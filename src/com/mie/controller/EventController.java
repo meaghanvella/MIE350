@@ -16,6 +16,7 @@ import java.sql.Time;
 
 public class EventController extends HttpServlet {
 
+	//Selena's shitty code
 	private static final long serialVersionUID = 1L;
 	private static String INSERT = "/addEvent.jsp";
 	
