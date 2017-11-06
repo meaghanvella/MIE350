@@ -17,19 +17,18 @@ public class EventDao {
 	public void addEvent(Event event) {
 		try {
 			PreparedStatement preparedStatement = connection
-					.prepareStatement("insert into Event(EventName,Startup,StartupID,EventDate,EventTime,Location,Description) values (?, ?, ?, ?, ?, ?, ?)");
+					.prepareStatement("insert into Event(EventName,StartupID,EventDate,EventTime,Location,Description) values (?, ?, ?, ?, ?, ?)");
 			// Parameters start with 1
 			preparedStatement.setString(1, event.getEventName());
-			preparedStatement.setString(2, event.getStartup());
-			preparedStatement.setInt(3, event.getStartupId());
+			preparedStatement.setInt(2, event.getStartupId());
 			
 			//need to doublecheck this
-			preparedStatement.setDate(4, new java.sql.Date(event.getDate().getTime()));
-			preparedStatement.setTime(5, event.getEventTime());
+			preparedStatement.setDate(3, new java.sql.Date(event.getDate().getTime()));
+			preparedStatement.setTime(4, new java.sql.Time(1)); //event.getEventTime()
 			
 			//this is ok
-			preparedStatement.setString(6, event.getLocation());
-			preparedStatement.setString(7, event.getDescription());
+			preparedStatement.setString(5, event.getLocation());
+			preparedStatement.setString(6, event.getDescription());
 			preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {
@@ -51,10 +50,9 @@ public class EventDao {
 				//not sure if need eventID
 				event.setEventId(rs.getInt("EventID"));
 				event.setEventName(rs.getString("EventName"));
-				event.setStartup(rs.getString("Startup"));
 				event.setStartupId(rs.getInt("StartupID"));
 				event.setDate(rs.getDate("EventDate"));
-				event.setEventTime(rs.getTime("EventTime")); //need to double check format of time
+				//event.setEventTime(rs.getTime("EventTime")); //need to double check format of time
 				event.setLocation(rs.getString("Location"));
 				event.setDescription(rs.getString("Description"));
 				
