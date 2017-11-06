@@ -63,3 +63,32 @@ footer {
 	border-style: solid;
 	border-colour: black;
 }
+*/
+
+
+//New stuff Claire
+
+.paddingleft {
+	padding-left: 40px;
+}
+.paddingright{
+	padding-right: 40px;
+}
+.modal-dialog {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.modal-content {
+  margin: 0 auto;
+}
+#contentWrapper {
+    
+    margin: 11 px;
+    background: #ffffff;
+    height: 125px
+}
+
+
