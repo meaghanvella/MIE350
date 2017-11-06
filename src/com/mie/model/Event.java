@@ -4,13 +4,13 @@ import java.util.Date;
 import java.sql.Time;
 
 public class Event {
+	//Created by Selena
 	
 	private int eventId;
 	private String eventName;
-	private String startup;
 	private int startupId;
 	private Date date;
-	private Time eventTime; 
+	private String eventTime;
 	private String location;
 	private String description;
 	
@@ -22,14 +22,6 @@ public class Event {
 
 	public void setEventName(String eventName) {
 		this.eventName = eventName;
-	}
-
-	public String getStartup() {
-		return startup;
-	}
-
-	public void setStartup(String startup) {
-		this.startup = startup;
 	}
 
 	public int getStartupId() {
@@ -48,11 +40,11 @@ public class Event {
 		this.date = date;
 	}
 
-	public Time getEventTime() {
+	public String getEventTime() {
 		return eventTime;
 	}
 
-	public void setEventTime(Time eventTime) {
+	public void setEventTime(String eventTime) {
 		this.eventTime = eventTime;
 	}
 
@@ -74,7 +66,7 @@ public class Event {
 
 	@Override
 	public String toString() {
-		return "Event [eventName=" + eventName + ", startup=" + startup
+		return "Event [eventName=" + eventName + ", "
 				+ ", startupId=" + startupId + ", date=" + date
 				+ ", eventTime=" + eventTime + ", location=" + location
 				+ ", description=" + description + "]";
