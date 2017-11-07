@@ -13,6 +13,7 @@
 				<li><a href="index.jsp">Home</a></li>
 				<li><a href="/mie350_group03/CompanyController?action=listCompany">Startup List</a></li>
 				<li><a href="/mie350_group03/CompanyController?action=listCompany">Startup List2</a></li>
+				<li><a href="StartU_first_page.jsp">LOG OUT</a></li>
 			</ul>
 		</div>
 	</div>

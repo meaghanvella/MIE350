@@ -81,7 +81,7 @@
 								</div>
 								<div class="row">
 								<div class="col-sm-6" align="center">
-								<a href="#" class="btn btn-success paddingleft paddingright" role="button" align="center"> STUDENT </a>								
+								<a href="studentSignup.jsp" class="btn btn-success paddingleft paddingright" role="button" align="center">STUDENT</a>								
 								</div>
 								<div class="col-sm-6" align="center">
 								<a href="#" class="btn btn-info" role="button">STARTUP REP</a>
@@ -97,7 +97,7 @@
 					</div>
 				</div>
 				<!-- This is the log in button -->
-				<a href="#" class="btn btn-default btn-lg" role="button">Log In</a>
+				<a href="login.jsp" class="btn btn-default btn-lg" role="button">Log In</a>
 			</div>
 			
 		</div>
