@@ -18,6 +18,8 @@ public class EventDao {
 		try {
 			PreparedStatement preparedStatement = connection
 					.prepareStatement("insert into Event(EventName,StartupID,EventDate,EventTime,Location,Description) values (?, ?, ?, ?, ?, ?)");
+			//dont need to insert EventId because automatically inserted
+			
 			// Parameters start with 1
 			preparedStatement.setString(1, event.getEventName());
 			preparedStatement.setInt(2, event.getStartupId());

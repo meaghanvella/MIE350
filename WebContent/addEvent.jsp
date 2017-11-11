@@ -6,7 +6,7 @@
 
 <html lang="en">
 <head>
-    <title>MIE350 Sample Web App - Add A Event</title>
+    <title>Startup Representative - Add An Event</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,23 +24,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 </head>
 <body>
 
-<%@ include file="../navbar_loggedin.jsp"%>
+<%@ include file="../navbar.jsp"%>
 
 <%
-    Member member = (Member) session.getAttribute("currentSessionUser");
-
-    String username = (String) session.getAttribute("username");
-    String firstname = (String) session.getAttribute("firstname");
-    String lastname = (String) session.getAttribute("lastname");
+//    Member member = (Member) session.getAttribute("currentSessionUser");
+//
+//    String username = (String) session.getAttribute("username");
+//    String firstname = (String) session.getAttribute("firstname");
+//    String lastname = (String) session.getAttribute("lastname");
 %>
 
 <div class="container-fluid text-center">
     <div class="row content">
-        <%@ include file="../sidebar_loggedin.jsp"%>
+        <% // @ include file="../sidebar_loggedin.jsp"%>
         <div class="col-sm-8 text-left">
             <h1>Add A Event</h1>
 
@@ -53,24 +53,43 @@
             <br>
 
             <form method="POST" action='EventController' name="frmAddEvent">
+
+                Name: <input type="text" name="name"
+                                 value="<c:out value="${event.getEventName()}" />"><br>
+
                 Location: <input type="text" name="location"
-                                   value="<c:out value="${event.location}" />"><br>
+                                   value="<c:out value="${event.getLocation()}" />"><br>
                 Date
-                (MM/dd/yyyy): <input type="text" name="date"
-                                     value="<fmt:formatDate pattern="MM/dd/yyyy" value="${event.date}" />"><br>
+                (MM/dd/yyyy): <input type="text" name="eventDate"
+                                     value="<fmt:formatDate pattern="MM/dd/yyyy" value="${event.getDate()}" />"><br>
+
+                Time: <input type="text" name="eventTime"
+                             value="<c:out value="${event.getEventTime()}" />"><br>
+
                 Description: <input type="text" name="description"
-                              value="<c:out value="${event.description}" />"><br> <br>
+                              value="<c:out value="${event.getDescription()}" />"><br>
+
+                Startup: <select name="startup">
+
+                <c:forEach items="${startups}" var="startup">
+                    <option value="<c:out value="${startup.getID()}" />"><c:out value="${startup.getName()}" /></option>
+                </c:forEach>
+
+                </select>
+
+                <br>
                 <input type="submit" class="btn btn-info" value="Submit" />
             </form>
 
         </div>
         <div class="col-sm-2 sidenav">
+        
             <!-- You can put right sidebar links here if you want to. -->
         </div>
     </div>
 </div>
 
-<%@ include file="../footer.jsp"%>
+<% // @ include file="../footer.jsp"%>
 
 
 </body>

@@ -23,7 +23,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 </head>
 <body>
 
@@ -44,6 +44,7 @@
                 <tr>
                     <th>Event Id</th>
                     <th>Location</th>
+                    <th>Name</th>
                     <th>Time & Date</th>
                     <th>Description</th>
                 </tr>
@@ -51,8 +52,9 @@
                 <tbody>
                 <c:forEach items="${events}" var="event">
                     <tr>
-                        <td align="center"><c:out value="${event.getId()}" /></td>
+                        <td align="center"><c:out value="${event.getEventId()}" /></td>
                         <td align="center"><c:out value="${event.getLocation()}" /></td>
+                        <td align="center"><c:out value="${event.getName()}" /></td>
                         <td align="center"><fmt:formatDate pattern="yyyy-MMM-dd"
 										value="${event.getDate()}" /></td>
                         <td align="center"><c:out value="${event.getDescription()}" /></td>
@@ -70,7 +72,7 @@
     </div>
 </div>
 
-<%@ include file="../footer.jsp"%>
+<% // @ include file="../footer.jsp"%>
 
 
 </body>
