@@ -88,7 +88,12 @@ public class CompanyDao {
 	
 	
 	//Next, we need a method that will conjure a set of companies according to certain filters
-	public List<Company> filter(List<String> industry_criteria, List<String> location_criteria) {
+	public List<Company> filter(Object industries_object, Object locations_object) {
+		
+		List<String> industry_criteria = (List<String>)industries_object;
+		List<String> location_criteria = (List<String>) locations_object;
+		
+		
 		
 		List<Company> companies = new ArrayList<Company>();
 		int num_industry_criteria = industry_criteria.size();
