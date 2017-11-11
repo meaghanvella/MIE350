@@ -7,8 +7,15 @@
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {
 	height: 450px;
-	padding: 100px;
+	padding: 70px;
 }
+
+#myCarousel {
+  height: 350px;
+  width: auto;
+  overflow: hidden;
+}
+
 
 /* Set gray background color and 100% height */
 .sidenav {

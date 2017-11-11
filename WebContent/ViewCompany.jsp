@@ -33,12 +33,10 @@
 			href="/mie350_group03/CompanyController?action=listCompany">Startups</a></li>
 		<li><a href="listEvent.jsp">Events</a></li>
 	</ul>
-    <br><br><br>
 	<div class="row content">
 		<div class="col-sm-8 content">
+		<br>
 			<div class="container-fluid text-left">
-				<br>
-				<br>
 				<div class="media">
 					<div class="media-left">
 						<img src="img_avatar1.png" class="media-object"
@@ -68,15 +66,13 @@
 				<h4>
 					<b>About</b>
 					</h3>
-
-
-
 					<h4>
 						<b>Website</b>
 						</h3>
 			</div>
 		</div>
-		<div class="col-sm-4 sidenav">
+		
+		<div class="col-sm-4">
 		<div class="container-fluid text-center">
 		<H3><b> Company Reps </b> </H3>
 		</div>
@@ -85,36 +81,37 @@
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				
 				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
+				<div class="carousel-inner" >
 				<!-- INSERT LOOP HERE -->
-					<div class="item active">
+					<div class="item active text-center">
 					<!-- REP PICTURE, MAY NEED TO LINK LATER -->
 					<center>
 						<img src="https://assets.merriam-webster.com/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg" style="width: 200px">
 					</center>
 							<h4>Name: </h3>
 							<h4>About: </h3>
+							
+							<!-- NEED TO LINK TO PARTICULAR EMAIL HERE USING VARIABLE LATER -->
+					
+					<a href="mailto:someone@example.com?Subject=Hello%20again"" class="btn btn-primary btn-sm" role="button">Contact Me</a>
+							
+							
 					
 					</div>
 
 					<div class="item">
 						<img src="chicago.jpg" alt="Chicago" style="width: 100%;">
 						<div class="carousel-caption">
-							<h3>Chicago</h3>
-							<p>Thank you, Chicago!</p>
 						</div>
 					</div>
 
 					<div class="item">
 						<img src="ny.jpg" alt="New York" style="width: 100%;">
 						<div class="carousel-caption">
-							<h3>New York</h3>
-							<p>We love the Big Apple!</p>
 						</div>
 					</div>
 
 				</div>
-				
 				<!-- Left and right controls -->
 				<a class="left carousel-control" href="#myCarousel"
 					data-slide="prev"> <span
@@ -126,12 +123,10 @@
 					class="glyphicon glyphicon-chevron-right"></span> <span
 					class="sr-only">Next</span>
 				</a>
-			
-					
+				
+						
 			</div>
 		</div>
-
-	</div>
 
 	</div>
 							
