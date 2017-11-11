@@ -30,17 +30,16 @@
 
 <%@ include file="navbar.jsp"%>
 
-<%
+<!--  
 //    Member member = (Member) session.getAttribute("currentSessionUser");
 //
 //    String username = (String) session.getAttribute("username");
 //    String firstname = (String) session.getAttribute("firstname");
 //    String lastname = (String) session.getAttribute("lastname");
-%>
+-->
 
 <div class="container-fluid text-center">
     <div class="row content">
-        <% // @ include file="../sidebar_loggedin.jsp"%>
         <div class="col-sm-8 text-left">
             <h1>Add A Event</h1>
 
@@ -81,10 +80,6 @@
                 <input type="submit" class="btn btn-info" value="Submit" />
             </form>
 
-        </div>
-        <div class="col-sm-2 sidenav">
-        
-            <!-- You can put right sidebar links here if you want to. -->
         </div>
     </div>
 </div>
