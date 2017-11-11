@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mie.model.StartupRep;
 import com.mie.util.DbUtil;
 
 public class StartupRepDao {
