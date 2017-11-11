@@ -55,19 +55,18 @@
      
 
   
-  
-  
-  
-  
+ 
+<div class="card" style="width: 20rem;">
   <c:forEach items="${Company}" var="company">
-  <div class="card" style="width: 20rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
   <div class="card-block">
-    <h4 class="card-title"><td align="center"><c:out value="${company.getName()}" /></td></h4>
-    <p class="card-text"> <c:out value="${company.getDescription()}" /> </p>
+    <h4 class="card-title"><td align="center"><c:out value="${company.getName()}" />
+    		</td></h4>
+    <p class="card-text"><c:out value="${company.getDescription()}" /></p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-   </c:forEach>
+  </div>
+  </c:forEach>
+</div>
+
  
 </div>
   

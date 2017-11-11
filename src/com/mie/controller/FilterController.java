@@ -31,8 +31,8 @@ public class FilterController extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//This method should be responsible for taking in criteria selections
 		
-		List<String> industries = request.getParameter("industries"); //assume it's called "industries"
-		List<String> locations = request.getParameter("locations"); //assume it's called "locations" 
+		Object industries = request.getAttribute("industries"); //assume it's called "industries"
+		Object locations = request.getAttribute("locations"); //assume it's called "locations" 
 		
 		RequestDispatcher view = request.getRequestDispatcher(FILTERED_RESULTS);
 		
