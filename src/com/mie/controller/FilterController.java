@@ -1,5 +1,7 @@
 package com.mie.controller;
 
+import com.mie.dao.CompanyDao;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,33 +17,33 @@ import javax.servlet.http.HttpServletResponse;
 public class FilterController extends HttpServlet {
 	//This class is supposed to handle the following:
 		//1) Spitting out all of the startups A-Z 
-		//2) Spitting out 
+		//2) Spitting out filtered results of companies  
 	
-	private static String search_companies = "insert url.jsp";
+	private static String FILTERED_RESULTS = "/filteredResults.jsp";
 	private CompanyDao companyDao;
 	
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//So...this method should be responsible for taking in criteria selections
-		
-		List<String> industries = request.getParameter("industries");
-		List<String> locations = request.getParameter("locations");
-		
-		//And...I think this is all it should do???? 
-		
+	//Constructor:
+	public FilterController() {
+		super();
+		companyDao = new CompanyDao();
 	}
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//This method should be responsible for actually spitting out the search results... 
-		List<String> industries = request.getParameter("industries");
-		List<String> locations = request.getParameter("locations");
+		//This method should be responsible for taking in criteria selections
 		
-		request.setAttribute("industries", industries);
-		request.setAttributes("locations", locations);
+		List<String> industries = request.getParameter("industries"); //assume it's called "industries"
+		List<String> locations = request.getParameter("locations"); //assume it's called "locations" 
 		
-		//Then, i guess the following is the output....:
+		RequestDispatcher view = request.getRequestDispatcher(FILTERED_RESULTS);
+		
 		request.setAttributes("companies", companyDao.filter(industries, locations));
+		//NOTE: All of the edge cases and conditional checks are accounted for within the filter function 
+		
+		//Finally, redirect to the results page once the filtered set of companies has been retrieved:
+		view.forward(request, response); 
 		
 	}
+	
 	
 	
 
