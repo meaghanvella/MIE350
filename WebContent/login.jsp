@@ -27,35 +27,25 @@
 </head>
 <body>
 
-	<%@ include file="navbar.jsp"%>
+<!-- navbar with only the Start U logo -->
+<%@ include file="navbarNotSignedIn.jsp"%>
 
 	<div class="container-fluid text-center">
-		<div class="row content">
-			<div class="col-sm-2 sidenav">
-				<!-- You can put left sidebar links here if you want to. -->
-			</div>
-			<div class="col-sm-8">
+		<div class="row justify-content-center">
+			<div class="col-8">
 				<br> <br>
-				<div class="text-center"><h1>Log In</h1></div>
+				<h1>Log In</h1>
 				<br> <br>
-				<div class="row">
-						<div class="form-group login-form">
-						  <label for="usr">Email:</label>
-						  <input type="text" class="form-control" id="usr">
-						</div>
-						<br>
-						<div class="form-group login-form">
-						  <label for="pwd">Password:</label>
-						  <input type="password" class="form-control" id="pwd">
-						</div>
+				<div class="form-group login-form">
+					<label for="usr">Email:</label> <input type="text"
+						class="form-control" id="usr">
+				<br>
+					<label for="pwd">Password:</label> <input type="password"
+						class="form-control" id="pwd">
 				</div>
 				<br>
-				<a href="index.jsp"><button type="button" class="btn btn-info go-right">GO!</button></a>
-
+				<a href="StudentHome.jsp"><button type="button" class="btn btn-info go-right">GO!</button></a>
 				<br /> <br />
-			</div>
-			<div class="col-sm-2 sidenav">
-				<!-- You can put right sidebar links here if you want to. -->
 			</div>
 		</div>
 	</div>

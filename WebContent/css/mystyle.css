@@ -106,6 +106,8 @@ footer {
 	margin: 0 auto;
 }
 
+/* sign up page stuff */
+
 .stepwizard-step p {
     margin-top: 10px;
 }
@@ -144,5 +146,16 @@ footer {
     font-size: 12px;
     line-height: 1.428571429;
     border-radius: 15px;
+}
+
+/* navbar logo */
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand > img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
 }
 
