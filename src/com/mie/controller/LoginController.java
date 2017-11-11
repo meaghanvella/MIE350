@@ -15,17 +15,21 @@ import com.mie.model.User;
 //this class takes input from the login jsp through the parameters "un" and "pw" for username and password
 //this class assigns the session attributes username and type according to login information and user type (student or startup)
 public class LoginController extends HttpServlet {
+	private static String INVALID_LOGIN = "/invalidLogin.jsp";
+	private static String STUDENT_LOGGED = "/studentLoginSuccess.jsp";
+	private static String STARTUP_LOGGED = "/startupLoginSuccess.jsp";
+	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
 
 		/**
 		 * Retrieve the entered username and password from the login.jsp form.
-		 */
+		 */		
+		String forward = "";
 		User u = new User();
-		
 		String un = request.getParameter("un");
+		System.out.println(un);
 		String pw = request.getParameter("pw");
-		u = UserDao.login(un,pw);
 		
 		try {
 			/**
@@ -35,6 +39,8 @@ public class LoginController extends HttpServlet {
 			 * If the isValid value is true, assign session attributes to the
 			 * current member.
 			 */
+			u = UserDao.login(un,pw);
+
 			if (u.isValid()) {
 				HttpSession session = request.getSession(true);
 				//claudia: tbh, not sure where these are used later...
@@ -47,12 +53,13 @@ public class LoginController extends HttpServlet {
 				 */
 				if((u.getType()).equals("student")){
 					//redirect to student dashboard
-					response.sendRedirect("StudentLoginSuccess.jsp");
-					
+					forward = STUDENT_LOGGED;
 				}
 				else if((u.getType()).equals("startup rep")){
 					//redirect to startup dashboard
 					//response.sendRedirect("startupLogged.jsp");
+					forward = STARTUP_LOGGED;
+
 				}
 			}
 
@@ -61,9 +68,10 @@ public class LoginController extends HttpServlet {
 				 * Otherwise, redirect the user to the invalid login page and
 				 * ask them to log in again with the proper credentials.
 				 */
-				response.sendRedirect("invalidLogin.jsp");
+				forward = INVALID_LOGIN;
 			}
-
+			RequestDispatcher view = request.getRequestDispatcher(forward);
+			view.forward(request, response);
 		}
 
 		catch (Throwable theException) {
@@ -73,7 +81,5 @@ public class LoginController extends HttpServlet {
 			System.out.println(theException);
 		}
 	}
-	
-	
 
 }

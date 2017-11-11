@@ -2,13 +2,16 @@ package com.mie.controller;
 
 import com.mie.dao.CompanyDao;
 import com.mie.dao.EventDao;
+import com.mie.dao.UserDao;
 import com.mie.model.Event;
+import com.mie.model.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -16,19 +19,20 @@ import java.util.Date;
 import java.sql.Time;
 
 public class EventController extends HttpServlet {
-
+	//allows the startup rep to add events to the event tab
+	//posts to "Events" tab all events that were posted
+	
 	private static final long serialVersionUID = 1L;
 	private static String INSERT = "/addEvent.jsp";
 	
 	//not going to be able to edit event
 	//private static String EDIT = "/event/edit.jsp";
 	//private static String LIST_EVENT_PUBLIC = "/event/listPublic.jsp";
-	
-	//need to modify naming of this
 	private static String LIST_EVENT_USER = "/listEventUser.jsp";
 
 	private EventDao dao;
 	private CompanyDao companyDao;
+	private UserDao UserDao;
 
 	/**
 	 * Constructor for this class.
@@ -62,7 +66,14 @@ public class EventController extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		// Check if they are logged in
+		//Can only post even if the person logged in is the StartupRep
+		
+		/*User u = new User();
+		
+		String un = request.getParameter("un");
+		String pw = request.getParameter("pw");
+		u = UserDao.login(un,pw);*/
+	
 
 		Event event = new Event();
 		
