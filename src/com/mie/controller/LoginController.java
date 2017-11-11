@@ -15,9 +15,15 @@ import com.mie.model.User;
 //this class takes input from the login jsp through the parameters "un" and "pw" for username and password
 //this class assigns the session attributes username and type according to login information and user type (student or startup)
 public class LoginController extends HttpServlet {
-	private static String INVALID_LOGIN = "/invalidLogin.jsp";
-	private static String STUDENT_LOGGED = "/studentLoginSuccess.jsp";
-	private static String STARTUP_LOGGED = "/startupLoginSuccess.jsp";
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//insert invalid login
+	private static String INVALID_LOGIN = "/StartU_first_page.jsp";
+	private static String STUDENT_LOGGED = "/StudentHome.jsp";
+	//insert startup home page
+	private static String STARTUP_LOGGED = "";
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
@@ -28,7 +34,6 @@ public class LoginController extends HttpServlet {
 		String forward = "";
 		User u = new User();
 		String un = request.getParameter("un");
-		System.out.println(un);
 		String pw = request.getParameter("pw");
 		
 		try {
@@ -61,9 +66,7 @@ public class LoginController extends HttpServlet {
 					forward = STARTUP_LOGGED;
 
 				}
-			}
-
-			else {
+			}else {
 				/**
 				 * Otherwise, redirect the user to the invalid login page and
 				 * ask them to log in again with the proper credentials.

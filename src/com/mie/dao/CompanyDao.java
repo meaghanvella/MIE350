@@ -241,5 +241,28 @@ public class CompanyDao {
 		return companies; 
 	
 	}
+	
+	//claudia: added this to facilitate creation of StartupRep account... I am assuming that startup names are unique
+	public int getCompanyIDByName(String name) {
+		int companyID = 0;
+
+		try {
+			String query = "SELECT * FROM Startup WHERE Name=?";
+			PreparedStatement pst = connection.prepareStatement(query);
+			pst.setString(1, name);
+			
+			ResultSet rs = pst.executeQuery();
+			
+			while(rs.next()) {
+				companyID = rs.getInt("StartupID");
+			}
+			
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+	
+		return companyID;
+	}
+	
 
 }
