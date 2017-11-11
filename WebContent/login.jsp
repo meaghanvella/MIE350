@@ -24,6 +24,8 @@
 </head>
 <body>
 <!-- navbar with only the Start U logo -->
+	<%@ include file="navbarNotSignedIn.jsp"%>
+	
     <div class="container-fluid text-center">
         <div class="row justify-content-center">
             <div class="col-8">
