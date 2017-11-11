@@ -38,6 +38,7 @@
 
 
 <center>
+<br> 
 <h1> Welcome, Student!</h1>
 <p> Welcome to your StartU dashboard! Choose an above tab to get started</p>
 <br />
@@ -54,37 +55,62 @@
 	<!-- line modal -->
 	<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
-		<div class="modal-content">
+		<div class="modal-content modal-padding">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">¡¿</span><span class="sr-only">Close</span></button>
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">¡¿</span><span class="sr-only">Close</span></button>
-				<h3 class="modal-title" id="lineModalLabel">My Modal</h3>
+				<h2 class="modal-title" id="lineModalLabel">Edit Info</h2>
+				<p>You can update your personal information below.</p>
 			</div>
 			<div class="modal-body">
 				
 	            <!-- content goes here -->
-				<form>
-	              <div class="form-group">
-	                <label for="exampleInputEmail1">First Name</label>
-	                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="First Name">
-	              </div>
-	              <div class="form-group">
-	                <label for="exampleInputPassword1">Last Name</label>
-	                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Last Name">
-	              </div>
-	              <div class="form-group">
-	                <label for="exampleInputFile">Profile Photo</label>
-	                <input type="file" id="exampleInputFile">
-	                <p class="help-block">Input your stuff</p>
-	              </div>
-	              <div class="checkbox">
-	                <label>
-	                  <input type="checkbox"> Check me out
-	                </label>
-	              </div>
-	              <button type="submit" class="btn btn-default">Submit</button>
+				<form role="form" action="" method="post">
+ 				<div class="text-left">
+ 				<div class="form-group">
+	            <label class="control-label">First Name</label>
+	            <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
+	          </div>
+	          <div class="form-group">
+	            <label class="control-label">Last Name</label>
+	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+	          </div>
+	          <div class="form-group">
+	            <label class="control-label">Email</label>
+	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your email address" >
+	          </div>
+	          <div class="form-group">
+	            <label class="control-label">New Password</label>
+	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
+	          </div>
+	          <div class="form-group">
+	            <label class="control-label">Brief Bio</label>
+	            <textarea required="required" class="form-control" placeholder="Enter brief description of yourself."></textarea>
+	          </div>
+	          <div class="col-auto">
+	          <label for="inlineFormCustomSelect">Industry</label>
+	          <select id="inlineFormCustomSelect" class="form-control">
+	            <option selected>Choose...</option>
+	            <option>Aerospace</option>
+	            <option>Analytics</option>
+	            <option>Education</option>
+	            <option>Electronics</option>
+	            <option>Energy</option>
+	            <option>Fintech</option>
+	            <option>Healthcare</option>
+	            <option>Marketing & Advertising</option>
+	            <option>Photography</option>
+	            <option>Robotics</option>
+	            <option>Software</option>
+	          </select>
+	        </div>
+	          </div>
+	              <br><button type="submit" class="btn btn-default">Submit</button>
 	            </form>
 	
 			</div>
+			
+			<!-- modal footer original -->
+			<!--
 			<div class="modal-footer">
 				<div class="btn-group btn-group-justified" role="group" aria-label="group button">
 					<div class="btn-group" role="group">
@@ -97,7 +123,9 @@
 						<button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
 					</div>
 				</div>
-			</div>
+			</div> -->
+			
+		
 		</div>
 	  </div>
 	</div>
