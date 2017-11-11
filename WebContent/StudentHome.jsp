@@ -38,7 +38,7 @@
 
 
 <center>
-<h1> Welcome!</h1>
+<h1> Welcome, Student!</h1>
 <p> Welcome to your StartU dashboard! Choose an above tab to get started</p>
 <br />
 <img src="https://assets.merriam-webster.com/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg">
