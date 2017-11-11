@@ -86,7 +86,7 @@
 	        <div class="col-md-12">
 	          <div class=text-center>
 	          <h2>Choose a photo</h2>
-	          <p>Link to an existing profile picture so recruiters know who you are!</p> <br>
+	          <p>Link to an existing profile picture so students know who you are!</p> <br>
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Image URL</label>
@@ -105,24 +105,16 @@
 	      <div class="col-xs-6 col-md-offset-3">
 	        <div class="col-md-12">
 	          <div class=text-center>
-	          <h2>Industry preference</h2>
-	          <p>Select the industry you're most interested in.</p> <br>
+	          <h2>Your Company</h2>
+	          <p>Which company are you representing?</p> <br>
 	          </div>
 	        <div class="col-auto">
-	          <label for="inlineFormCustomSelect">Industry</label>
+	          <label for="inlineFormCustomSelect">Company</label>
 	          <select id="inlineFormCustomSelect" class="form-control">
 	            <option selected>Choose...</option>
-	            <option>Aerospace</option>
-	            <option>Analytics</option>
-	            <option>Education</option>
-	            <option>Electronics</option>
-	            <option>Energy</option>
-	            <option>Fintech</option>
-	            <option>Healthcare</option>
-	            <option>Marketing & Advertising</option>
-	            <option>Photography</option>
-	            <option>Robotics</option>
-	            <option>Software</option>
+                <c:forEach items="${startups}" var="startup">
+                    <option value="<c:out value="${startup.getID()}" />"><c:out value="${startup.getName()}" /></option>
+                </c:forEach>
 	          </select>
 	        </div>
 	          <br>

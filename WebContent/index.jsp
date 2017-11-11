@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="en">
+<html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MIE350 Sample Web App</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,42 +22,85 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+
 </head>
-<body>
-
-	<%@ include file="navbar.jsp"%>
-
-
-
+<body style="background-color:#E0FFFF;" background="briefcase-6-xxl.png">
 	<div class="container-fluid text-center">
-		<div class="row content">
-			<div class="col-sm-2 sidenav">
-				<!-- You can put left sidebar links here if you want to. -->
+		<div class="container-fluid">
+			
+			<center>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				
+				<p id="contentWrapper">
+				<br> 
+				<img src="StartU_logo.png" alt="StartU logo"
+					style="width: 350px" class="center" />
+					</p>
+			</center>
+			<hr>
+			<!-- This is the sign up button -->
+			<div class="container">
+				<!-- Trigger the modal with a button -->
+				<button type="button" class="btn btn-info btn-lg"
+					data-toggle="modal" data-target="#myModal">Sign Up</button>
+					
+					
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">
+								
+								Are you a <font color="#5cb85c"><b>student </font></b> or a <font color="#5bc0de"><b>start up
+									representative?</font></b>
+									</h4>
+							</div>
+							<div class="modal-body">
+
+								<div class="row">
+
+									<div class="col-sm-6" align="center">
+										<div class="container-fluid">
+											<img src="Business_Graduation_Cap.png" class="img-thumbnail"
+												alt="Student logo" width="120" height="120"> 
+										</div>
+									</div>
+									<div class="col-sm-6" align="center">
+
+										<div class="container-fluid">
+											<img src="Startup_rep_logo.png" class="img-thumbnail"
+												alt="StartUp Rep" width="120" height="120"> 
+										</div>
+									</div>
+
+								</div>
+								<div class="row">
+								<div class="col-sm-6" align="center">
+								<a href="studentSignup.jsp" class="btn btn-success paddingleft paddingright" role="button" align="center">STUDENT</a>								
+								</div>
+								<div class="col-sm-6" align="center">
+								<a href="repSignup.jsp" class="btn btn-info" role="button">STARTUP REP</a>
+								
+								</div>								
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- This is the log in button -->
+				<a href="login.jsp" class="btn btn-default btn-lg" role="button">Log In</a>
 			</div>
-			<div class="col-sm-8 text-left">
-				<h1>Welcome to StartU!</h1>
-				<p>This application is made to help connect university students to up and coming startups!</p>
-				<hr>
-				<h3>Team Members</h3>
-				<p>List of members currently working on the project
-				<ul>
-					<li>Meaghan</li>
-					<li>Claire</li>
-					<li>Lauren</li>
-					<li>Selena</li>
-					<li>Herman</li>
-					<li>Claudia</li>
-					<li>Irene</li>
-				</ul>
-				</p>
-			</div>
-			<div class="col-sm-2 sidenav">
-				<!-- You can put right sidebar links here if you want to. -->
-			</div>
+			
 		</div>
 	</div>
-
-
-
 </body>
 </html>
