@@ -74,7 +74,7 @@ public class UserDao {
 				u.setType("startup rep");
 			}
 			
-			if(more1|more2){
+			if(more1||more2){
 				//in either case (startup rep or student), set valid to true and set email and password within user object
 				u.setValid(true);
 				u.setEmail(e);
