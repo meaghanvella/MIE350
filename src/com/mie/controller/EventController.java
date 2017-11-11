@@ -73,8 +73,7 @@ public class EventController extends HttpServlet {
 		String un = request.getParameter("un");
 		String pw = request.getParameter("pw");
 		u = UserDao.login(un,pw);*/
-		
-		
+	
 
 		Event event = new Event();
 		
