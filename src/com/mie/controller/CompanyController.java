@@ -20,7 +20,7 @@ public class CompanyController extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private static String LIST_COMPANY_PUBLIC = "/StartupList.jsp";
+	private static String LIST_COMPANY_PUBLIC = "/StartU/StartupList.jsp";
 
 	private CompanyDao dao;
 

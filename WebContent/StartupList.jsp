@@ -32,7 +32,7 @@
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
     <li><a href="StudentHome.jsp">Home</a></li>
-    <li class ="active"><a href="/mie350_group03/CompanyController?action=StartupList">Startups</a></li>
+    <li class ="active"><a href="/CompanyController?action=StartupList">Startups</a></li>
     <li><a href="listEvent.jsp">Events</a></li>
   </ul>
 
@@ -53,51 +53,22 @@
     <div class="col-sm-9">
      <h4>List of Startups recently added</h4>
      
-     <table border=1 class="sortable">
-		<thead>
-		  <tr>
-			<th>Company</th>
-		  </tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${Company}" var="company">
-			<tr>
-				<td align="center"><c:out value="${company.getName()}" /></td>
-			</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-	
-	
-	
-	
-	
-	<div class="panel-group">
-    <div class="panel panel-default">
-    	
-    	<c:forEach items="${Company}" var="company">
-			<div class="panel-heading">
-				<td align="center"><c:out value="${company.getName()}" /></td>
-			</div>
-			<div class="panel-body">Panel Content stuffs</div>
-			<br />
-			</c:forEach>
 
-    </div>
-  </div>
   
   
   
   
-  <div class="card" style="width: 20rem;">
+  
   <c:forEach items="${Company}" var="company">
+  <div class="card" style="width: 20rem;">
   <img class="card-img-top" src="..." alt="Card image cap">
   <div class="card-block">
     <h4 class="card-title"><td align="center"><c:out value="${company.getName()}" /></td></h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text"> <c:out value="${company.getDescription()}" /> </p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
    </c:forEach>
-  </div>
+ 
 </div>
   
   
