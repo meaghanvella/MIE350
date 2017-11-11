@@ -51,7 +51,7 @@
 	  </div>
 	  
 	  <!-- Form groups -->
-	  <form role="form" action="StudentHome.jsp" method="post">
+	  <form role="form" action="repHome.jsp" method="post">
 	    
 	    <div class="row setup-content" id="step-1">
 	      <div class="col-xs-6 col-md-offset-3">
