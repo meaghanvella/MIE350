@@ -167,3 +167,7 @@ footer {
   width: auto;
 }
 
+/* modal body */
+.modal-padding {
+	padding: 25px;
+}

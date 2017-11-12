@@ -31,15 +31,15 @@
 <br />
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
-    <li class="active"><a href="StudentHome.jsp">Home</a></li>
-    <li><a href="/StartU/CompanyController?action=listCompany">Startups</a></li>
-    <li><a href="listEvent.jsp">Events</a></li>
+    <li class="active"><a href="repHome.jsp">Home</a></li>
+    <li><a href="ViewCompany.jsp">My Company</a></li>
+    <li><a href="addEvent.jsp">Add Event</a></li>
   </ul>
 
 
 <center>
 <br> 
-<h1> Welcome, Student!</h1>
+<h1> Welcome, Rep!</h1>
 <p> Welcome to your StartU dashboard! Choose an above tab to get started</p>
 <br />
 <img src="https://assets.merriam-webster.com/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg">
@@ -86,44 +86,12 @@
 	            <label class="control-label">Brief Bio</label>
 	            <textarea required="required" class="form-control" placeholder="Enter brief description of yourself."></textarea>
 	          </div>
-	          <div class="col-auto">
-	          <label for="inlineFormCustomSelect">Industry</label>
-	          <select id="inlineFormCustomSelect" class="form-control">
-	            <option selected>Choose...</option>
-	            <option>Aerospace</option>
-	            <option>Analytics</option>
-	            <option>Education</option>
-	            <option>Electronics</option>
-	            <option>Energy</option>
-	            <option>Fintech</option>
-	            <option>Healthcare</option>
-	            <option>Marketing & Advertising</option>
-	            <option>Photography</option>
-	            <option>Robotics</option>
-	            <option>Software</option>
-	          </select>
 	        </div>
 	          </div>
 	              <br><button type="submit" class="btn btn-default">Submit</button>
 	            </form>
 	
 			</div>
-			
-			<!-- modal footer original -->
-			<!--
-			<div class="modal-footer">
-				<div class="btn-group btn-group-justified" role="group" aria-label="group button">
-					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Close</button>
-					</div>
-					<div class="btn-group btn-delete hidden" role="group">
-						<button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal"  role="button">Delete</button>
-					</div>
-					<div class="btn-group" role="group">
-						<button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
-					</div>
-				</div>
-			</div> -->
 			
 		
 		</div>

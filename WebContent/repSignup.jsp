@@ -15,7 +15,7 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="../signup.js"></script>
+	<script src="<c:url value="/js/signup.js"/>" type="text/javascript"></script>
 	
 	<!-- Date Picker Javascript -->
 	<!-- https://jqueryui.com/datepicker/ -->
@@ -27,7 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
 <body>
-
+	
 	<%@ include file="navbarNotSignedIn.jsp"%>
 
 	<div class="container">
@@ -51,7 +51,7 @@
 	  </div>
 	  
 	  <!-- Form groups -->
-	  <form role="form" action="StudentHome.jsp" method="post">
+	  <form role="form" action="repHome.jsp" method="post">
 	    
 	    <div class="row setup-content" id="step-1">
 	      <div class="col-xs-6 col-md-offset-3">
@@ -112,6 +112,7 @@
 	          <label for="inlineFormCustomSelect">Company</label>
 	          <select id="inlineFormCustomSelect" class="form-control">
 	            <option selected>Choose...</option>
+                <!-- dynamically pull from db -->
                 <c:forEach items="${startups}" var="startup">
                     <option value="<c:out value="${startup.getID()}" />"><c:out value="${startup.getName()}" /></option>
                 </c:forEach>
