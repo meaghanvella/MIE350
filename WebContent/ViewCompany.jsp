@@ -25,6 +25,7 @@
 </head>
 <body>
 
+	<%@ include file="footbar.jsp"%>
 	<%@ include file="navbar.jsp"%>
 	<!--  Code taken from W3 schools -->
 	<ul class="nav nav-pills nav-justified">
