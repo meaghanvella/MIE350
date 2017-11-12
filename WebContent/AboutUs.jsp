@@ -94,7 +94,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="img_avatar1.png" class="media-object"
+						<img src="Hermanpuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -110,7 +110,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="img_avatar1.png" class="media-object"
+						<img src="Clairepuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -127,7 +127,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="img_avatar1.png" class="media-object"
+						<img src="Irenepuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -144,7 +144,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="img_avatar1.png" class="media-object"
+						<img src="Laurenpuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -161,7 +161,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="col-sm-5">
 				<div class="media">
 					<div class="media-left">
-						<img src="img_avatar1.png" class="media-object"
+						<img src="selenapuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -175,7 +175,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<br>
 			<div class="media">
 					<div class="media-left">
-						<img src="img_avatar1.png" class="media-object"
+						<img src="Claudiapuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -188,7 +188,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<br>
 			<div class="media">
 					<div class="media-left">
-						<img src="img_avatar1.png" class="media-object"
+						<img src="meaghan puppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
