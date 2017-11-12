@@ -28,6 +28,7 @@
 <body>
 
 <%@ include file="navbar.jsp"%>
+<%@ include file="footbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
 	<ul class="nav nav-pills nav-justified">
@@ -36,10 +37,10 @@
 		<li><a href="listEvent.jsp">Events</a></li>
 	</ul>
 
-	<div class="row content text-left">
-		<div class="col-sm-2 sidenav">
+	<div class="row text-left"">
+		<div class="col-sm-2">
 		</div>
-		<div class="col-sm-8 content">
+		<div class="col-sm-8">
 		<center>
 			<h2>Our Vision</h2>
 			</center>
@@ -73,15 +74,28 @@ Startup Representatives can:<br>
 This web application was created for MIE350, an undergraduate course at the University of Toronto.
 </p>
 <center>
-			<h2>Our Team</h2>
-</center>
+	<h2>Our Team</h2>
+	</center>
+
 <hr>
-	<div class="row content text-left">
+	
+<div class="col-sm-2">
+</div>
+</center>
+		</div>
+		</div>
+
+		
+	<div class="row text-left" >
+	
+<div class="col-sm-2">
+</div>
+	<div class="col-sm-4">
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
 						<img src="img_avatar1.png" class="media-object"
-							style="width: 100px">
+							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
@@ -97,11 +111,11 @@ This web application was created for MIE350, an undergraduate course at the Univ
 				<div class="media">
 					<div class="media-left">
 						<img src="img_avatar1.png" class="media-object"
-							style="width: 100px">
+							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
-						<br>
+						
 							<b>Claire Goldsmith</b>
 							<br>
 							Position:
@@ -114,11 +128,11 @@ This web application was created for MIE350, an undergraduate course at the Univ
 				<div class="media">
 					<div class="media-left">
 						<img src="img_avatar1.png" class="media-object"
-							style="width: 100px">
+							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
-						<br>
+					
 							<b>Irene Halim</b>
 							<br>
 							Position:
@@ -131,24 +145,24 @@ This web application was created for MIE350, an undergraduate course at the Univ
 				<div class="media">
 					<div class="media-left">
 						<img src="img_avatar1.png" class="media-object"
-							style="width: 100px">
+							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
-						<br>
 							<b>Lauren Ip</b>
 							<br>
 							Position:
 					</div>
 				</div>
 
-			</div>
-			<br>
+			</div></div>
+		
 			<div class="container-fluid text-left">
+			<div class="col-sm-5">
 				<div class="media">
 					<div class="media-left">
 						<img src="img_avatar1.png" class="media-object"
-							style="width: 100px">
+							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
@@ -158,44 +172,40 @@ This web application was created for MIE350, an undergraduate course at the Univ
 					</div>
 				</div>
 
-			</div>
 			<br>
-			<div class="container-fluid text-left">
-				<div class="media">
+			<div class="media">
 					<div class="media-left">
 						<img src="img_avatar1.png" class="media-object"
-							style="width: 100px">
+							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
 							<b>Claudia Nguyen</b>
-								<br>
+							<br>
 							Position:
 					</div>
 				</div>
-
-			</div>
 			<br>
-			<div class="container-fluid text-left">
-				<div class="media">
+			<div class="media">
 					<div class="media-left">
 						<img src="img_avatar1.png" class="media-object"
-							style="width: 100px">
+							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
-						<br>
 							<b>Meaghan Vella</b>
 							<br>
 							Position:
 					</div>
 				</div>
-
-			</div>
-		</div>			
-		</div>
-		<div class="col-sm-2 sidenav">
-		</div>
+		</div>	
+		</div>		
+		<div class="col-sm-1">
+</div>
+		
+	</div>
+	<div class="row text-left" >
+	<br><br>
 	</div>
 </body>
 </html>
