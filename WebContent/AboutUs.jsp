@@ -182,7 +182,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 						<h4 class="media-heading">
 							<b>Claudia Nguyen</b>
 							<br>
-							Position:
+							Position: barkend developer
 					</div>
 				</div>
 			<br>
