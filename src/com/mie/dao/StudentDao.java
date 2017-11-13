@@ -108,6 +108,29 @@ public class StudentDao {
 		return students;
 	}
 	
+	public Student getStudentByEmail(String email){
+		Student student = new Student();
+		try {
+			PreparedStatement preparedStatement = connection
+					.prepareStatement("select * from students where email=?");
+			preparedStatement.setString(1, email);
+			ResultSet rs = preparedStatement.executeQuery();
+
+			if (rs.next()) {
+				student.setName(rs.getString("Name"));
+				student.setYear(rs.getString("Year"));
+				student.setMajor(rs.getString("Major"));
+				student.setEmail(rs.getString("Email"));
+				student.setPassword(rs.getString("Password"));
+				student.setPhone(rs.getString("Phone"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return student;
+	}
+	
 //	//claudia: adding this to facilitate login functionality
 //	public static Student login(String un, String pwd) throws FailedLoginException{
 //		Student s = new Student();

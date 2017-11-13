@@ -97,4 +97,30 @@ public class StartupRepDao {
 		
 	}
 
+	public StartupRep getStartupRepByEmail(String email) {
+		StartupRep rep = new StartupRep();
+
+		try {
+			PreparedStatement preparedStatement = connection
+					.prepareStatement("select * from StartupRep where email=?");
+			preparedStatement.setString(1, email);
+			ResultSet rs = preparedStatement.executeQuery();
+
+			if (rs.next()) {
+				rep.setName(rs.getString("Name"));
+				rep.setPosition(rs.getString("Position"));
+				rep.setIntroduction(rs.getString("Introduction"));
+				rep.setEmail(rs.getString("Email"));
+				rep.setPassword(rs.getString("Password"));
+				rep.setStartup(rs.getString("Startup"));
+				rep.setStartupID(rs.getInt("StartupID"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return rep;
+
+	}
+
 }
