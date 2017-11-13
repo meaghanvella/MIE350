@@ -118,7 +118,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 						
 							<b>Claire Goldsmith</b>
 							<br>
-							Position:
+							Position: bootstrap chewer & fluff-end developer
 					</div>
 				</div>
 
@@ -161,7 +161,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="col-sm-5">
 				<div class="media">
 					<div class="media-left">
-						<img src="selenapuppy.jpg" class="media-object"
+						<img src="selenapart2.png" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -182,7 +182,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 						<h4 class="media-heading">
 							<b>Claudia Nguyen</b>
 							<br>
-							Position: barkend developer
+							Position: bark-end developer
 					</div>
 				</div>
 			<br>

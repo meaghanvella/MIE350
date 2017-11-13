@@ -29,8 +29,8 @@
 	<%@ include file="navbar.jsp"%>
 	<!--  Code taken from W3 schools -->
 	<ul class="nav nav-pills nav-justified">
-		<li class="active"><a href="StudentHome.jsp">Home</a></li>
-		<li><a
+		<li ><a href="StudentHome.jsp">Home</a></li>
+		<li class="active"><a
 			href="/mie350_group03/CompanyController?action=listCompany">Startups</a></li>
 		<li><a href="listEvent.jsp">Events</a></li>
 	</ul>
