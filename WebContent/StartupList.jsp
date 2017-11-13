@@ -34,7 +34,7 @@
  <ul class="nav nav-pills nav-justified">
     <li><a href="StudentHome.jsp">Home</a></li>
     <li class ="active"><a href="/CompanyController?action=StartupList">Startups</a></li>
-    <li><a href="listEvent.jsp">Events</a></li>
+    <li><a href="listEventUser.jsp">Events</a></li>
   </ul>
 
 <div class="container-fluid">

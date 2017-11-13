@@ -33,7 +33,7 @@
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
     <li class="active"><a href="repHome.jsp">Home</a></li>
-    <li><a href="ViewCompany.jsp">My Company</a></li>
+    <li><a href="repViewCompany.jsp">My Company</a></li>
     <li><a href="addEvent.jsp">Add Event</a></li>
   </ul>
 
