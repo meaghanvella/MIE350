@@ -45,16 +45,17 @@
             <!-- You can put left sidebar links here if you want to. -->
         </div>
         <div class="col-sm-8 text-left">
+ 
             <h1>All Events In Database</h1>
 
             The time is now <b><%=new java.util.Date()%></b>.<br> <br>
 
-            <table border=1 class="sortable">
+            <table class="table table-hover  sortable"">
                 <thead>
                 <tr>
                     <th>Event Id</th>
-                    <th>Location</th>
                     <th>Name</th>
+                    <th>Location</th>
                     <th>Time & Date</th>
                     <th>Description</th>
                 </tr>
@@ -62,9 +63,9 @@
                 <tbody>
                 <c:forEach items="${events}" var="event">
                     <tr>
-                        <td align="center"><c:out value="${event.getEventId()}" /></td>
+                        <td align="center"><c:out value="${event.getEventId()}" /></td>  
+                        <b><td align="center"><c:out value="${event.getName()}" /></td></b>
                         <td align="center"><c:out value="${event.getLocation()}" /></td>
-                        <td align="center"><c:out value="${event.getName()}" /></td>
                         <td align="center"><fmt:formatDate pattern="yyyy-MMM-dd"
 										value="${event.getDate()}" /></td>
                         <td align="center"><c:out value="${event.getDescription()}" /></td>
@@ -74,16 +75,16 @@
                 </tbody>
             </table>
 
-            <br /> <br />
+            <br/> <br/>
+   
         </div>
         <div class="col-sm-2 sidenav">
             <!-- You can put right sidebar links here if you want to. -->
         </div>
+  
     </div>
 </div>
 
 <% // @ include file="../footer.jsp"%>
-
-
 </body>
 </html>
