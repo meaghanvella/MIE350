@@ -35,6 +35,8 @@
 		<li class="active"><a href="StudentHome.jsp">Home</a></li>
 		<li><a href="/StartU/CompanyController?action=listCompany">Startups</a></li>
 		<li><a href="listEvent.jsp">Events</a></li>
+	
+		<!-- why do you have a navigation bar here? -->
 	</ul>
 
 	<div class="row text-left"">

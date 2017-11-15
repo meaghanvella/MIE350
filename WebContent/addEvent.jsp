@@ -36,15 +36,6 @@
   </ul>
 <body>
 
-
-<!--  
-//    Member member = (Member) session.getAttribute("currentSessionUser");
-//
-//    String username = (String) session.getAttribute("username");
-//    String firstname = (String) session.getAttribute("firstname");
-//    String lastname = (String) session.getAttribute("lastname");
--->
-
 	<div class="row text-left"">
 		<div class="col-sm-2">
 		</div>
@@ -54,7 +45,7 @@
 
             <script>
                 $(function() {
-                    $('input[name=date]').datepicker();
+                    $('input[name=eventDate]').datepicker();
                 });
             </script>
             Note: the Event ID is a fixed field and cannot be changed. <br>
@@ -64,26 +55,26 @@
 			
                 <label class="control-label"> Name: </label>
                 <br> 
-                <input maxlength="100" type="text" name="name" class="form-control" placeholder="Enter Event Name"
+                <input maxlength="100" type="text" name="eventName" class="form-control" placeholder="Enter Event Name"
                                  value="<c:out value="${event.getEventName()}" />"><br>
               
                 <label class="control-label"> Location:</label>
                 <br> 
-                <input maxlength="100" type="text" name="name" class="form-control" placeholder="Enter Event Location"
+                <input maxlength="100" type="text" name="location" class="form-control" placeholder="Enter Event Location"
                                    value="<c:out value="${event.getLocation()}" />"><br>
                 <label class="control-label">Date:</label>
                  <br> 
-                 <input maxlength="100" type="text" name="name" class="form-control" placeholder="Enter Event Date (mm/dd/yyyy)"
+                 <input maxlength="100" type="text" name="eventDate" class="form-control" placeholder="Enter Event Date (mm/dd/yyyy)"
                                      value="<fmt:formatDate pattern="MM/dd/yyyy" value="${event.getDate()}" />"><br>
 
                 <label class="control-label">Time: </label>
                 <br> 
-                <input maxlength="100" type="text" name="name" class="form-control" placeholder="Enter Event Time"
+                <input maxlength="100" type="text" name="eventTime" class="form-control" placeholder="Enter Event Time"
                              value="<c:out value="${event.getEventTime()}" />"><br>
 
                 <label class="control-label">Description:</label>
                 <br> 
-                <input maxlength="100" type="text" name="name" class="form-control" placeholder="Enter Event Description"
+                <input maxlength="100" type="text" name="description" class="form-control" placeholder="Enter Event Description"
                               value="<c:out value="${event.getDescription()}" />"><br>
 
                 <label class="control-label"> Startup:</label>

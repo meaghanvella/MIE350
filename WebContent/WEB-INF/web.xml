@@ -24,4 +24,15 @@
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/LoginController</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>EventController</display-name>
+    <servlet-name>EventController</servlet-name>
+    <servlet-class>com.mie.controller.EventController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EventController</servlet-name>
+    <url-pattern>/EventController</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -32,9 +32,14 @@
 <br />
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
+    
+    <!-- You need to modify the actions so that it points to the controllers
+         Or have a nav bar instead of changing it each time   -->
+    
     <li ><a href="StudentHome.jsp">Home</a></li>
     <li><a href="StartupList.jsp">Startups</a></li>
-    <li class="active"><a href="listEventUser.jsp">Events</a></li>
+    
+    <li class="active"><a href="/EventController?action=listEvent">Events</a></li>
   </ul>
 
 
@@ -64,7 +69,7 @@
                 <c:forEach items="${events}" var="event">
                     <tr>
                         <td align="center"><c:out value="${event.getEventId()}" /></td>  
-                        <b><td align="center"><c:out value="${event.getName()}" /></td></b>
+                        <b><td align="center"><c:out value="${event.getEventName()}" /></td></b>
                         <td align="center"><c:out value="${event.getLocation()}" /></td>
                         <td align="center"><fmt:formatDate pattern="yyyy-MMM-dd"
 										value="${event.getDate()}" /></td>
