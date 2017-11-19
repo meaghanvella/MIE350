@@ -29,10 +29,10 @@
 	<%@ include file="navbar.jsp"%>
 	<!--  Code taken from W3 schools -->
 	<ul class="nav nav-pills nav-justified">
-		<li ><a href="StudentHome.jsp">Home</a></li>
-		<li class="active"><a
-			href="/mie350_group03/CompanyController?action=listCompany">Startups</a></li>
-		<li><a href="listEventUser.jsp">Events</a></li>
+		    <li class="active"><a href="StudentHome.jsp">Home</a></li>
+    	<!-- Note: modify below when search finished -->
+    	<li><a href="StartupList.jsp">Startups</a></li>
+    	<li><a href="EventController?action=listEvent">Events</a></li>
 	</ul>
 	<div class="row content">
 		<div class="col-sm-8 content">
