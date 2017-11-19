@@ -90,27 +90,21 @@
 			<div class="modal-body">
 				
 	            <!-- content goes here -->
-				<form role="form" action="" method="post">
+				<form role="form" action="StudentController" method="post">
  				<div class="text-left">
  				<div class="form-group">
-	            <label class="control-label">First Name</label>
-	            <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
-	          </div>
-	          <div class="form-group">
-	            <label class="control-label">Last Name</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+ 				
+	            <label class="control-label">Full Name</label>
+	            
+	            <input maxlength="100" type="text" required="required" class="form-control" placeholder= "<%=s.getName() %>"  />
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Email</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your email address" >
+	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="<%=s.getEmail() %>"  >
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">New Password</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
-	          </div>
-	          <div class="form-group">
-	            <label class="control-label">Brief Bio</label>
-	            <textarea required="required" class="form-control" placeholder="Enter brief description of yourself."></textarea>
+	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="New password" >
 	          </div>
 	          <div class="col-auto">
 	          <label for="inlineFormCustomSelect">Industry</label>
@@ -130,7 +124,7 @@
 	          </select>
 	        </div>
 	          </div>
-	              <br><button type="submit" class="btn btn-default">Submit</button>
+	              <br><input type="submit" class="btn btn-default"/>
 	            </form>
 	
 			</div>

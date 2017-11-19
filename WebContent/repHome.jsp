@@ -94,7 +94,8 @@
  				<div class="text-left">
  				 <div class="form-group">
 	            <label class="control-label">Full Name</label>
-	            <input name="fullName" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Full Name"  />
+	            <input name="fullName" maxlength="100" type="text" required="required" class="form-control" 
+	            placeholder="Enter Full Name" >
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Email</label>
