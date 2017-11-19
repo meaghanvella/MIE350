@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,10 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mie.dao.CompanyDao;
-import com.mie.dao.IndustryDao;
 import com.mie.dao.StudentDao;
-import com.mie.model.Company;
 import com.mie.model.Student;
 
 public class StudentController extends HttpServlet {
@@ -32,14 +28,13 @@ public class StudentController extends HttpServlet {
 	 */
 	
 	private static final long serialVersionUID = 1L;
-	private static String INSERT = "/studentSignup.jsp";
-	private static String EDIT = "/studentHome.jsp";
-	private static String HOME = "/studentHome.jsp";
+	private static String INSERT = "/views/student/studentSignup.jsp";
+	private static String EDIT = "/views/student/editStudent.jsp";
+	private static String HOME = "/views/student/studentHome.jsp";
 	private static String INSERT_SUCCESS = "";
 	private static String EDIT_SUCCESS = "";
 
 	private StudentDao dao;
-	private IndustryDao industryDao;
 
 	/**
 	 * Constructor for this class.
@@ -47,12 +42,8 @@ public class StudentController extends HttpServlet {
 	public StudentController() {
 		super();
 		dao = new StudentDao();
-		industryDao = new IndustryDao();
 	}
 
-	
-	
-	
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
@@ -71,8 +62,7 @@ public class StudentController extends HttpServlet {
 
 		if (action.equalsIgnoreCase("insert")) {
 			forward = INSERT;
-			List<String> industries = industryDao.getAllIndustries();
-			request.setAttribute("industries", industries);
+			
 		} else if (action.equalsIgnoreCase("edit")) {
 			forward = EDIT;
 			//assuming we get this from the session???
@@ -97,19 +87,19 @@ public class StudentController extends HttpServlet {
 
 		if(s == null){
 			s = new Student();
-			s.setName(request.getParameter("Email"));
-			s.setYear(request.getParameter("Name"));
-			s.setMajor(request.getParameter("Position"));
-			s.setPassword(request.getParameter("Introduction"));
-			s.setEmail(request.getParameter("Password"));
+			s.setName(request.getParameter("Name"));
+			s.setYear(request.getParameter("Year"));
+			s.setMajor(request.getParameter("Major"));
+			s.setPassword(request.getParameter("Password"));
+			s.setEmail(request.getParameter("Email"));
 			
 			dao.addStudent(s);
 			forward = INSERT_SUCCESS;
 		}else{//we're editing now! woo!
-			s.setName(request.getParameter("Email"));
-			s.setYear(request.getParameter("Name"));
-			s.setMajor(request.getParameter("Position"));
-			s.setPassword(request.getParameter("Introduction"));
+			s.setName(request.getParameter("Name"));
+			s.setYear(request.getParameter("Year"));
+			s.setMajor(request.getParameter("Major"));
+			s.setPassword(request.getParameter("Password"));
 			dao.updateStudent(s);  
 			forward = EDIT_SUCCESS;
 		}
