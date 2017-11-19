@@ -112,7 +112,7 @@ public class StudentDao {
 		Student student = new Student();
 		try {
 			PreparedStatement preparedStatement = connection
-					.prepareStatement("select * from students where email=?");
+					.prepareStatement("select * from Student where email=?");
 			preparedStatement.setString(1, email);
 			ResultSet rs = preparedStatement.executeQuery();
 
