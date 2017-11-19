@@ -46,4 +46,26 @@
     <servlet-name>StartupRepController</servlet-name>
     <url-pattern>/StartupRepController</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>StudentController</display-name>
+    <servlet-name>StudentController</servlet-name>
+    <servlet-class>com.mie.controller.StudentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentController</servlet-name>
+    <url-pattern>/StudentController</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <description></description>
+    <display-name>FilterController</display-name>
+    <servlet-name>FilterController</servlet-name>
+    <servlet-class>com.mie.controller.FilterController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FilterController</servlet-name>
+    <url-pattern>/FilterController</url-pattern>
+  </servlet-mapping>
 </web-app>

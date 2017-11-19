@@ -27,10 +27,10 @@ public class StudentController extends HttpServlet {
 	 * 
 	 */
 	
-	private static final long serialVersionUID = 1L;
-	private static String INSERT = "/views/student/studentSignup.jsp";
-	private static String EDIT = "/views/student/editStudent.jsp";
-	private static String HOME = "/views/student/studentHome.jsp";
+    private static final long serialVersionUID = 1L;
+	private static String INSERT = "/studentSignup.jsp";
+	private static String EDIT = "/studentHome.jsp";
+	private static String HOME = "/studentHome.jsp";
 	private static String INSERT_SUCCESS = "";
 	private static String EDIT_SUCCESS = "";
 
@@ -110,7 +110,7 @@ public class StudentController extends HttpServlet {
 		 * the listing of students.
 		 */
 		// Note: It should redirect to the student page
-		RequestDispatcher view = request.getRequestDispatcher(HOME);
+		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);
 	}
 }
