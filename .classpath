@@ -8,6 +8,5 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="//SRVC/Homes$/nguy1341/Downloads/jasypt-1.9.2/lib/jasypt-1.9.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
