@@ -114,17 +114,12 @@
 	          <label for="inlineFormCustomSelect">Industry</label>
 	          <select id="inlineFormCustomSelect" class="form-control">
 	            <option selected>Choose...</option>
-	            <option>Aerospace</option>
-	            <option>Analytics</option>
-	            <option>Education</option>
-	            <option>Electronics</option>
-	            <option>Energy</option>
-	            <option>Fintech</option>
-	            <option>Healthcare</option>
-	            <option>Marketing &amp; Advertising</option>
-	            <option>Photography</option>
-	            <option>Robotics</option>
-	            <option>Software</option>
+                
+                <!-- dynamically pull from db -->
+                <c:forEach items="${industries}" var="industries">
+                    <option value="<c:out value="${industries.getID()}" />"><c:out value="${industries.getName()}" /></option>
+                </c:forEach>
+
 	          </select>
 	        </div>
 	          <br>

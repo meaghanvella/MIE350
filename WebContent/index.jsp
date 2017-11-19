@@ -82,10 +82,10 @@
 								</div>
 								<div class="row">
 								<div class="col-sm-6" align="center">
-								<a href="studentSignup.jsp" class="btn btn-success paddingleft paddingright" role="button" align="center">STUDENT</a>								
+								<a href="StudentController?action=insert" class="btn btn-success paddingleft paddingright" role="button" align="center">STUDENT</a>								
 								</div>
 								<div class="col-sm-6" align="center">
-								<a href="repSignup.jsp" class="btn btn-info" role="button">STARTUP REP</a>
+								<a href="StartupRepController?action=insert" class="btn btn-info" role="button">STARTUP REP</a>
 								
 								</div>								
 								</div>

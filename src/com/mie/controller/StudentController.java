@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,7 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mie.dao.CompanyDao;
+import com.mie.dao.IndustryDao;
 import com.mie.dao.StudentDao;
+import com.mie.model.Company;
 import com.mie.model.Student;
 
 public class StudentController extends HttpServlet {
@@ -28,13 +32,14 @@ public class StudentController extends HttpServlet {
 	 */
 	
 	private static final long serialVersionUID = 1L;
-	private static String INSERT = "/views/student/studentSignup.jsp";
-	private static String EDIT = "/views/student/editStudent.jsp";
-	private static String HOME = "/views/student/studentHome.jsp";
+	private static String INSERT = "/studentSignup.jsp";
+	private static String EDIT = "/studentHome.jsp";
+	private static String HOME = "/studentHome.jsp";
 	private static String INSERT_SUCCESS = "";
 	private static String EDIT_SUCCESS = "";
 
 	private StudentDao dao;
+	private IndustryDao industryDao;
 
 	/**
 	 * Constructor for this class.
@@ -42,8 +47,12 @@ public class StudentController extends HttpServlet {
 	public StudentController() {
 		super();
 		dao = new StudentDao();
+		industryDao = new IndustryDao();
 	}
 
+	
+	
+	
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
@@ -62,7 +71,8 @@ public class StudentController extends HttpServlet {
 
 		if (action.equalsIgnoreCase("insert")) {
 			forward = INSERT;
-			
+			List<String> industries = industryDao.getAllIndustries();
+			request.setAttribute("industries", industries);
 		} else if (action.equalsIgnoreCase("edit")) {
 			forward = EDIT;
 			//assuming we get this from the session???
