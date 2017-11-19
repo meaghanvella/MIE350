@@ -28,7 +28,7 @@
 </head>
 <body>
 
-	<%@ include file="navbarNotSignedIn.jsp"%>
+	<%@ include file="views/common/navbarNotSignedIn.jsp"%>
 
 	<div class="container">
 	<br>

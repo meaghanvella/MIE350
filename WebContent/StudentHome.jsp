@@ -1,4 +1,4 @@
-<%@ include file="footbar.jsp"%>
+<%@ include file="views/common/footbar.jsp"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -28,7 +28,7 @@
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 <body>
 
-<%@ include file="navbar.jsp"%>
+<%@ include file="views/common/navbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">

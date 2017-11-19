@@ -27,8 +27,8 @@
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 <body>
 
-<%@ include file="navbar.jsp"%>
-<%@ include file="footbar.jsp"%>
+<%@ include file="../common/navbar.jsp"%>
+<%@ include file="../common/footbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
 	<ul class="nav nav-pills nav-justified">
@@ -36,7 +36,7 @@
 		<li><a href="/StartU/CompanyController?action=listCompany">Startups</a></li>
 		<li><a href="listEvent.jsp">Events</a></li>
 	
-		<!-- why do you have a navigation bar here? -->
+		<!-- why do you have a navigation bar here?????????? Where are we putting this?? Home page/Index?-->
 	</ul>
 
 	<div class="row text-left"">
@@ -96,7 +96,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="img/Hermanpuppy.jpg" class="media-object"
+						<img src="../../img/Hermanpuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -112,7 +112,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="img/Clairepuppy.jpg" class="media-object"
+						<img src="../../img/Clairepuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -129,7 +129,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="img/Irenepuppy.jpg" class="media-object"
+						<img src="../../img/Irenepuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -146,7 +146,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="img/Laurenpuppy.jpg" class="media-object"
+						<img src="../../img/Laurenpuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -163,7 +163,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="col-sm-5">
 				<div class="media">
 					<div class="media-left">
-						<img src="img/selenapart2.png" class="media-object"
+						<img src="../../img/selenapart2.png" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -177,7 +177,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<br>
 			<div class="media">
 					<div class="media-left">
-						<img src="img/Claudiapuppy.jpg" class="media-object"
+						<img src="../../img/Claudiapuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -190,7 +190,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<br>
 			<div class="media">
 					<div class="media-left">
-						<img src="img/meaghan puppy.jpg" class="media-object"
+						<img src="../../img/meaghan puppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">

@@ -1,5 +1,5 @@
-<%@ include file="footbar.jsp"%>
-<%@ include file="navbar.jsp"%>
+<%@ include file="../common/footbar.jsp"%>
+<%@ include file="../common/navbar.jsp"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -26,13 +26,13 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+<link rel="stylesheet" type="text/css" href="../../css/mystyle.css">
 
 </head>
  <ul class="nav nav-pills nav-justified">
-    <li><a href="repHome.jsp">Home</a></li>
-    <li><a href="repViewCompany.jsp">My Company</a></li>
-    <li class="active"><a href="addEvent.jsp">Add Event</a></li>
+    <li><a href="../startup_rep/repHome.jsp">Home</a></li>
+    <li><a href="../company/repViewCompany.jsp">My Company</a></li>
+    <li class="active"><a href="EventController?action=insert">Add Event</a></li>
   </ul>
 <body>
 

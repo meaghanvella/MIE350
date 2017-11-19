@@ -1,4 +1,4 @@
-<%@ include file="footbar.jsp"%>
+<%@ include file="views/common/footbar.jsp"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -28,7 +28,7 @@
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 <body>
 
-<%@ include file="navbar.jsp"%>
+<%@ include file="views/common/navbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
@@ -70,13 +70,9 @@
 	            <!-- content goes here -->
 				<form role="form" action="" method="post">
  				<div class="text-left">
- 				<div class="form-group">
-	            <label class="control-label">First Name</label>
-	            <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
-	          </div>
-	          <div class="form-group">
-	            <label class="control-label">Last Name</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+ 				 <div class="form-group">
+	            <label class="control-label">Full Name</label>
+	            <input name="fullName" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Full Name"  />
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Email</label>

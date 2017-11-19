@@ -25,11 +25,11 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="../../css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
 <body>
 	
-	<%@ include file="navbarNotSignedIn.jsp"%>
+	<%@ include file="views/common/navbarNotSignedIn.jsp"%>
 
 	<div class="container">
 	<br>
@@ -51,8 +51,8 @@
 	    </div>
 	  </div>
 	  
-	  <!-- Form groups -->
-	  <form role="form" action="StartupController" method="post">
+	  <!-- Form groups need to modify all actions to controller -->
+	  <form role="form" action="StartupRepController" method="post">
 	    
 	    <div class="row setup-content" id="step-1">
 	      <div class="col-xs-6 col-md-offset-3">
@@ -61,7 +61,7 @@
 	          <h2>Basic Info</h2>
 	          <p>Please fill in your personal information below.</p> <br>
 	          </div>
-	          <div class="form-group">
+	       	 <div class="form-group">
 	            <label class="control-label">Full Name</label>
 	            <input name="fullName" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Full Name"  />
 	          </div>
@@ -73,6 +73,7 @@
 	            <label class="control-label">Create Password</label>
 	            <input name="password" maxlength="100" type="password" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
 	          </div>
+
 	          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
 	        </div>
 	      </div>
