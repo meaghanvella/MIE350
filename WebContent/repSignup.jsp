@@ -71,7 +71,7 @@
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Position</label>
-	            <input name="Position" maxlength="100" type="text" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
+	            <input name="Position" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your position." >
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Create Password</label>
@@ -85,6 +85,10 @@
 	    <div class="row setup-content" id="step-2">
 	      <div class="col-xs-6 col-md-offset-3">
 	        <div class="col-md-12">
+	        	<div class=text-center>
+	          <h2>Tell us about yourself.</h2>
+	          <p>Write a brief introduction about yourself!</p> <br>
+	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Brief Bio</label>
 	            <textarea required="required" name="Introduction" class="form-control" placeholder="Enter brief description of yourself."></textarea>

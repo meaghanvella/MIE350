@@ -29,10 +29,9 @@
 <link rel="stylesheet" type="text/css" href="../../css/mystyle.css">
 
 </head>
- <ul class="nav nav-pills nav-justified">
-    <li><a href="../startup_rep/repHome.jsp">Home</a></li>
-    <li><a href="../company/repViewCompany.jsp">My Company</a></li>
-    <li class="active"><a href="EventController?action=insert">Add Event</a></li>
+ <ul class="nav nav-pills nav-justified">    
+    <li class="active"><a href="repHome.jsp">Home</a></li>
+    <li><a href="/EventController?action=insert">Add Event</a></li>
   </ul>
 <body>
 

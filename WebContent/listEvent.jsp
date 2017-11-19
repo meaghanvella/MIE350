@@ -36,11 +36,11 @@
     <!-- You need to modify the actions so that it points to the controllers
          Or have a nav bar instead of changing it each time   -->
     
-    <li ><a href="StudentHome.jsp">Home</a></li>
+    <li class="active"><a href="StudentHome.jsp">Home</a></li>
+    <!-- Note: modify below when search finished -->
     <li><a href="StartupList.jsp">Startups</a></li>
-    
-    <li class="active"><a href="/EventController?action=listEvent">Events</a></li>
-  </ul>
+    <li><a href="EventController?action=listEvent">Events</a></li>  
+    </ul>
 
 
 
