@@ -31,7 +31,7 @@ public class StudentController extends HttpServlet {
 	private static String INSERT = "/studentSignup.jsp";
 	private static String EDIT = "/studentHome.jsp";
 	private static String HOME = "/studentHome.jsp";
-	private static String INSERT_SUCCESS = "";
+	private static String INSERT_SUCCESS = "/signupRedirect.jsp";
 	private static String EDIT_SUCCESS = "";
 
 	private StudentDao dao;

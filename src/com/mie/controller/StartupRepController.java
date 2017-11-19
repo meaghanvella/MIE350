@@ -27,7 +27,7 @@ public class StartupRepController extends HttpServlet{
 	//page for editing startuprep
 	private static String EDIT = "";
 	//redirect if proper account creation
-	private static String CREATE_SUCCESS = "";
+	private static String CREATE_SUCCESS = "/signupRedirect.jsp";
 	//redirect if edit success
 	private static String EDIT_SUCCESS = "";
 
