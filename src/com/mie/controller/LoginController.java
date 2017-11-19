@@ -20,10 +20,10 @@ public class LoginController extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	//insert invalid login
-	private static String INVALID_LOGIN = "/StartU_first_page.jsp";
+	private static String INVALID_LOGIN = "/views/pages/index.jsp";
 	private static String STUDENT_LOGGED = "/StudentHome.jsp";
 	//insert startup home page
-	private static String STARTUP_LOGGED = "";
+	private static String STARTUP_LOGGED = "/repHome.jsp";
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
@@ -67,10 +67,6 @@ public class LoginController extends HttpServlet {
 
 				}
 			}else {
-				/**
-				 * Otherwise, redirect the user to the invalid login page and
-				 * ask them to log in again with the proper credentials.
-				 */
 				forward = INVALID_LOGIN;
 			}
 			RequestDispatcher view = request.getRequestDispatcher(forward);

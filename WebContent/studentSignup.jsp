@@ -2,7 +2,9 @@
 	pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!-- make empty doc-type to support html5 attributes -->
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -32,7 +34,7 @@
 
 	<div class="container">
 	<br>
-	<!-- 3 Step Buttons -->
+	<!-- 2 Step Buttons -->
 	<div class="stepwizard col-md-offset-3">
 	    <div class="stepwizard-row setup-panel">
 	      <div class="stepwizard-step">
@@ -43,9 +45,9 @@
 	        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
 	        <p>Step 2</p>
 	      </div>
-	      <div class="stepwizard-step">
+	      <!-- <div class="stepwizard-step">
 	        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-	        <p>Step 3</p>
+	        <p>Step 3</p> -->
 	      </div>
 	    </div>
 	  </div>
@@ -74,14 +76,14 @@
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Create Password</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
+	            <input maxlength="100" type="password" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
 	          </div>
 	          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
 	        </div>
 	      </div>
 	    </div>
-	    
-	    <div class="row setup-content" id="step-2">
+	   
+	    <!-- <div class="row setup-content" id="step-2">
 	      <div class="col-xs-6 col-md-offset-3">
 	        <div class="col-md-12">
 	          <div class=text-center>
@@ -99,9 +101,9 @@
 	          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
 	        </div>
 	      </div>
-	    </div>
+	    </div> -->
 	    
-	    <div class="row setup-content" id="step-3">
+	    <div class="row setup-content" id="step-2">
 	      <div class="col-xs-6 col-md-offset-3">
 	        <div class="col-md-12">
 	          <div class=text-center>
@@ -119,7 +121,7 @@
 	            <option>Energy</option>
 	            <option>Fintech</option>
 	            <option>Healthcare</option>
-	            <option>Marketing & Advertising</option>
+	            <option>Marketing &amp; Advertising</option>
 	            <option>Photography</option>
 	            <option>Robotics</option>
 	            <option>Software</option>
