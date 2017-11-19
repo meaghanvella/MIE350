@@ -1,5 +1,5 @@
-<%@ include file="../common/navbar.jsp"%>
-<%@ include file="../common/footbar.jsp"%>
+<%@ include file="navbar.jsp"%>
+<%@ include file="footbar.jsp"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>

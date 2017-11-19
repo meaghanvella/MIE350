@@ -27,8 +27,8 @@
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 <body>
 
-<%@ include file="../common/navbar.jsp"%>
-<%@ include file="../common/footbar.jsp"%>
+<%@ include file="navbar.jsp"%>
+<%@ include file="footbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
 	<ul class="nav nav-pills nav-justified">

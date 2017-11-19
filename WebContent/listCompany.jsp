@@ -1,4 +1,4 @@
-<%@ include file="views/common/footbar.jsp"%>
+<%@ include file="footbar.jsp"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -28,7 +28,7 @@
 </head>
 <body>
 
-	<%@ include file="views/common/navbar.jsp"%>
+	<%@ include file="navbar.jsp"%>
 
 	<div class="container-fluid text-center">
 		<div class="row content">

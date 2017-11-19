@@ -29,7 +29,7 @@
 </head>
 <body>
 	
-	<%@ include file="views/common/navbarNotSignedIn.jsp"%>
+	<%@ include file="navbarNotSignedIn.jsp"%>
 
 	<div class="container">
 	<br>

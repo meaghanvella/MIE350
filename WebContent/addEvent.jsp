@@ -1,5 +1,5 @@
-<%@ include file="../common/footbar.jsp"%>
-<%@ include file="../common/navbar.jsp"%>
+<%@ include file="footbar.jsp"%>
+<%@ include file="navbar.jsp"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -36,7 +36,7 @@
   </ul>
 <body>
 
-	<div class="row text-left"">
+	<div class="row text-left">
 		<div class="col-sm-2">
 		</div>
         <div class="col-sm-8 text-left">

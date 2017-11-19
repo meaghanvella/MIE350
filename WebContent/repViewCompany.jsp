@@ -25,8 +25,8 @@
 </head>
 <body>
 
-	<%@ include file="views/common/footbar.jsp"%>
-	<%@ include file="views/common/navbar.jsp"%>
+	<%@ include file="footbar.jsp"%>
+	<%@ include file="navbar.jsp"%>
 	<!--  Code taken from W3 schools -->
 	<ul class="nav nav-pills nav-justified">
 		<li ><a href="repHome.jsp">Home</a></li>
