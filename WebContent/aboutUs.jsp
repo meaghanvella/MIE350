@@ -101,9 +101,12 @@ This web application was created for MIE350, an undergraduate course at the Univ
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
-							<b>Herman Chandi</b>
+							<b>Herman Chandi</b> 
+							
+							Position: bark-end dev
 							<br>
-							Position:
+							House: Ravenclaw
+						
 					</div>
 				</div>
 
@@ -120,7 +123,9 @@ This web application was created for MIE350, an undergraduate course at the Univ
 						
 							<b>Claire Goldsmith</b>
 							<br>
-							Position: bootstrap chewer & fluff-end developer
+							Position: bootstrap chewer
+							<br>
+							House: Hufflepuff
 					</div>
 				</div>
 
@@ -138,6 +143,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 							<b>Irene Halim</b>
 							<br>
 							Position:
+							<br> House: 
 					</div>
 				</div>
 
@@ -153,7 +159,8 @@ This web application was created for MIE350, an undergraduate course at the Univ
 						<h4 class="media-heading">
 							<b>Lauren Ip</b>
 							<br>
-							Position:
+							Position: fluff-end dev
+							<br> House: 
 					</div>
 				</div>
 
@@ -171,6 +178,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 							<b>Selena Lu</b>
 							<br>
 							Position:
+							<br>House: Slytherin
 					</div>
 				</div>
 
@@ -184,7 +192,8 @@ This web application was created for MIE350, an undergraduate course at the Univ
 						<h4 class="media-heading">
 							<b>Claudia Nguyen</b>
 							<br>
-							Position: bark-end developer
+							Position: bark-end dev<br>
+							House: Slytherin
 					</div>
 				</div>
 			<br>
@@ -198,6 +207,8 @@ This web application was created for MIE350, an undergraduate course at the Univ
 							<b>Meaghan Vella</b>
 							<br>
 							Position:
+							<br>
+							House: Ravenclaw
 					</div>
 				</div>
 		</div>	
