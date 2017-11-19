@@ -26,12 +26,12 @@ public class EventController extends HttpServlet {
 	//posts to "Events" tab all events that were posted
 	
 	private static final long serialVersionUID = 1L;
-	private static String INSERT = "/views/event/addEvent.jsp";
+	private static String INSERT = "/addEvent.jsp";
 	
 	//not going to be able to edit event
 	//private static String EDIT = "/event/edit.jsp";
 	//private static String LIST_EVENT_PUBLIC = "/event/listPublic.jsp";
-	private static String LIST_EVENT_USER = "/views/event/listEvent.jsp";
+	private static String LIST_EVENT_USER = "/listEvent.jsp";
 	
 	//need to modify this
 	private static String INVALID_PERMISION = "/studentHome.jsp";
