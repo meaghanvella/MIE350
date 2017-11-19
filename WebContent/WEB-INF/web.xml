@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>mie350_group03</display-name>
   <welcome-file-list>
-    <welcome-file>views/pages/index.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
@@ -14,7 +14,7 @@
     <servlet-name>CompanyController</servlet-name>
     <url-pattern>/CompanyController</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>LoginController</display-name>
     <servlet-name>LoginController</servlet-name>
@@ -34,5 +34,16 @@
   <servlet-mapping>
     <servlet-name>EventController</servlet-name>
     <url-pattern>/EventController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>StartupRepController</display-name>
+    <servlet-name>StartupRepController</servlet-name>
+    <servlet-class>com.mie.controller.StartupRepController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StartupRepController</servlet-name>
+    <url-pattern>/StartupRepController</url-pattern>
   </servlet-mapping>
 </web-app>

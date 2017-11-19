@@ -26,7 +26,7 @@ public class StartupRepDao {
 	public void addStartupRep(StartupRep rep) {
 		
 		try {
-			PreparedStatement pst = connection.prepareStatement("INSERT INTO StartupRep(Name, Position, Introduction, Email, Password, Startup, StartupID) VALUES(?, ?, ?, ?, ?, ?)");
+			PreparedStatement pst = connection.prepareStatement("INSERT INTO StartupRep(Name, Position, Introduction, Email, Password, Startup, StartupID) VALUES(?, ?, ?, ?, ?, ?, ?)");
 			pst.setString(1, rep.getName());
 			pst.setString(2, rep.getPosition());
 			pst.setString(3, rep.getIntroduction());
@@ -45,7 +45,7 @@ public class StartupRepDao {
 	}
 	
 	public void updateStartupRep(StartupRep rep) {
-		
+
 		try {
 			PreparedStatement pst = connection.prepareStatement("UPDATE STUDENT SET Name=?, Position=?, Introduction=?, Password=?, Startup=?, StartupID=? WHERE email=?");
 			pst.setString(1, rep.getName());
