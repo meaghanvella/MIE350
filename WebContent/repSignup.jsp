@@ -7,7 +7,7 @@
 
 <html lang="en">
 <head>
-	<title>SignUp Process</title>
+	<title>Signup Process</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet"
@@ -61,19 +61,22 @@
 	          <h2>Basic Info</h2>
 	          <p>Please fill in your personal information below.</p> <br>
 	          </div>
-	       	 <div class="form-group">
-	            <label class="control-label">Full Name</label>
-	            <input name="fullName" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Full Name"  />
-	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Email</label>
-	            <input name="email" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your email address" >
+	            <input name="Email" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your email address" >
+	          </div>
+	          <div class="form-group">
+	            <label class="control-label">Full Name</label>
+	            <input name="Name" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Full Name"  />
+	          </div>
+	          <div class="form-group">
+	            <label class="control-label">Position</label>
+	            <input name="Position" maxlength="100" type="text" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Create Password</label>
-	            <input name="password" maxlength="100" type="password" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
+	            <input name="Password" maxlength="100" type="password" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
 	          </div>
-
 	          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
 	        </div>
 	      </div>
@@ -82,17 +85,9 @@
 	    <div class="row setup-content" id="step-2">
 	      <div class="col-xs-6 col-md-offset-3">
 	        <div class="col-md-12">
-	          <div class=text-center>
-	          <h2>Choose a photo</h2>
-	          <p>Link to an existing profile picture so students know who you are!</p> <br>
-	          </div>
-	          <div class="form-group">
-	            <label class="control-label">Image URL</label>
-	            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter the link to a photo that already exists online." />
-	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Brief Bio</label>
-	            <textarea required="required" class="form-control" placeholder="Enter brief description of yourself."></textarea>
+	            <textarea required="required" name="Introduction" class="form-control" placeholder="Enter brief description of yourself."></textarea>
 	          </div>
 	          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
 	        </div>
@@ -106,9 +101,11 @@
 	          <h2>Your Company</h2>
 	          <p>Which company are you representing?</p> <br>
 	          </div>
-	        <div class="col-auto">
-	          <label for="inlineFormCustomSelect">Company</label>
-	          <select id="inlineFormCustomSelect" class="form-control">
+	          
+	         <!-- this next block shouldn't do anything rn -->
+	         <div class="col-auto">
+	         <label for="inlineFormCustomSelect">Company</label>
+	          <select id="inlineFormCustomSelect" class="form-control"  name = "Startup">
 	            <option selected>Choose...</option>
                 <!-- dynamically pull from db -->
                 <c:forEach items="${startups}" var="startup">
@@ -116,6 +113,7 @@
                 </c:forEach>
 	          </select>
 	        </div>
+		
 	          <br>
 	          <button class="btn btn-success btn-lg pull-right" type="submit">Finish</button>
 	        </div>
