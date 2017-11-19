@@ -53,7 +53,7 @@
 	  </div>
 	  
 	  <!-- Form groups -->
-	  <form role="form" action="signupRedirect.jsp" method="post">
+	  <form role="form" action="StudentController" method="post">
 	    
 	    <div class="row setup-content" id="step-1">
 	      <div class="col-xs-6 col-md-offset-3">
@@ -63,20 +63,24 @@
 	          <p>Please fill in your personal information below.</p> <br>
 	          </div>
 	          <div class="form-group">
-	            <label class="control-label">First Name</label>
-	            <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
+	            <label class="control-label">Name</label>
+	            <input  maxlength="100" name = "Name" type="text" required="required" class="form-control" placeholder="Enter Full Name"  />
 	          </div>
 	          <div class="form-group">
-	            <label class="control-label">Last Name</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+	            <label class="control-label">Year</label>
+	            <input maxlength="100" name = "Year" type="text" required="required" class="form-control" placeholder="What year are you in?" />
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Email</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your email address" >
+	            <input maxlength="100" name = "Email" type="text" required="required" class="form-control" placeholder="Enter your email address" >
 	          </div>
 	          <div class="form-group">
-	            <label class="control-label">Create Password</label>
-	            <input maxlength="100" type="password" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
+	            <label class="control-label">Major</label>
+	            <input maxlength="100" name = "Major" type="text" required="required" class="form-control" placeholder="What's your major?" >
+	          </div>
+	           <div class="form-group">
+	            <label class="control-label">Password</label>
+	            <input maxlength="100" name = "Password" type="password" required="required" class="form-control" placeholder="Create a password!" >
 	          </div>
 	          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
 	        </div>

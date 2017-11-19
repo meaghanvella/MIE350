@@ -47,7 +47,7 @@ public class StartupRepDao {
 	public void updateStartupRep(StartupRep rep) {
 
 		try {
-			PreparedStatement pst = connection.prepareStatement("UPDATE STUDENT SET Name=?, Position=?, Introduction=?, Password=?, Startup=?, StartupID=? WHERE email=?");
+			PreparedStatement pst = connection.prepareStatement("UPDATE StartupRep SET Name=?, Position=?, Introduction=?, Password=?, Startup=?, StartupID=? WHERE email=?");
 			pst.setString(1, rep.getName());
 			pst.setString(2, rep.getPosition());
 			pst.setString(3, rep.getIntroduction());

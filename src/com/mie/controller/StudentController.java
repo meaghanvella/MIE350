@@ -87,19 +87,19 @@ public class StudentController extends HttpServlet {
 
 		if(s == null){
 			s = new Student();
-			s.setName(request.getParameter("Email"));
-			s.setYear(request.getParameter("Name"));
-			s.setMajor(request.getParameter("Position"));
-			s.setPassword(request.getParameter("Introduction"));
-			s.setEmail(request.getParameter("Password"));
+			s.setName(request.getParameter("Name"));
+			s.setYear(request.getParameter("Year"));
+			s.setMajor(request.getParameter("Major"));
+			s.setPassword(request.getParameter("Password"));
+			s.setEmail(request.getParameter("Email"));
 			
 			dao.addStudent(s);
 			forward = INSERT_SUCCESS;
 		}else{//we're editing now! woo!
-			s.setName(request.getParameter("Email"));
-			s.setYear(request.getParameter("Name"));
-			s.setMajor(request.getParameter("Position"));
-			s.setPassword(request.getParameter("Introduction"));
+			s.setName(request.getParameter("Name"));
+			s.setYear(request.getParameter("Year"));
+			s.setMajor(request.getParameter("Major"));
+			s.setPassword(request.getParameter("Password"));
 			dao.updateStudent(s);  
 			forward = EDIT_SUCCESS;
 		}
