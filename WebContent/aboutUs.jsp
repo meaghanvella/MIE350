@@ -96,14 +96,17 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="../../img/Hermanpuppy.jpg" class="media-object"
+						<img src="img/Hermanpuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
-							<b>Herman Chandi</b>
+							<b>Herman Chandi</b> 
+							
+							Position: bark-end dev
 							<br>
-							Position:
+							House: Ravenclaw
+						
 					</div>
 				</div>
 
@@ -112,7 +115,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="../../img/Clairepuppy.jpg" class="media-object"
+						<img src="img/Clairepuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -120,7 +123,9 @@ This web application was created for MIE350, an undergraduate course at the Univ
 						
 							<b>Claire Goldsmith</b>
 							<br>
-							Position: bootstrap chewer & fluff-end developer
+							Position: bootstrap chewer
+							<br>
+							House: Hufflepuff
 					</div>
 				</div>
 
@@ -129,7 +134,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="../../img/Irenepuppy.jpg" class="media-object"
+						<img src="img/Irenepuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -138,6 +143,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 							<b>Irene Halim</b>
 							<br>
 							Position:
+							<br> House: 
 					</div>
 				</div>
 
@@ -146,14 +152,15 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="../../img/Laurenpuppy.jpg" class="media-object"
+						<img src="img/Laurenpuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
 							<b>Lauren Ip</b>
 							<br>
-							Position:
+							Position: fluff-end dev
+							<br> House: 
 					</div>
 				</div>
 
@@ -163,7 +170,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 			<div class="col-sm-5">
 				<div class="media">
 					<div class="media-left">
-						<img src="../../img/selenapart2.png" class="media-object"
+						<img src="img/selenapart2.png" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -171,26 +178,28 @@ This web application was created for MIE350, an undergraduate course at the Univ
 							<b>Selena Lu</b>
 							<br>
 							Position:
+							<br>House: Slytherin
 					</div>
 				</div>
 
 			<br>
 			<div class="media">
 					<div class="media-left">
-						<img src="../../img/Claudiapuppy.jpg" class="media-object"
+						<img src="img/Claudiapuppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">
 							<b>Claudia Nguyen</b>
 							<br>
-							Position: bark-end developer
+							Position: bark-end dev<br>
+							House: Slytherin
 					</div>
 				</div>
 			<br>
 			<div class="media">
 					<div class="media-left">
-						<img src="../../img/meaghan puppy.jpg" class="media-object"
+						<img src="img/meaghan puppy.jpg" class="media-object"
 							style="width: 150px">
 					</div>
 					<div class="media-body">
@@ -198,6 +207,8 @@ This web application was created for MIE350, an undergraduate course at the Univ
 							<b>Meaghan Vella</b>
 							<br>
 							Position:
+							<br>
+							House: Ravenclaw
 					</div>
 				</div>
 		</div>	

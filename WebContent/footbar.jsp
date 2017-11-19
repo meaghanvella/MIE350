@@ -9,7 +9,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="StartU/views/pages/aboutUs.jsp"><h4><b>About Us</b></h4></a></li>
+                <li><a href="aboutUs.jsp"><h4><b>About Us</b></h4></a></li>
             </ul>
         </div>
     </div>
