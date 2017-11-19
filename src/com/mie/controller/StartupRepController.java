@@ -4,23 +4,26 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.mie.dao.CompanyDao;
 import com.mie.dao.StartupRepDao;
 import com.mie.dao.StudentDao;
+import com.mie.model.Company;
 import com.mie.model.StartupRep;
 import com.mie.model.Student;
 
-public class StartupController {
+public class StartupRepController extends HttpServlet{
 	private StartupRepDao dao;
 	private CompanyDao companyDao;
 	//page for inserting startuprep
-	private static String INSERT = "";
+	private static String INSERT = "/repSignup.jsp";
 	//page for editing startuprep
 	private static String EDIT = "";
 	//redirect if proper account creation
@@ -28,7 +31,7 @@ public class StartupController {
 	//redirect if edit success
 	private static String EDIT_SUCCESS = "";
 
-	public StartupController() {
+	public StartupRepController() {
 		super();
 		dao = new StartupRepDao();
 		companyDao = new CompanyDao();
@@ -42,7 +45,8 @@ public class StartupController {
 
 		if (action.equalsIgnoreCase("insert")) {
 			forward = INSERT;
-
+			List<Company> companies = companyDao.getAllCompanies();
+			request.setAttribute("startups", companies);
 		} else if (action.equalsIgnoreCase("edit")) {
 			forward = EDIT;
 			//we're on the edit page now somehow

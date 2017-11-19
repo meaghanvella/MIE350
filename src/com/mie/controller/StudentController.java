@@ -28,9 +28,9 @@ public class StudentController extends HttpServlet {
 	 */
 	
 	private static final long serialVersionUID = 1L;
-	private static String INSERT = "/studentSignup.jsp";
-	private static String EDIT = "/editStudent.jsp";
-	private static String HOME = "/StudentHome.jsp";
+	private static String INSERT = "/views/student/studentSignup.jsp";
+	private static String EDIT = "/views/student/editStudent.jsp";
+	private static String HOME = "/views/student/studentHome.jsp";
 	private static String INSERT_SUCCESS = "";
 	private static String EDIT_SUCCESS = "";
 

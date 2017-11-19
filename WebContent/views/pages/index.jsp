@@ -26,7 +26,7 @@
 
 </head>
 
-<body style="background-color:#E0FFFF;" background="briefcase-6-xxl.png">
+<body style="background-color:#E0FFFF;" background="img/briefcase-6-xxl.png">
 	<div class="container-fluid text-center">
 		<div class="container-fluid">
 			
@@ -35,7 +35,7 @@
 				
 				<p id="contentWrapper">
 				<br> 
-				<img src="StartU_logo.png" alt="StartU logo"
+				<img src="img/StartU_logo.png" alt="img/StartU logo"
 					style="width: 350px" class="center" />
 					</p>
 			</center>
@@ -67,14 +67,14 @@
 
 									<div class="col-sm-6" align="center">
 										<div class="container-fluid">
-											<img src="Business_Graduation_Cap.png" class="img-thumbnail"
+											<img src="img/Business_Graduation_Cap.png" class="img-thumbnail"
 												alt="Student logo" width="120" height="120"> 
 										</div>
 									</div>
 									<div class="col-sm-6" align="center">
 
 										<div class="container-fluid">
-											<img src="Startup_rep_logo.png" class="img-thumbnail"
+											<img src="img/Startup_rep_logo.png" class="img-thumbnail"
 												alt="StartUp Rep" width="120" height="120"> 
 										</div>
 									</div>

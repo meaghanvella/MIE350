@@ -25,7 +25,7 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/mystyle.css">
 </head>
 <body>
 	
@@ -52,7 +52,7 @@
 	  </div>
 	  
 	  <!-- Form groups -->
-	  <form role="form" action="repHome.jsp" method="post">
+	  <form role="form" action="StartupController" method="post">
 	    
 	    <div class="row setup-content" id="step-1">
 	      <div class="col-xs-6 col-md-offset-3">
@@ -62,20 +62,16 @@
 	          <p>Please fill in your personal information below.</p> <br>
 	          </div>
 	          <div class="form-group">
-	            <label class="control-label">First Name</label>
-	            <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
-	          </div>
-	          <div class="form-group">
-	            <label class="control-label">Last Name</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+	            <label class="control-label">Full Name</label>
+	            <input name="fullName" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Full Name"  />
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Email</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your email address" >
+	            <input name="email" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your email address" >
 	          </div>
 	          <div class="form-group">
 	            <label class="control-label">Create Password</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
+	            <input name="password" maxlength="100" type="password" required="required" class="form-control" placeholder="Choose a password that you'll remember!" >
 	          </div>
 	          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
 	        </div>

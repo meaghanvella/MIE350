@@ -32,7 +32,7 @@ public class EventController extends HttpServlet {
 	//private static String EDIT = "/event/edit.jsp";
 	//private static String LIST_EVENT_PUBLIC = "/event/listPublic.jsp";
 	private static String LIST_EVENT_USER = "/listEventUser.jsp";
-	private static String INVALID_PERMISION = "/StudentHome.jsp";
+	private static String INVALID_PERMISION = "/studentHome.jsp";
 
 	private EventDao dao;
 	private CompanyDao companyDao;
