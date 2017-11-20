@@ -7,13 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.mie.dao.StartupRepDao;
+import com.mie.dao.StudentDao;
 import com.mie.dao.UserDao;
+import com.mie.model.StartupRep;
+import com.mie.model.Student;
 import com.mie.model.User;
-//done by claudia: 
-//SOME NOTES:
-//TO DO: add proper redirect pages and figure out which session attributes to assign
-//this class takes input from the login jsp through the parameters "un" and "pw" for username and password
-//this class assigns the session attributes username and type according to login information and user type (student or startup)
+
 public class LoginController extends HttpServlet {
 	/**
 	 * 
@@ -58,11 +58,17 @@ public class LoginController extends HttpServlet {
 				 */
 				if((u.getType()).equals("student")){
 					//redirect to student dashboard
+					StudentDao d = new StudentDao();
+					Student s= d.getStudentByEmail(u.getEmail());
+					session.setAttribute("student", s);
 					forward = STUDENT_LOGGED;
 				}
 				else if((u.getType()).equals("startup rep")){
 					//redirect to startup dashboard
 					//response.sendRedirect("startupLogged.jsp");
+					StartupRepDao d = new StartupRepDao();
+					StartupRep s = d.getStartupRepByEmail(u.getEmail());
+					session.setAttribute("startup rep", s);
 					forward = STARTUP_LOGGED;
 
 				}

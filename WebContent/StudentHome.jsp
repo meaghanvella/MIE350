@@ -97,15 +97,20 @@
  				
 	            <label class="control-label">Full Name</label>
 	            
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder= "<%=s.getName() %>"  />
+	            <input name="Name" maxlength="100" type="text" required="required" class="form-control" placeholder= "<%=s.getName() %>"  />
 	          </div>
 	          <div class="form-group">
-	            <label class="control-label">Email</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="<%=s.getEmail() %>"  >
+	            <label class="control-label">Year</label>
+	            <input name = "Year" maxlength="100" type="text" required="required" class="form-control" placeholder="<%=s.getYear() %>"  >
 	          </div>
+	          <div class="form-group">
+	            <label class="control-label">Major</label>
+	            <input name = "Major" maxlength="100" type="text" required="required" class="form-control" placeholder="<%=s.getMajor() %>"  >
+	          </div>
+	          
 	          <div class="form-group">
 	            <label class="control-label">New Password</label>
-	            <input maxlength="100" type="text" required="required" class="form-control" placeholder="New password" >
+	            <input name = "Password" maxlength="100" type="text" required="required" class="form-control" placeholder="New password" >
 	          </div>
 	          <div class="col-auto">
 	          <label for="inlineFormCustomSelect">Industry</label>

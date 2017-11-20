@@ -10,8 +10,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.mie.dao.StudentDao;
+import com.mie.model.StartupRep;
 import com.mie.model.Student;
 
 public class StudentController extends HttpServlet {
@@ -32,7 +34,7 @@ public class StudentController extends HttpServlet {
 	private static String EDIT = "/studentHome.jsp";
 	private static String HOME = "/studentHome.jsp";
 	private static String INSERT_SUCCESS = "/signupRedirect.jsp";
-	private static String EDIT_SUCCESS = "";
+	private static String EDIT_SUCCESS = "/studentHome.jsp";
 
 	private StudentDao dao;
 
@@ -63,13 +65,7 @@ public class StudentController extends HttpServlet {
 		if (action.equalsIgnoreCase("insert")) {
 			forward = INSERT;
 			
-		} else if (action.equalsIgnoreCase("edit")) {
-			forward = EDIT;
-			//assuming we get this from the session???
-			String email = request.getParameter("Email");
-			Student student = dao.getStudentByEmail(email);
-			request.setAttribute("student", student);
-		}
+		} 
 
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);
@@ -82,9 +78,12 @@ public class StudentController extends HttpServlet {
 		 * This method retrieves all of the information entered in the form on
 		 * the createStudent.jsp or the editStudent.jsp pages.
 		 */
-		Student s = (Student) request.getAttribute("student");
+		HttpSession session = request.getSession(true);
+		Student s = (Student) session.getAttribute("student");
 		String forward="";
-
+		
+		//note: need to add dropdown stuff
+		
 		if(s == null){
 			s = new Student();
 			s.setName(request.getParameter("Name"));

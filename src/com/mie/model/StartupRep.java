@@ -47,7 +47,7 @@ public class StartupRep {
 	}
 	
 	public void setPassword(String new_password) {
-		this.password = password; 
+		this.password = new_password; 
  	}
 	
 	public String getStartup() {
