@@ -34,7 +34,7 @@ public class EventController extends HttpServlet {
 	private static String LIST_EVENT_USER = "/listEvent.jsp";
 	
 	//need to modify this
-	private static String INVALID_PERMISION = "/studentHome.jsp";
+	private static String INVALID_PERMISION = "/index.jsp";
 
 	private EventDao dao;
 	private CompanyDao companyDao;
@@ -48,6 +48,7 @@ public class EventController extends HttpServlet {
 		super();
 		dao = new EventDao();
 		companyDao = new CompanyDao();
+		startupRepDao = new StartupRepDao();
 	}
 
 	protected void doGet(HttpServletRequest request,
@@ -112,13 +113,14 @@ public class EventController extends HttpServlet {
 
 			String eventId = request.getParameter("eventId");
 
-			if (eventId == null || eventId.isEmpty()) {
-				dao.addEvent(event);//only add it when this event DNE
-			}
-
 			// use logged in users company as the startup
 			StartupRep sr = startupRepDao.getStartupRepByEmail(u.getEmail());
 			event.setStartupId(sr.getStartupID());
+
+			//need to test if this automatically adds Startup without needing to have dropdown list
+			if (eventId == null || eventId.isEmpty()) {
+				dao.addEvent(event);//only add it when this event DNE
+			}
 		
 		/*else {
 			event.setEventId(Integer.parseInt(eventid));

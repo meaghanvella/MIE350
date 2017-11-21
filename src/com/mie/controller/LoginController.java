@@ -21,7 +21,7 @@ public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	//insert invalid login
 	private static String INVALID_LOGIN = "index.jsp";
-	private static String STUDENT_LOGGED = "/StudentHome.jsp";
+	private static String STUDENT_LOGGED = "/studentHome.jsp";
 	//insert startup home page
 	private static String STARTUP_LOGGED = "/repHome.jsp";
 	

@@ -36,7 +36,7 @@ public class FilterController extends HttpServlet {
 		
 		RequestDispatcher view = request.getRequestDispatcher(FILTERED_RESULTS);
 		
-		request.setAttributes("companies", companyDao.filter(industries, locations));
+		request.setAttribute("companies", companyDao.filter(industries, locations));
 		//NOTE: All of the edge cases and conditional checks are accounted for within the filter function 
 		
 		//Finally, redirect to the results page once the filtered set of companies has been retrieved:

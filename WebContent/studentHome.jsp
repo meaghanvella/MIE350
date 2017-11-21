@@ -47,7 +47,7 @@
 <br />
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
-    <li class="active"><a href="StudentHome.jsp">Home</a></li>
+    <li class="active"><a href="studentHome.jsp">Home</a></li>
     <!-- Note: modify below when search finished -->
     <li><a href="StartupList.jsp">Startups</a></li>
     <li><a href="EventController?action=listEvent">Events</a></li>

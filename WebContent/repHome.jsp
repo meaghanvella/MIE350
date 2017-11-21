@@ -48,7 +48,7 @@
 	<ul class="nav nav-pills nav-justified">
 		<li class="active"><a href="repHome.jsp">Home</a></li>
 
-		<li><a href="/StartU/EventController?action=insert">Add Event</a></li>
+		<li><a href="EventController?action=insert">Add Event</a></li>
 		<!--<li><a href="/EventController?action=listEvent">Events</a></li>-->
 	</ul>
 	<%
@@ -120,7 +120,8 @@
 							</div>
 					</div>
 					<br>
-					<button type="submit" class="btn btn-default">Submit</button>
+			
+					<button type="submit" class="btn btn-default" value = "Submit">Submit</button>
 
 					</form>
 

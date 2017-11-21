@@ -59,7 +59,7 @@ Within StartU, students can:<br>
        2. <b>Log</b> in to the site<br>
        3. <b>Edit</b> account information<br>
        4. <b>View</b> startup events<br>
-       5. <b>Filter</b> through a list of startups<br>
+       5. <b>Search</b> through a list of startups<br>
        6. <b>View</b> startup representative profiles and contact information
        
        </div>
@@ -70,7 +70,7 @@ Startup Representatives can:<br>
 1. <b>Create</b> an account<br>
 2. <b>Log</b> in to the site <br>
 3. <b>Edit</b> account information<br>
-4. <b>Create</b> and view events<br>
+4. <b>Create</b> events for students to see<br>
 </div>
 <br>
 This web application was created for MIE350, an undergraduate course at the University of Toronto.

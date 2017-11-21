@@ -76,11 +76,17 @@ public class StartupRepController extends HttpServlet{
 			s.setPosition(request.getParameter("Position"));
 			s.setIntroduction(request.getParameter("Introduction"));
 			s.setPassword(request.getParameter("Password"));
-			String startupName = request.getParameter("Startup");
-			s.setStartup(startupName);
-			s.setStartupID(companyDao.getCompanyIDByName(startupName));
-			dao.addStartupRep(s);
-			forward = CREATE_SUCCESS;
+			String startupId = request.getParameter("Startup");
+			//s.setStartup(startupName);
+			try {
+				s.setStartupID(Integer.parseInt(startupId));
+
+				dao.addStartupRep(s);
+				forward = CREATE_SUCCESS;
+			} catch (NumberFormatException e){
+				// error with filling in
+				forward = INSERT;
+			}
 		}else{//we're editing now! woo!
 			s.setName(request.getParameter("Name"));
 			s.setPosition(request.getParameter("Position"));
