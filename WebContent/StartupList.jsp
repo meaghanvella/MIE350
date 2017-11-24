@@ -30,7 +30,7 @@
 </head>
 <body>
 
-<%@ include file="views/common/navbar.jsp"%>
+<%@ include file="navbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">

@@ -58,6 +58,17 @@
     <url-pattern>/StudentController</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+		<description></description>
+		<display-name>SearchController</display-name>
+		<servlet-name>SearchController</servlet-name>
+		<servlet-class>com.mie.controller.SearchController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchController</servlet-name>
+		<url-pattern>/SearchController</url-pattern>
+	</servlet-mapping>
+  
       <servlet>
     <description></description>
     <display-name>FilterController</display-name>
@@ -79,5 +90,6 @@
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
+  
   
 </web-app>

@@ -54,7 +54,6 @@
 								<tr>
 									<td align="center"><c:out
 											value="${startup.getName()}" /></td>
-								
 								</tr>
 							</c:forEach>
 						</tbody>

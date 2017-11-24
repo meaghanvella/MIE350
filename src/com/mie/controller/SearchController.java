@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.mie.dao.CompanyDao;
 import com.mie.model.Company;
 
-public class SearchController {
+public class SearchController extends HttpServlet {
 	
 	//Adopted from the MIE 350 sample application code 
 	//waiting on Meaghan, tbh....
@@ -36,6 +36,7 @@ public class SearchController {
 	 * Responsible for retrieving the search term entered by the user
 	 */
 		String keyword = request.getParameter("keyword");
+		
 		RequestDispatcher view = request.getRequestDispatcher(SEARCH_COMPANY);
 		request.setAttribute("keyword", keyword);
 		request.setAttribute("startup", dao.searchCompanyByKeyword(keyword));

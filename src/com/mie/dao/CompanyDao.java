@@ -9,12 +9,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mie.model.Company;
+import com.mie.util.DbUtil;
 
 public class CompanyDao {
 	/**
 	 * This class handles all of the Company-related methods
 	 * (Display 1 or display all)
 	 */
+	
+	public CompanyDao() {
+		connection = DbUtil.getConnection();
+	}
 	
 	private Connection connection;
 	
@@ -155,7 +160,8 @@ public class CompanyDao {
 		ArrayList<Company> results = new ArrayList<Company>();
 		
 		try {
-			String query = "SELECT * FROM Startup WHERE Name LIKE ? OR Description LIKE ? OR Location LIKE ? OR Industry LIKE ? OR Stage LIKE ?";
+			
+			String query = "SELECT * FROM Startup WHERE Name LIKE ? OR Description LIKE ? OR Location LIKE ? OR Industry LIKE ? OR Stage LIKE ?;";
 			PreparedStatement prep = connection.prepareStatement(query);
 			prep.setString(1, "%" + keyword + "%");
 			prep.setString(2, "%" + keyword + "%");
