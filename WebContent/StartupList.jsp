@@ -1,8 +1,10 @@
-<%@ include file="footbar.jsp"%>
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="com.mie.dao.CompanyDao"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
@@ -28,12 +30,12 @@
 </head>
 <body>
 
-<%@ include file="navbar.jsp"%>
+<%@ include file="views/common/navbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
     <li><a href="StudentHome.jsp">Home</a></li>
-    <li class ="active"><a href="/CompanyController?action=StartupList">Startups</a></li>
+    <li class ="active"><a href="/CompanyController?action=listCompany">Startups</a></li>
     <li><a href="listEventUser.jsp">Events</a></li>
   </ul>
 
@@ -44,17 +46,38 @@
       <div class="form-group">
 		<label for="sel1">Industry:</label>
 		<select class="form-control" id="sel1">
-		    <option>1</option>
-		    <option>2</option>
-		    <option>3</option>
-		    <option>4</option>
+		    <option> Aerospace </option>
+		    <option> Analytics </option>
+		    <option> Education </option>
+		    <option> Electronics </option>
+		    <option> Energy </option>
+		    <option> Fintech </option>
+		    <option> Healthcare </option>
+		    <option> Marketing & Accounting </option>
+		    <option> Photography </option>
+		    <option> Robotics </option>
+		    <option> Software </option>
+		    <option> Tech </option>
 		</select>
 	</div>
     </div>
     <div class="col-sm-9">
+    
+    
+    <h1><c:out value="${Industry.size()}" /> a</h1>
+    <h1><c:out value="${Company.size()}" /> b</h1>
+    <c:forEach items="${Industry}" var="industry">
+		   <h1><c:out value="${industry.getIndustry()}"/></h1>
+	</c:forEach>
+	<h1>1</h1>
+    
+    
      <h4>List of Startups recently added</h4>
      
-
+	<c:forEach items="${CompanyDao.getAllIndustries()}" var="company">
+     <p class="card-text"><c:out value="${company}" /></p>
+   </c:forEach>
+ 
   
  
 <div class="card" style="width: 20rem;">
@@ -68,7 +91,7 @@
   </c:forEach>
 </div>
 
- 
+
 </div>
   
   

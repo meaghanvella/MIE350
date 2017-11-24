@@ -9,17 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mie.model.Company;
-import com.mie.util.DbUtil;
 
 public class CompanyDao {
 	/**
 	 * This class handles all of the Company-related methods
 	 * (Display 1 or display all)
 	 */
-	
-	public CompanyDao(){
-		connection = DbUtil.getConnection();
-	}
 	
 	private Connection connection;
 	
@@ -64,7 +59,7 @@ public class CompanyDao {
 		List<Company> companies = new ArrayList<Company>();
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT * FROM Startup ORDER BY Name");
+			ResultSet rs = statement.executeQuery("SELECT * FROM Startup SORT BY Name");
 			while (rs.next()) {
 				Company company = new Company();
 				company.setName(rs.getString("Name"));
@@ -87,13 +82,116 @@ public class CompanyDao {
 	}
 	
 	
+	public List<Company> filter_single(String industry, String location) {
+		List<Company> companies = new ArrayList<Company>();
+		try {
+			//Just need to account for the different cases here: 
+			//For now, let's just suppose that if either of industry or location is not selected...
+			//then that means we're getting a "" empty string
+			//I'm sure there's a way to make parameters optional (and then subsequently check...
+			//to see if those parameters were passed in or not 
+			
+			//We're going to go with .isEmpty() to check this (for now)
+			
+			ResultSet rs = null;
+			
+			//1) Something from both is selected
+			if (!(industry.isEmpty()) && !(location.isEmpty())) {
+				String query = "SELECT * FROM Company WHERE (Industry=?) OR (Location=?)";
+				PreparedStatement pst = connection.prepareStatement(query);
+				pst.setString(1, industry);
+				pst.setString(2, location);
+				rs = pst.executeQuery();
+			}
+			//2) Only an Industry is selected
+			else if (!(industry.isEmpty()) && location.isEmpty()) {
+				String query = "SELECT * FROM Company WHERE (Industry=?)";
+				PreparedStatement pst = connection.prepareStatement(query);
+				pst.setString(1, industry);
+				rs = pst.executeQuery();
+			}
+			//3) Only a Location is selected
+			else if (industry.isEmpty() && !(location.isEmpty())) {
+				String query = "SELECT * FROM Company WHERE (Location=?)";
+				PreparedStatement pst = connection.prepareStatement(query);
+				pst.setString(1, location);
+				rs = pst.executeQuery();
+			}
+			//4) Nothing is selected 
+			else {
+				String query = "SELECT * FROM Company";
+				Statement stmt = connection.createStatement();
+				rs = stmt.executeQuery(query);
+			}
+			
+			//At this point, we should have a result set and we can populate the companies list:
+			while(rs.next()) {
+				Company company = new Company();
+				company.setName(rs.getString("Name"));
+				company.setID(rs.getInt("StartupID"));
+				company.setDescription(rs.getString("Description"));
+				company.setSize(rs.getString("Size"));
+				company.setLocation(rs.getString("Location"));
+				company.setIndustry(rs.getString("Industry"));
+				company.setWebsite(rs.getString("Website"));
+				company.setHiring_Status(rs.getString("Hiring_Status"));
+				company.setStage(rs.getString("Stage"));
+				
+				//Finally...just add this Company object into the list: 
+				companies.add(company);
+			}
+			
+			
+			
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return companies;
+	}
+	
+	
+	public ArrayList<Company> searchCompanyByKeyword(String keyword) {
+		ArrayList<Company> results = new ArrayList<Company>();
+		
+		try {
+			String query = "SELECT * FROM Startup WHERE Name LIKE ? OR Description LIKE ? OR Location LIKE ? OR Industry LIKE ? OR Stage LIKE ?";
+			PreparedStatement prep = connection.prepareStatement(query);
+			prep.setString(1, "%" + keyword + "%");
+			prep.setString(2, "%" + keyword + "%");
+			prep.setString(3, "%" + keyword + "%");
+			prep.setString(4, "%" + keyword + "%");
+			prep.setString(5, "%" + keyword + "%");
+			
+			//Execute query & generate result set: 
+			ResultSet rs = prep.executeQuery();
+			
+			while(rs.next()) {
+				Company company = new Company();
+				company.setName(rs.getString("Name"));
+				company.setID(rs.getInt("StartupID"));
+				company.setDescription(rs.getString("Description"));
+				company.setSize(rs.getString("Size"));
+				company.setLocation(rs.getString("Location"));
+				company.setIndustry(rs.getString("Industry"));
+				company.setWebsite(rs.getString("Website"));
+				company.setHiring_Status(rs.getString("Hiring_Status"));
+				company.setStage(rs.getString("Stage"));
+				
+				results.add(company);
+			}
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return results;
+	}
+	
+	
+	
+	
 	//Next, we need a method that will conjure a set of companies according to certain filters
-	public List<Company> filter(Object industries_object, Object locations_object) {
-		
-		List<String> industry_criteria = (List<String>)industries_object;
-		List<String> location_criteria = (List<String>) locations_object;
-		
-		
+	public List<Company> filter(List<String> industry_criteria, List<String> location_criteria) {
 		
 		List<Company> companies = new ArrayList<Company>();
 		int num_industry_criteria = industry_criteria.size();
@@ -246,28 +344,5 @@ public class CompanyDao {
 		return companies; 
 	
 	}
-	
-	//claudia: added this to facilitate creation of StartupRep account... I am assuming that startup names are unique
-	public int getCompanyIDByName(String name) {
-		int companyID = 0;
-
-		try {
-			String query = "SELECT * FROM Startup WHERE Name=?";
-			PreparedStatement pst = connection.prepareStatement(query);
-			pst.setString(1, name);
-			
-			ResultSet rs = pst.executeQuery();
-			
-			while(rs.next()) {
-				companyID = rs.getInt("StartupID");
-			}
-			
-		}catch (SQLException e) {
-			e.printStackTrace();
-		}
-	
-		return companyID;
-	}
-	
 
 }
