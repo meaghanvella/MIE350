@@ -1,4 +1,4 @@
-<%@ include file="footbar.jsp"%>
+<%@ include file="repfootbar.jsp"%>
 <%@ page import="com.mie.model.*"%>
 <%@ page import="com.mie.dao.*"%>
 <%@ page import="com.mie.controller.*"%>

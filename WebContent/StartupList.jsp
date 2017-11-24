@@ -34,9 +34,9 @@
 <br />
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
-    <li><a href="StudentHome.jsp">Home</a></li>
+    <li><a href="studentHome.jsp">Home</a></li>
     <li class ="active"><a href="/CompanyController?action=listCompany">Startups</a></li>
-    <li><a href="listEventUser.jsp">Events</a></li>
+    <li><a href="EventController?action=listEvent">Events</a></li>
   </ul>
 
 <div class="container-fluid">

@@ -1,4 +1,4 @@
-<%@ include file="footbar.jsp"%>
+<%@ include file="repfootbar.jsp"%>
 <%@ include file="navbar.jsp"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -30,8 +30,8 @@
 
 </head>
  <ul class="nav nav-pills nav-justified">    
-    <li class="active"><a href="repHome.jsp">Home</a></li>
-    <li><a href="/EventController?action=insert">Add Event</a></li>
+    <li><a href="repHome.jsp">Home</a></li>
+    <li class="active"><a href="addEvent.jsp">Add Event</a></li>
   </ul>
 <body>
 
