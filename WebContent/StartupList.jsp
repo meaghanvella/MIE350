@@ -35,7 +35,8 @@
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
     <li><a href="studentHome.jsp">Home</a></li>
-    <li class ="active"><a href="/CompanyController?action=listCompany">Startups</a></li>
+    <li  class="active"><a href="CompanyController?action=listCompany">Startup List</a></li>
+    <li><a href="SearchStartup.jsp">Search a Startup</a></li>
     <li><a href="EventController?action=listEvent">Events</a></li>
   </ul>
 
@@ -63,35 +64,36 @@
     </div>
     <div class="col-sm-9">
     
-    
-    <h1><c:out value="${Industry.size()}" /> a</h1>
-    <h1><c:out value="${Company.size()}" /> b</h1>
-    <c:forEach items="${Industry}" var="industry">
-		   <h1><c:out value="${industry.getIndustry()}"/></h1>
-	</c:forEach>
-	<h1>1</h1>
-    
-    
      <h4>List of Startups recently added</h4>
-     
+    <!--  
 	<c:forEach items="${CompanyDao.getAllIndustries()}" var="company">
      <p class="card-text"><c:out value="${company}" /></p>
    </c:forEach>
- 
+ -->
   
  
-<div class="card" style="width: 20rem;">
-  <c:forEach items="${Company}" var="company">
-  <div class="card-block">
-    <h4 class="card-title"><td align="center"><c:out value="${company.getName()}" />
-    		</td></h4>
-    <p class="card-text"><c:out value="${company.getDescription()}" /></p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  </c:forEach>
-</div>
-
-
+ <% int colCount = 0; %>
+ <c:forEach items="${Company}" var="company">
+	 <% if(colCount == 0){%>
+	 	<div class="row">
+	 <% }%>
+	  <div class="col-sm-4">
+	    <div class="card" height=200px>
+	      <div class="card-body">
+	        <h4 class="card-title"> <c:out value="${company.getName()}" /> </h4>
+	        <p class="card-text"> <c:out value="${company.getDescription()}"/> </p>
+	        <a href="#" class="btn btn-primary">More Info</a>
+	      </div>
+	    </div>
+	  </div>
+	  <% colCount++;%>
+	 <% if(colCount == 3){%>
+	 	</div>
+	 	<br/>
+	 	<%colCount = 0; %>
+	 <% }%>
+</c:forEach>
+ 
 </div>
   
   

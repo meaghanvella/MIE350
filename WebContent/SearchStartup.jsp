@@ -28,6 +28,13 @@
 <body>
 
 	<%@ include file="navbar.jsp"%>
+	<br />
+  <ul class="nav nav-pills nav-justified">
+    <li><a href="studentHome.jsp">Home</a></li>
+    <li><a href="CompanyController?action=listCompany">Startup List</a></li>
+    <li class="active"><a href="SearchStartup.jsp">Search a Startup</a></li>
+    <li><a href="EventController?action=listEvent">Events</a></li>
+  </ul>
 
 	<%
 	//not sure about this

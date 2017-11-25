@@ -64,7 +64,7 @@ public class CompanyDao {
 		List<Company> companies = new ArrayList<Company>();
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT * FROM Startup SORT BY Name");
+			ResultSet rs = statement.executeQuery("SELECT * FROM Startup ORDER BY Name");
 			while (rs.next()) {
 				Company company = new Company();
 				company.setName(rs.getString("Name"));

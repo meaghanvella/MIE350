@@ -31,16 +31,12 @@
 
 <br />
 <!--  Code taken from W3 schools -->
- <ul class="nav nav-pills nav-justified">
-    
-    <!-- You need to modify the actions so that it points to the controllers
-         Or have a nav bar instead of changing it each time   -->
-    
-    <li ><a href="studentHome.jsp">Home</a></li>
-    <!-- Note: modify below when search finished -->
-    <li><a href="StartupList.jsp">Startups</a></li>
-    <li class="active"><a href="EventController?action=listEvent">Events</a></li>  
-    </ul>
+  <ul class="nav nav-pills nav-justified">
+    <li><a href="studentHome.jsp">Home</a></li>
+    <li><a href="CompanyController?action=listCompany">Startup List</a></li>
+    <li><a href="SearchStartup.jsp">Search a Startup</a></li>
+    <li class="active"><a href="EventController?action=listEvent">Events</a></li>
+  </ul>
 
 
 
