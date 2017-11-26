@@ -47,29 +47,31 @@
         </div>
         <div class="col-sm-8 text-left">
  
-            <h1>All Events In Database</h1>
+            <h1>All Events in StartU</h1>
 
             The time is now <b><%=new java.util.Date()%></b>.<br> <br>
 
             <table class="table table-hover  sortable"">
                 <thead>
                 <tr>
-                    <th>Event Id</th>
+                    <th>Startup</th>
                     <th>Name</th>
                     <th>Location</th>
-                    <th>Time & Date</th>
+                    <th>Date</th>
+                    <th>Time</th>
                     <th>Description</th>
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach items="${events}" var="event">
                     <tr>
-                        <td align="center"><c:out value="${event.getEventId()}" /></td>  
+                        <td align="center"><c:out value="${event.getStartup().getName()}" /></td>
                         <b><td align="center"><c:out value="${event.getEventName()}" /></td></b>
                         <td align="center"><c:out value="${event.getLocation()}" /></td>
                         <td align="center"><fmt:formatDate pattern="yyyy-MMM-dd"
 										value="${event.getDate()}" /></td>
-                        <td align="center"><c:out value="${event.getDescription()}" /></td>
+						<td align="center"><c:out value="${event.getEventTime()}" /></td>				
+                        <td align="left"><c:out value="${event.getDescription()}" /></td>
 
                     </tr>
                 </c:forEach>

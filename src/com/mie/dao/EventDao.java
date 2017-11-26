@@ -53,7 +53,7 @@ public class EventDao {
 				event.setEventName(rs.getString("EventName"));
 				event.setStartupId(rs.getInt("StartupID"));
 				event.setDate(rs.getDate("EventDate"));
-				//event.setEventTime(rs.getTime("EventTime")); //need to double check format of time
+				event.setEventTime(rs.getString("EventTime")); 
 				event.setLocation(rs.getString("Location"));
 				event.setDescription(rs.getString("Description"));
 				

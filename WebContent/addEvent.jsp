@@ -77,14 +77,6 @@
                               value="<c:out value="${event.getDescription()}" />"><br>
 
                 <label class="control-label"> Startup:</label>
-                <br>  
-                <select name="startup" class="form-control">
-
-                <c:forEach items="${startups}" var="startup" >
-                    <option value="<c:out value="${startup.getID()}" />"><c:out value="${startup.getName()}" /></option>
-                </c:forEach>
-
-                </select>
 
                 <br>
                 <input type="submit" class="btn btn-primary" value="Submit" />
