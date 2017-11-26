@@ -31,7 +31,7 @@
 <%@ include file="repfootbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
-	<ul class="nav nav-pills nav-justified">
+<ul class="nav nav-pills nav-justified">
 		<li><a href="repHome.jsp">Home</a></li>
 
 		<li><a href="EventController?action=insert">Add Event</a></li>
@@ -130,7 +130,7 @@ This web application was created for MIE350, an undergraduate course at the Univ
 
 			</div>
 			<br>
-			<div class="container-fluid text-left">
+			<div class="container-fluid text-left" >
 				<div class="media">
 					<div class="media-left">
 						<img src="img/Irenepuppy.jpg" class="media-object"
@@ -145,8 +145,8 @@ This web application was created for MIE350, an undergraduate course at the Univ
 							<br> House: 
 					</div>
 				</div>
-
-			</div>
+</div>
+			
 			<br>
 			<div class="container-fluid text-left">
 				<div class="media">
@@ -163,10 +163,11 @@ This web application was created for MIE350, an undergraduate course at the Univ
 					</div>
 				</div>
 
-			</div></div>
-		
+			</div>
+			</div>
+		<div class="col-sm-5">
 			<div class="container-fluid text-left">
-			<div class="col-sm-5">
+			
 				<div class="media">
 					<div class="media-left">
 						<img src="img/selenapart2.png" class="media-object"
@@ -215,7 +216,6 @@ This web application was created for MIE350, an undergraduate course at the Univ
 		<div class="col-sm-1">
 </div>
 		
-	</div>
 	<div class="row text-left" >
 	<br><br>
 	</div>
