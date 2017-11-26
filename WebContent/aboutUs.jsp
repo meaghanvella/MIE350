@@ -31,13 +31,12 @@
 <%@ include file="footbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
-	<ul class="nav nav-pills nav-justified">
-		<li ><a href="studentHome.jsp">Home</a></li>
-		<li><a href="StartupList.jsp">Startups</a></li>
-		<li><a href="EventController?action=listEvent">Events</a></li>
-	
-		<!-- why do you have a navigation bar here?????????? Where are we putting this?? Home page/Index?-->
-	</ul>
+ <ul class="nav nav-pills nav-justified">
+    <li><a href="studentHome.jsp">Home</a></li>
+    <li><a href="CompanyController?action=listCompany">Startup List</a></li>
+    <li><a href="SearchStartup.jsp">Search a Startup</a></li>
+    <li><a href="EventController?action=listEvent">Events</a></li>
+  </ul>
 	<div class="row text-left"">
 		<div class="col-sm-2">
 		</div>
