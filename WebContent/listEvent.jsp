@@ -38,14 +38,12 @@
     <li class="active"><a href="EventController?action=listEvent">Events</a></li>
   </ul>
 
-
-
 <div class="container-fluid text-center">
     <div class="row content">
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-1 sidenav">
             <!-- You can put left sidebar links here if you want to. -->
         </div>
-        <div class="col-sm-8 text-left">
+        <div class="col-sm-10 text-left">
  
             <h1>All Events in StartU</h1>
 
@@ -55,7 +53,7 @@
                 <thead>
                 <tr>
                     <th>Startup</th>
-                    <th>Name</th>
+                    <th>Event Name</th>
                     <th>Location</th>
                     <th>Date</th>
                     <th>Time</th>
@@ -65,12 +63,12 @@
                 <tbody>
                 <c:forEach items="${events}" var="event">
                     <tr>
-                        <td align="center"><c:out value="${event.getStartup().getName()}" /></td>
-                        <b><td align="center"><c:out value="${event.getEventName()}" /></td></b>
-                        <td align="center"><c:out value="${event.getLocation()}" /></td>
+                        <td align="left"><c:out value="${event.getStartup().getName()}" /></td>
+                        <b><td align="left"><c:out value="${event.getEventName()}" /></td></b>
+                        <td align="left"><c:out value="${event.getLocation()}" /></td>
                         <td align="center"><fmt:formatDate pattern="yyyy-MMM-dd"
 										value="${event.getDate()}" /></td>
-						<td align="center"><c:out value="${event.getEventTime()}" /></td>				
+						<td align="center" style="white-space:nowrap;"><c:out value="${event.getEventTime()}" /></td>				
                         <td align="left"><c:out value="${event.getDescription()}" /></td>
 
                     </tr>
@@ -81,7 +79,7 @@
             <br/> <br/>
    
         </div>
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-1 sidenav">
             <!-- You can put right sidebar links here if you want to. -->
         </div>
   
