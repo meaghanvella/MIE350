@@ -72,7 +72,7 @@
  -->
   
  
- <% int colCount = 0; %>
+ <% int colCount = 0;%>
  <c:forEach items="${Company}" var="company">
 	 <% if(colCount == 0){%>
 	 	<div class="row">
