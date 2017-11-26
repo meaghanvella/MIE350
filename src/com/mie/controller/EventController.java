@@ -59,10 +59,15 @@ public class EventController extends HttpServlet {
 
 		if (action.equalsIgnoreCase("insert")) {
 			forward = INSERT;
-			request.setAttribute("startups", companyDao.getAllCompanies());
+			//request.setAttribute("startups", companyDao.getAllCompanies());
 		} else if (action.equalsIgnoreCase("listEvent")) {
 			forward = LIST_EVENT_USER; //may need to change this dependent on front end changes
 			request.setAttribute("events", dao.getAllEvents());
+//			List companies = new ArrayList<>();
+//			for(Event e: dao.getAllEvents()){
+//
+//			}
+			//request.setAttribute("companies", companies);
 		} else {
 			forward = INSERT;
 		}
