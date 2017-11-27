@@ -1,5 +1,7 @@
 package com.mie.model;
 
+import com.mie.dao.CompanyDao;
+
 import java.util.Date;
 import java.sql.Time;
 
@@ -61,6 +63,11 @@ public class Event {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Company getStartup(){
+		CompanyDao cd = new CompanyDao();
+		return cd.getCompanyByID(this.startupId);
 	}
 
 	@Override

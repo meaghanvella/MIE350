@@ -26,7 +26,8 @@ public class EventDao {
 			
 			//need to doublecheck this
 			preparedStatement.setDate(3, new java.sql.Date(event.getDate().getTime()));
-			preparedStatement.setTime(4, new java.sql.Time(1)); //event.getEventTime()
+			//Claire changed this line so the database doesn't look weird
+			preparedStatement.setString(4, event.getEventTime()); //event.getEventTime()
 			
 			//this is ok
 			preparedStatement.setString(5, event.getLocation());
@@ -53,7 +54,7 @@ public class EventDao {
 				event.setEventName(rs.getString("EventName"));
 				event.setStartupId(rs.getInt("StartupID"));
 				event.setDate(rs.getDate("EventDate"));
-				//event.setEventTime(rs.getTime("EventTime")); //need to double check format of time
+				event.setEventTime(rs.getString("EventTime")); 
 				event.setLocation(rs.getString("Location"));
 				event.setDescription(rs.getString("Description"));
 				

@@ -27,21 +27,22 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+<body>
 
 <br />
 <!--  Code taken from W3 schools -->
-  <ul class="nav nav-pills nav-justified">
-    <li><a href="studentHome.jsp">Home</a></li>
-    <li><a href="CompanyController?action=listCompany">Startup List</a></li>
-    <li><a href="SearchStartup.jsp">Search a Startup</a></li>
-    <li class="active"><a href="EventController?action=listEvent">Events</a></li>
-  </ul>
+	<ul class="nav nav-pills nav-justified">
+		<li><a href="repHome.jsp">Home</a></li>
+		<li><a href="EventController?action=insert">Add Event</a></li>
+		<li class="active"><a href="EventController?action=repListEvent">Events</a></li>
+	</ul>
 
-<body>
 <div class="container-fluid text-center">
-    <div class="row">
-    <div class="col-sm-2 text-left"></div>
-        <div class="col-sm-8 text-left">
+    <div class="row content">
+        <div class="col-sm-1 sidenav">
+            <!-- You can put left sidebar links here if you want to. -->
+        </div>
+        <div class="col-sm-10 text-left">
  			<div class="text-center">
             <h1>All Events in StartU</h1>
 
@@ -50,6 +51,7 @@
             <table class="table table-hover  sortable"">
                 <thead>
                 <tr>
+                    <th>Startup</th>
                     <th>Event Name</th>
                     <th>Location</th>
                     <th>Date</th>
@@ -76,7 +78,9 @@
             <br/> <br/>
    
         </div>
-     <div class="col-sm-2 text-left"></div>
+        <div class="col-sm-1 sidenav">
+            <!-- You can put right sidebar links here if you want to. -->
+        </div>
   
     </div>
 </div>

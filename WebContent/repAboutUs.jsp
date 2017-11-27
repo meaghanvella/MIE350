@@ -31,11 +31,10 @@
 <%@ include file="repfootbar.jsp"%>
 <br />
 <!--  Code taken from W3 schools -->
-<ul class="nav nav-pills nav-justified">
+	<ul class="nav nav-pills nav-justified">
 		<li><a href="repHome.jsp">Home</a></li>
-
 		<li><a href="EventController?action=insert">Add Event</a></li>
-		<!--<li><a href="/EventController?action=listEvent">Events</a></li>-->
+		<li><a href="EventController?action=repListEvent">Events</a></li>
 	</ul>
 
 	<div class="row text-left"">
