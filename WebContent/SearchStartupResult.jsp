@@ -41,24 +41,31 @@
 
 				The following students match your search keyword "<b><font
 					color=red><%=request.getAttribute("keyword")%></font></b>":<br> <br>
-				<center>
-					<table border=1 class="sortable">
-						<thead>
-							<tr>
-								<th>Name</th>
-								
-							</tr>
-						</thead>
-						<tbody>
-							<c:forEach items="${startup}" var="startup">
-								<tr>
-									<td align="center"><c:out
-											value="${startup.getName()}" /></td>
-								</tr>
-							</c:forEach>
-						</tbody>
-					</table>
-				</center>
+					<br/>
+				 <% int colCount = 0;%>
+				 <c:forEach items="${startup}" var="company">
+					 <% if(colCount == 0){%>
+					 	<div class="row">
+					 <% }%>
+					  <div class="col-sm-4">
+					    <div class="card" height=200px>
+					      <div class="card-body">
+					        <h4 class="card-title"> <c:out value="${company.getName()}" /> </h4>
+					        <p class="card-text"> <c:out value="${company.getDescription()}"/> </p>
+					        <a class="btn btn-primary" href="CompanyController?action=viewPage&startupID=<c:out value="${company.getID()}"/>">Visit Page</a>
+					        
+					      </div>
+					    </div>
+					  </div>
+					  <% colCount++;%>
+					 <% if(colCount == 3){%>
+					 	</div>
+					 	<br/>
+					 	<%colCount = 0; %>
+					 <% }%>
+				</c:forEach>
+				
+				
 
 			</div>
 			<div class="col-sm-2 sidenav">

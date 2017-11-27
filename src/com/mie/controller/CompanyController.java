@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.mie.dao.CompanyDao;
+import com.mie.dao.StartupRepDao;
 import com.mie.model.Company;
+import com.mie.model.StartupRep;
 
 public class CompanyController extends HttpServlet {
 	/**
@@ -24,6 +26,7 @@ public class CompanyController extends HttpServlet {
 	private static String VIEW_COMPANY_PUBLIC = "/ViewCompany.jsp";
 
 	private CompanyDao dao;
+	private StartupRepDao RepDao;
 
 	/**
 	 * Constructor for this class.
@@ -31,6 +34,7 @@ public class CompanyController extends HttpServlet {
 	public CompanyController() {
 		super();
 		dao = new CompanyDao();
+		RepDao = new StartupRepDao();
 	}
 
 	protected void doGet(HttpServletRequest request,
@@ -53,6 +57,7 @@ public class CompanyController extends HttpServlet {
 			forward = VIEW_COMPANY_PUBLIC;
 			int startupID = Integer.parseInt(request.getParameter("startupID"));
 			request.setAttribute("startup", dao.getCompanyByID(startupID));
+			request.setAttribute("rep", RepDao.getRepsByStartup(dao.getCompanyByID(startupID)));
 		}
 	
 		RequestDispatcher view = request.getRequestDispatcher(forward);
