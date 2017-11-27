@@ -40,7 +40,7 @@
 <body>
 <div class="container-fluid text-center">
     <div class="row">
-    <div class="col-sm-2 text-left">\</div>
+    <div class="col-sm-2 text-left"></div>
         <div class="col-sm-8 text-left">
  			<div class="text-center">
             <h1>All Events in StartU</h1>
@@ -50,7 +50,6 @@
             <table class="table table-hover  sortable"">
                 <thead>
                 <tr>
-                    <th>Startup</th>
                     <th>Event Name</th>
                     <th>Location</th>
                     <th>Date</th>
@@ -77,7 +76,7 @@
             <br/> <br/>
    
         </div>
-     <div class="col-sm-2 text-left">\</div>
+     <div class="col-sm-2 text-left"></div>
   
     </div>
 </div>
