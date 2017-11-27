@@ -35,12 +35,11 @@ public class CompanyPageController extends HttpServlet {
 	/**
 	 * Responsible for retrieving the search term entered by the user
 	 */
-		String keyword1 = request.getParameter("keyword1");
-		int keyword = Integer.parseInt(keyword1);
+		String keyword = request.getParameter("keyword");
+		int keyword1 = Integer.parseInt(keyword);
 		
 		RequestDispatcher view = request.getRequestDispatcher(SEARCH_COMPANY);
-		request.setAttribute("keyword", keyword1);
-		request.setAttribute("startup", dao.getCompanyByID(keyword));
+		request.setAttribute("startup", dao.getCompanyByID(keyword1));
 		
 		//Redirect to the results page: 
 		view.forward(request, response);

@@ -21,7 +21,7 @@ public class CompanyController extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	private static String LIST_COMPANY_PUBLIC = "/StartupList.jsp";
-	private static String VIEW_COMPANY_PUBLIC = "/viewCompany.jsp";
+	private static String VIEW_COMPANY_PUBLIC = "/ViewCompany.jsp";
 
 	private CompanyDao dao;
 
@@ -49,7 +49,12 @@ public class CompanyController extends HttpServlet {
 			forward = LIST_COMPANY_PUBLIC;
 			request.setAttribute("Company", dao.getAllCompanies());
 		} 
-
+		else if(action.equalsIgnoreCase("viewPage")) {
+			forward = VIEW_COMPANY_PUBLIC;
+			int startupID = Integer.parseInt(request.getParameter("startupID"));
+			request.setAttribute("startup", dao.getCompanyByID(startupID));
+		}
+	
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);
 	}
