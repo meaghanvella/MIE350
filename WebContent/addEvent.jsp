@@ -71,7 +71,7 @@
 
                 <label class="control-label">Time: </label>
                 <br> 
-                <input maxlength="100" type="text" name="eventTime" class="form-control" placeholder="Enter Event Time"
+                <input maxlength="100" type="text" name="eventTime" class="form-control" placeholder="Enter Event Time (HH:MM AM/PM)"
                              value="<c:out value="${event.getEventTime()}" />"><br>
 
                 <label class="control-label">Description:</label>
