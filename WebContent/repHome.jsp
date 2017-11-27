@@ -1,4 +1,5 @@
 <%@ include file="repfootbar.jsp"%>
+<%@ include file="navbar.jsp"%>
 <%@ page import="com.mie.model.*"%>
 <%@ page import="com.mie.dao.*"%>
 <%@ page import="com.mie.controller.*"%>
@@ -15,13 +16,12 @@
 		response.sendRedirect("login.jsp");
 	}
 	System.out.println(session.getAttribute("username"));
-	System.out.println(session.getAttribute("currentSessionUser")
-			.getClass());
+	System.out.println(session.getAttribute("currentSessionUser").getClass());
 %>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student Home Page</title>
+<title>Rep Home Page</title>
 </head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,16 +40,12 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
-<body>
-
-	<%@ include file="navbar.jsp"%>
-	<br />
+<br />
 	<!--  Code taken from W3 schools -->
 	<ul class="nav nav-pills nav-justified">
 		<li class="active"><a href="repHome.jsp">Home</a></li>
-
 		<li><a href="EventController?action=insert">Add Event</a></li>
-		<!--<li><a href="/EventController?action=listEvent">Events</a></li>-->
+		<li><a href="EventController?action=repListEvent">Events</a></li>
 	</ul>
 	<%
 		String email = (String) session.getAttribute("username");
@@ -58,12 +54,12 @@
 		StartupRep s = repDao.getStartupRepByEmail(email);
 		String name = s.getName();
 	%>
-
+<body>
 	<center>
 		<br>
-		<h1>Welcome, Rep!</h1>
-		<p>Welcome to your StartU dashboard! Choose an above tab to get
-			started</p>
+		<h1>Welcome, <%=name%>!</h1>
+		<p>Welcome to your StartU Rep dashboard! Choose an above tab to get
+			started.</p>
 		<br /> <img
 			src="https://assets.merriam-webster.com/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg">
 		<br /> <br /> <b><%=name%></b>

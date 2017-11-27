@@ -32,7 +32,7 @@ public class EventController extends HttpServlet {
 	//private static String EDIT = "/event/edit.jsp";
 	//private static String LIST_EVENT_PUBLIC = "/event/listPublic.jsp";
 	private static String LIST_EVENT_USER = "/listEvent.jsp";
-	
+	private static String LIST_EVENT_REP = "/repListEvent.jsp";
 	//need to modify this
 	private static String INVALID_PERMISION = "/index.jsp";
 
@@ -68,7 +68,16 @@ public class EventController extends HttpServlet {
 //
 //			}
 			//request.setAttribute("companies", companies);
-		} else {
+		} else if (action.equalsIgnoreCase("repListEvent")) {
+			forward = LIST_EVENT_REP; //may need to change this dependent on front end changes
+			request.setAttribute("events", dao.getAllEvents());
+//			List companies = new ArrayList<>();
+//			for(Event e: dao.getAllEvents()){
+//
+//			}
+			//request.setAttribute("companies", companies);
+		}
+		else {
 			forward = INSERT;
 		}
 
@@ -134,12 +143,12 @@ public class EventController extends HttpServlet {
 
 			request.setAttribute("events", dao.getAllEvents());
 
-			forward = LIST_EVENT_USER;
+			forward = LIST_EVENT_REP;
 		} else {
 
 			request.setAttribute("events", dao.getAllEvents());
 
-			forward = LIST_EVENT_USER;
+			forward = LIST_EVENT_REP;
 		}
 
 		RequestDispatcher view = request.getRequestDispatcher(forward);

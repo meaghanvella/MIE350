@@ -28,11 +28,12 @@
 
 <link rel="stylesheet" type="text/css" href="../../css/mystyle.css">
 
-</head>
- <ul class="nav nav-pills nav-justified">    
-    <li><a href="repHome.jsp">Home</a></li>
-    <li class="active"><a href="addEvent.jsp">Add Event</a></li>
-  </ul>
+	<ul class="nav nav-pills nav-justified">
+		<li><a href="repHome.jsp">Home</a></li>
+		<li class="active"><a href="EventController?action=insert">Add Event</a></li>
+		<li><a href="EventController?action=repListEvent">Events</a></li>
+	</ul>
+	
 <body>
 
 	<div class="row text-left">
@@ -40,15 +41,17 @@
 		</div>
         <div class="col-sm-8 text-left">
         <div class="container-fluid text-left">
-            <h1>Add An Event</h1>
+            <br>
+            <div class="text-center"><h1>Add An Event</h1>
+            Note: the Event ID is a fixed field and cannot be changed. 
+            </div>
+            <br><br>
 
             <script>
                 $(function() {
                     $('input[name=eventDate]').datepicker();
                 });
             </script>
-            Note: the Event ID is a fixed field and cannot be changed. <br>
-            <br>
 
             <form method="POST" action='EventController' name="frmAddEvent">
 			
@@ -76,15 +79,11 @@
                 <input maxlength="100" type="text" name="description" class="form-control" placeholder="Enter Event Description"
                               value="<c:out value="${event.getDescription()}" />"><br>
 
-                <label class="control-label"> Startup:</label>
-
                 <br>
                 <input type="submit" class="btn btn-primary" value="Submit" />
             </form>
 
         </div>
-        <div class="col-sm-2">
-		</div>
     </div>
 </div>
 
