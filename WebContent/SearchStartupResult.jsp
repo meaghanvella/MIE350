@@ -28,7 +28,13 @@
 <body>
 
 	<%@ include file="navbar.jsp"%>
-
+	<br />
+  <ul class="nav nav-pills nav-justified">
+    <li><a href="studentHome.jsp">Home</a></li>
+    <li><a href="CompanyController?action=listCompany">Startup List</a></li>
+    <li class="active"><a href="SearchStartup.jsp">Search a Startup</a></li>
+    <li><a href="EventController?action=listEvent">Events</a></li>
+  </ul>
 
 
 	<div class="container-fluid text-center">
@@ -37,9 +43,9 @@
 				<!-- You can put left sidebar links here if you want to. -->
 			</div>
 			<div class="col-sm-8 text-left">
-				<h1>Search A Student - Results</h1>
+				<h1>Search A Startup - Results</h1>
 
-				The following students match your search keyword "<b><font
+				The following startups match your search result "<b><font
 					color=red><%=request.getAttribute("keyword")%></font></b>":<br> <br>
 					<br/>
 				 <% int colCount = 0;%>
