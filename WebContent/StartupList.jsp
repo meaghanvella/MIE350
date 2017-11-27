@@ -82,7 +82,14 @@
 	      <div class="card-body">
 	        <h4 class="card-title"> <c:out value="${company.getName()}" /> </h4>
 	        <p class="card-text"> <c:out value="${company.getDescription()}"/> </p>
-	        <a href="#" class="btn btn-primary">More Info</a>
+	        <a href="viewCompany.jsp" class="btn btn-primary">More Info</a>
+	        
+	        
+	        <form action="CompanyPageController" method="get">
+    			<input type="submit" value="${company.getName()}" 
+        		 name="startup" id="frm1_submit" />
+			</form>
+	        
 	      </div>
 	    </div>
 	  </div>

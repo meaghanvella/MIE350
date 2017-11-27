@@ -34,6 +34,11 @@
     	<li><a href="StartupList.jsp">Startups</a></li>
     	<li><a href="EventController?action=listEvent">Events</a></li>
 	</ul>
+	
+	
+	
+	
+	
 	<div class="row content">
 		<div class="col-sm-8 content">
 		<br>
