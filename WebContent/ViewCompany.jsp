@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
@@ -27,13 +29,14 @@
 
 	<%@ include file="footbar.jsp"%>
 	<%@ include file="navbar.jsp"%>
-	<!--  Code taken from W3 schools -->
-	<ul class="nav nav-pills nav-justified">
-		    <li class="active"><a href="StudentHome.jsp">Home</a></li>
-    	<!-- Note: modify below when search finished -->
-    	<li><a href="StartupList.jsp">Startups</a></li>
-    	<li><a href="EventController?action=listEvent">Events</a></li>
-	</ul>
+<br />
+<!--  Code taken from W3 schools -->
+ <ul class="nav nav-pills nav-justified">
+    <li><a href="studentHome.jsp">Home</a></li>
+    <li  class="active"><a href="CompanyController?action=listCompany">Startup List</a></li>
+    <li><a href="SearchStartup.jsp">Search a Startup</a></li>
+    <li><a href="EventController?action=listEvent">Events</a></li>
+  </ul>
 	
 	
 	
@@ -50,19 +53,19 @@
 					</div>
 					<div class="media-body">
 						<h1 class="media-heading">
-							<b>Company Name</b>
+							<b><c:out value="${startup.getName()}"/></b>
 							</h4>
 							<h4>
-								<b>Industry: </b>
+								<b>Industry: <c:out value="${startup.getIndustry()}"/></b>
 								</h3>
 								<h4>
-									<b>Location: </b>
+									<b>Location: <c:out value="${startup.getLocation()}"/></b>
 									</h3>
 									<h4>
-										<b>Size: </b>
+										<b>Size: <c:out value="${startup.getSize()}"/></b>
 										</h3>
 										<h4>
-											<b>Stage: </b>
+											<b>Stage: <c:out value="${startup.getStage()}"/></b>
 											</h3>
 					</div>
 				</div>
@@ -70,10 +73,10 @@
 			</div>
 			<div class="container-fluid text-left">
 				<h4>
-					<b>About</b>
+					<b>About: <c:out value="${startup.getDescription()}"/></b>
 					</h3>
 					<h4>
-						<b>Website</b>
+						<b>Website: <c:out value="${startup.getWeb()}"/></b>
 						</h3>
 			</div>
 		</div>
