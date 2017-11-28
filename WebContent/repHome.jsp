@@ -53,6 +53,8 @@
 		StartupRepDao repDao = new StartupRepDao();
 		StartupRep s = repDao.getStartupRepByEmail(email);
 		String name = s.getName();
+		String position=s.getPosition();
+		String company= s.getStartup(); 
 	%>
 <body>
 	<center>
@@ -62,7 +64,8 @@
 			started.</p>
 		<br /> <img
 			src="https://assets.merriam-webster.com/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg">
-		<br /> <br /> <b><%=name%></b>
+		<br /> <br /> <h4> <b><%=name%></b></h4>
+		<%=position%> @ <%=company%>
 		<p><%=email%></p>
 		<br />
 
