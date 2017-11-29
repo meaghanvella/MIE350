@@ -95,15 +95,14 @@
 			<c:forEach items="${rep}" var="rep">
 				<% colCount++;%>
 			</c:forEach>
-
+			
 			<div class="container-fluid text-center"></div>
-
+			<%if(colCount >0){%>
 			<!-- CAROUSEL FROM W3 TUTORIAL, COMPANY REPS -->
 			<div class="carousel slide" data-ride="carousel">
 
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner">
-
 					<div id="myCarousel">
 						<center>
 							<H3>
@@ -112,16 +111,12 @@
 						</center>
 						<!-- INSERT LOOP HERE -->
 						<% int repCount = 0;%>
-
-
-						<div id="hope" class="item active text-center">
-							<c:forEach items="${rep}" var="rep">
-								<% repCount++; 
-					if (repCount> 1){ %>
-								<script>
-					document.getElementById("hope").className ="item text-center"; 
-					</script>
-								<% }%>
+						<c:forEach items="${rep}" var="rep">
+						<% repCount++;%>
+						
+						<% if (repCount==1){ System.out.println("start"); %>								
+							<div class="item active text-center">
+						
 								<!-- REP PICTURE, MAY NEED TO LINK LATER -->
 								<center>
 									<img src=img/anne.jpg style="width: 200px">
@@ -144,8 +139,38 @@
 									class="btn btn-primary btn-sm" role="button">Contact Me </a>
 								<br>
 								<br>
+								</div>
+								<% }%>
+								<% if (repCount>1){
+									System.out.println("break");%>
+								<div class="item text-center">
+						
+								<!-- REP PICTURE, MAY NEED TO LINK LATER -->
+								<center>
+									<img src=img/anne.jpg style="width: 200px">
+								</center>
+								<h4>
+									<c:out value="${rep.getName()}" />
+								</h4>
+								<h5>
+									<b> <c:out value="${rep.getPosition()}" />
+									</b>
+								</h5>
+
+								<h5 class="text-left paddingright">
+									<c:out value="${rep.getIntroduction()}" />
+								</h5>
+
+								<!-- NEED TO LINK TO PARTICULAR EMAIL HERE USING VARIABLE LATER -->
+
+								<a href="mailto:getemail?Subject=Hello%20again"
+									class="btn btn-primary btn-sm" role="button">Contact Me </a>
+								<br>
+								<br>
+								</div>
+								<% System.out.println("end");}%>
+								</c:forEach>
 						</div>
-						</c:forEach>
 					</div>
 
 					<%if(colCount >1){%>
@@ -166,5 +191,9 @@
 				</div>
 
 			</div>
+			<% }%>
+			
+			
+			
 </body>
 </html>
