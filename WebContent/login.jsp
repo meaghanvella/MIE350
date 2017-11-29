@@ -26,9 +26,8 @@
 <!-- navbar with only the Start U logo -->
 	<%@ include file="navbarNotSignedIn.jsp"%>
 	
-    <div class="container-fluid text-center">
-        <div class="row justify-content-center">
-            <div class="col-8">
+ 
+            <div class="loginform">
                 <br> <br>
                 <h1>Log In</h1>
                 <br> <br>
@@ -48,7 +47,5 @@
 				<br /> <br />
             </div>
       
-        </div>
-    </div>
 </body>
 </html>

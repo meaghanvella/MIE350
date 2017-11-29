@@ -9,7 +9,7 @@
 
 <html lang="en">
 <head>
-<title>All of the startups in the database</title>
+<title>StartU</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -41,66 +41,50 @@
     <li><a href="EventController?action=listEvent">Events</a></li>
   </ul>
 
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <p>Filter by...</p> 
-      <div class="form-group">
-		<label for="sel1">Industry:</label>
-		<select class="form-control" id="sel1">
-		    <option> Aerospace </option>
-		    <option> Analytics </option>
-		    <option> Education </option>
-		    <option> Electronics </option>
-		    <option> Energy </option>
-		    <option> Fintech </option>
-		    <option> Healthcare </option>
-		    <option> Marketing & Accounting </option>
-		    <option> Photography </option>
-		    <option> Robotics </option>
-		    <option> Software </option>
-		    <option> Tech </option>
-		</select>
-	</div>
-    </div>
-    <div class="col-sm-9">
     
-     <h4>List of Startups recently added</h4>
+     
     <!--  
 	<c:forEach items="${CompanyDao.getAllIndustries()}" var="company">
      <p class="card-text"><c:out value="${company}" /></p>
    </c:forEach>
  -->
   
- 
- <% int colCount = 0;%>
- <c:forEach items="${Company}" var="company">
-	 <% if(colCount == 0){%>
-	 	<div class="row">
-	 <% }%>
-	  <div class="col-sm-4">
-	    <div class="card" height=200px>
-	      <div class="card-body">
-	        <h4 class="card-title"> <c:out value="${company.getName()}" /> </h4>
-	        <p class="card-text"> <c:out value="${company.getDescription()}"/> </p>
-	        <a class="btn btn-primary" href="CompanyController?action=viewPage&startupID=<c:out value="${company.getID()}"/>">Visit Page</a>
-	        
-	      </div>
-	    </div>
-	  </div>
-	  <% colCount++;%>
-	 <% if(colCount == 3){%>
-	 	</div>
-	 	<br/>
-	 	<%colCount = 0; %>
-	 <% }%>
-</c:forEach>
- 
+ <div class="container-fluid text-center">
+	<div class="row content">
+	<div class="col-sm-2 sidenav">
+				
+			</div>
+		<div class="col-sm-8 text-left">
+			<h1>List of Startups </h1>
+			 <% int colCount = 0;%>
+			 <c:forEach items="${Company}" var="company">
+				 <% if(colCount == 0){%>
+				 	<div class="row">
+				 <% }%>
+				  <div class="col-sm-4">
+				    <div class="card" height=200px>
+				      <div class="card-body">
+				        <h4 class="card-title"> <c:out value="${company.getName()}" /> </h4>
+				        <p class="card-text"> <c:out value="${company.getDescription()}"/> </p>
+				         <div class = "togrow"> 
+				        <a class="btn btn-primary" href="CompanyController?action=viewPage&startupID=<c:out value="${company.getID()}"/>">Visit Page</a>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				  <% colCount++;%>
+				 <% if(colCount == 3){%>
+				 	</div>
+				 	<br/>
+				 	<%colCount = 0; %>
+				 <% }%>
+			</c:forEach>
+		 </div>
+		 <div class="col-sm-2 sidenav">
+		</div>
+	</div>
 </div>
-  
-  
-  
-</div>
+
 
 </body>
 </html>

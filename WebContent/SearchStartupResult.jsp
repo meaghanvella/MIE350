@@ -6,7 +6,7 @@
 
 <html lang="en">
 <head>
-<title>MIE350 Sample Web App - Search Results</title>
+<title>StartU</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -58,7 +58,9 @@
 					      <div class="card-body">
 					        <h4 class="card-title"> <c:out value="${company.getName()}" /> </h4>
 					        <p class="card-text"> <c:out value="${company.getDescription()}"/> </p>
+					        <div class = "togrow"> 
 					        <a class="btn btn-primary" href="CompanyController?action=viewPage&startupID=<c:out value="${company.getID()}"/>">Visit Page</a>
+					     	</div>
 					      </div>
 					    </div>
 					  </div>
@@ -74,14 +76,11 @@
 
 			</div>
 			<div class="col-sm-2 sidenav">
-				<!-- You can put right sidebar links here if you want to. -->
 			</div>
 		</div>
 	</div>
-
-
-
 </body>
+<%@ include file="footbar.jsp"%>
 </html>
 
 

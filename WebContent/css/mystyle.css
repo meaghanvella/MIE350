@@ -236,3 +236,14 @@
     display: flex;
     min-height: 250px;
 }
+
+.card .togrow{
+  position:absolute; 
+  bottom:0;
+  margin-bottom:20px;
+  align: center;
+}
+
+.loginform{
+	text-align: center;
+}
