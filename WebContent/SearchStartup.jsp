@@ -56,10 +56,18 @@
 				<Br />
 				<center>
 					<form method="POST" action='SearchController' name="frmAddUser">
+						
 						Keyword: <input type="text" name="keyword"
 							value="<c:out value="${startup.searchword}" />"><input
 							type="submit" class="btn btn-info" value="Submit" />
+						
 					</form>
+					
+					
+					
+	
+					
+					
 				</center>
 
 			</div>
@@ -71,5 +79,6 @@
 
 
 </body>
+<%@ include file="footbar.jsp"%>
 </html>
 
