@@ -45,7 +45,7 @@ public class EventDao {
 		List<Event> Events = new ArrayList<Event>();
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("Select * from Event");
+			ResultSet rs = statement.executeQuery("Select * from Event ORDER BY EventDate");
 			while (rs.next()) {
 				Event event = new Event();
 				

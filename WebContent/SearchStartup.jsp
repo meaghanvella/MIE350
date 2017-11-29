@@ -52,23 +52,17 @@
 			<div class="col-sm-8 text-left">
 				<h1>Search A Startup</h1>
 
-				Enter a keyword to find a startup. <Br />
+				<h4> Enter a keyword to find a startup. This can be part of the name, industry, location or stage of the startup. </h4>
+				<Br />
 				<Br />
 				<center>
-					<form method="POST" action='SearchController' name="frmAddUser">
-						
-						Keyword: <input type="text" name="keyword"
-							value="<c:out value="${startup.searchword}" />"><input
-							type="submit" class="btn btn-info" value="Submit" />
-						
+					<form method="POST" action='SearchController' name="frmAddUser" class="form-inline">
+						    <input type="text" name="keyword" value="<c:out value="${startup.searchword}" />"  class="form-control" placeholder="Search a Startup">
+						    <input type="submit" class="btn btn-info" value="Submit" />
 					</form>
-					
-					
-					
-	
-					
-					
 				</center>
+				
+				
 
 			</div>
 			<div class="col-sm-2 sidenav">

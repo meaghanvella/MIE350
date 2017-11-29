@@ -47,9 +47,10 @@
 
             The time is now <b><%=new java.util.Date()%></b>.<br> <br><br>
 			</div>
-            <table class="table table-hover  sortable"">
+            <table class="table table-hover  sortable table-bordered">
                 <thead>
                 <tr>
+                 	<th>Startup Name</th>
                     <th>Event Name</th>
                     <th>Location</th>
                     <th>Date</th>
