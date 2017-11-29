@@ -1,4 +1,4 @@
-<%@ include file="footbar.jsp"%>
+
 <%@ page import="com.mie.model.*" %>
 <%@ page import="com.mie.dao.*" %>
 <%@ page import="com.mie.controller.*" %>
@@ -160,3 +160,4 @@
 
 </body>
 </html>
+<%@ include file="footbar.jsp"%>

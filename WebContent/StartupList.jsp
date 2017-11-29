@@ -31,6 +31,7 @@
 <body>
 
 <%@ include file="navbar.jsp"%>
+
 <br />
 <!--  Code taken from W3 schools -->
  <ul class="nav nav-pills nav-justified">
@@ -103,3 +104,4 @@
 
 </body>
 </html>
+<%@ include file="footbar.jsp"%>

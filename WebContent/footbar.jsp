@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-bottom navbahref="/mie350_group03/CompanyController?action=listCompanyhref="/mie350_group03/CompanyController?action=listCompanyr-inverse">
+<nav class="navbar navbar-fixed-bottom" style="background-color: #ffffff;">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -8,7 +8,9 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
+    
             <ul class="nav navbar-nav navbar-right">
+            <li><a href="resources.jsp"><h4><b>Resources</b></h4></a></li>
                 <li><a href="aboutUs.jsp"><h4><b>About Us</b></h4></a></li>
             </ul>
         </div>
