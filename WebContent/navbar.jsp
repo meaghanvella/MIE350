@@ -23,6 +23,7 @@
                 <li><a href="EventController?action=insert">Add Event</a></li>
                 <li><a href="EventController?action=listEvent">Event List</a></li>
                 -->
+                
                 <li><a href="index.jsp">LOG OUT</a></li>
             </ul>
         </div>

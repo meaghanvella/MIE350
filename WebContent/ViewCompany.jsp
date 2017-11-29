@@ -48,24 +48,24 @@
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="img_avatar1.png" class="media-object"
-							style="width: 250px">
+						<img src="http://www.aerialtechnology.com/wp-content/uploads/2014/10/3drobotics-logo.jpg" class="media-object"
+							style="width: 200px">
 					</div>
 					<div class="media-body">
 						<h1 class="media-heading">
 							<b><c:out value="${startup.getName()}"/></b>
-							</h4>
+							</h1>
 							<h4>
-								<b>Industry: <c:out value="${startup.getIndustry()}"/></b>
+								<b>Industry:</b> <c:out value="${startup.getIndustry()}"/>
 								</h3>
 								<h4>
-									<b>Location: <c:out value="${startup.getLocation()}"/></b>
+									<b>Location:</b> <c:out value="${startup.getLocation()}"/>
 									</h3>
 									<h4>
-										<b>Size: <c:out value="${startup.getSize()}"/></b>
+										<b>Size:</b> <c:out value="${startup.getSize()}"/>
 										</h3>
 										<h4>
-											<b>Stage: <c:out value="${startup.getStage()}"/></b>
+											<b>Stage:</b> <c:out value="${startup.getStage()}"/>
 											</h3>
 					</div>
 				</div>
@@ -73,10 +73,10 @@
 			</div>
 			<div class="container-fluid text-left">
 				<h4>
-					<b>About: <c:out value="${startup.getDescription()}"/></b>
+					<b>About:</b> <c:out value="${startup.getDescription()}"/>
 					</h3>
 					<h4>
-						<b>Website: <c:out value="${startup.getWeb()}"/></b>
+						<b>Website: </b><c:out value="${startup.getWeb()}"/>
 						</h3>
 			</div>
 		</div>
@@ -96,14 +96,16 @@
 					<div class="item active text-center">
 					<!-- REP PICTURE, MAY NEED TO LINK LATER -->
 					<center>
-						<img src="https://assets.merriam-webster.com/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg" style="width: 200px">
+						<img src=img/anne.jpg style="width: 200px">
 					</center>
-							<h4>Name: <c:out value="${rep.getName()}" /></h3>
-							<h4>About: <c:out value="${rep.getIntroduction()}" /></h3>
+							<h4><c:out value="${rep.getName()}" /></h4>
+							<h5> <b> <c:out value="${rep.getPosition()}"/> </b></h5>
+							
+							<h5 class="text-left paddingright" ><c:out value="${rep.getIntroduction()}" /></h5>
 							
 							<!-- NEED TO LINK TO PARTICULAR EMAIL HERE USING VARIABLE LATER -->
 					
-					<a href="mailto:getemail?Subject=Hello%20again"" class="btn btn-primary btn-sm" role="button">Contact Me</a>
+					<a href="mailto:getemail?Subject=Hello%20again" class="btn btn-primary btn-sm" role="button">Contact Me </a>
 					</div>
 				</c:forEach>
 				</div>
