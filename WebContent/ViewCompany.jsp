@@ -48,8 +48,8 @@
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
-						<img src="http://www.aerialtechnology.com/wp-content/uploads/2014/10/3drobotics-logo.jpg" class="media-object"
-							style="width: 200px">
+						<img src="${startup.getLogo()}" class="media-object"
+							style="width: 150px">
 					</div>
 					<div class="media-body">
 						<h1 class="media-heading">
