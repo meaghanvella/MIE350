@@ -59,7 +59,6 @@
 					        <h4 class="card-title"> <c:out value="${company.getName()}" /> </h4>
 					        <p class="card-text"> <c:out value="${company.getDescription()}"/> </p>
 					        <a class="btn btn-primary" href="CompanyController?action=viewPage&startupID=<c:out value="${company.getID()}"/>">Visit Page</a>
-					        
 					      </div>
 					    </div>
 					  </div>

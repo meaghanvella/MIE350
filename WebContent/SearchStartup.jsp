@@ -50,10 +50,9 @@
 				<!-- You can put left sidebar links here if you want to. -->
 			</div>
 			<div class="col-sm-8 text-left">
-				<h1>Search A Student</h1>
+				<h1>Search A Startup</h1>
 
-				Type in any keyword to search for student information (last name,
-				first name, email) that matches the keyword. <Br />
+				Enter a keyword to find a startup. <Br />
 				<Br />
 				<center>
 					<form method="POST" action='SearchController' name="frmAddUser">
