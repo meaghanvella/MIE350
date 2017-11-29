@@ -11,9 +11,15 @@
 }
 
 #myCarousel {
-  height: 400px;
+  height: auto;
   width: auto;
+  background-color: ;
+  border-style: solid;
+  border-color:#428bca;
   overflow: hidden;
+}
+#hope{
+	
 }
 
 /* Set gray background color and 100% height */
@@ -69,6 +75,7 @@
 
 
 //New stuff Claire
+
 
 .paddingleft {
 	padding-left: 40px;
@@ -246,4 +253,5 @@
 
 .loginform{
 	text-align: center;
+	align: center;
 }

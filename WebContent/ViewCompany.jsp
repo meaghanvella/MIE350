@@ -1,8 +1,13 @@
+<%@ page import="com.mie.model.*" %>
+<%@ page import="com.mie.dao.*" %>
+<%@ page import="com.mie.controller.*" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 
 <html lang="en">
 <head>
@@ -38,11 +43,10 @@
 		<li><a href="SearchStartup.jsp">Search a Startup</a></li>
 		<li><a href="EventController?action=listEvent">Events</a></li>
 	</ul>
-<div class="col-sm-2 content">
-</div>
+	<div class="col-sm-1 content"></div>
 
 	<div class="row content">
-		<div class="col-sm-6 content">
+		<div class="col-sm-7 content">
 			<br>
 			<div class="container-fluid text-left">
 				<div class="media">
@@ -87,48 +91,64 @@
 		</div>
 
 		<div class="col-sm-4">
+			<% int colCount = 0;%>
+			<c:forEach items="${rep}" var="rep">
+				<% colCount++;%>
+			</c:forEach>
 
-			<!--   if ( "${rep}".length()>=0){ %>-->
 			<div class="container-fluid text-center"></div>
 
 			<!-- CAROUSEL FROM W3 TUTORIAL, COMPANY REPS -->
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel slide" data-ride="carousel">
 
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner">
-				<c:forEach items="${rep}" var="rep">
-					<center>
-						<H3>
-							<b> Company Reps </b>
-						</H3>
-					</center>
-					<!-- INSERT LOOP HERE -->
-					
-						<div class="item active text-center">
-							<!-- REP PICTURE, MAY NEED TO LINK LATER -->
-							<center>
-								<img src=img/anne.jpg style="width: 200px">
-							</center>
-							<h4>
-								<c:out value="${rep.getName()}" />
-							</h4>
-							<h5>
-								<b> <c:out value="${rep.getPosition()}" />
-								</b>
-							</h5>
 
-							<h5 class="text-left paddingright">
-								<c:out value="${rep.getIntroduction()}" />
-							</h5>
+					<div id="myCarousel">
+						<center>
+							<H3>
+								<b> Company Reps </b>
+							</H3>
+						</center>
+						<!-- INSERT LOOP HERE -->
+						<% int repCount = 0;%>
 
-							<!-- NEED TO LINK TO PARTICULAR EMAIL HERE USING VARIABLE LATER -->
 
-							<a href="mailto:getemail?Subject=Hello%20again"
-								class="btn btn-primary btn-sm" role="button">Contact Me </a>
+						<div id="hope" class="item active text-center">
+							<c:forEach items="${rep}" var="rep">
+								<% repCount++; 
+					if (repCount> 1){ %>
+								<script>
+					document.getElementById("hope").className ="item text-center"; 
+					</script>
+								<% }%>
+								<!-- REP PICTURE, MAY NEED TO LINK LATER -->
+								<center>
+									<img src=img/anne.jpg style="width: 200px">
+								</center>
+								<h4>
+									<c:out value="${rep.getName()}" />
+								</h4>
+								<h5>
+									<b> <c:out value="${rep.getPosition()}" />
+									</b>
+								</h5>
+
+								<h5 class="text-left paddingright">
+									<c:out value="${rep.getIntroduction()}" />
+								</h5>
+
+								<!-- NEED TO LINK TO PARTICULAR EMAIL HERE USING VARIABLE LATER -->
+
+								<a href="mailto:getemail?Subject=Hello%20again"
+									class="btn btn-primary btn-sm" role="button">Contact Me </a>
+								<br>
+								<br>
 						</div>
-					</c:forEach>
+						</c:forEach>
+					</div>
 
-
+					<%if(colCount >1){%>
 					<!-- Left and right controls -->
 					<a class="left carousel-control" href="#myCarousel"
 						data-slide="prev"> <span
@@ -139,7 +159,12 @@
 						class="glyphicon glyphicon-chevron-right"></span> <span
 						class="sr-only">Next</span>
 					</a>
+					<% }%>
+
+
+
 				</div>
+
 			</div>
 </body>
 </html>

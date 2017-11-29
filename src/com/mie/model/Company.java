@@ -1,5 +1,4 @@
 package com.mie.model;
-
 public class Company {
 	/**
 	 * This class contains all of the relevant information, and getter/setter
