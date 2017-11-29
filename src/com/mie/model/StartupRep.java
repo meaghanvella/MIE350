@@ -8,6 +8,7 @@ public class StartupRep {
 	private String email;
 	private String password;
 	private String startup;
+	
 	private int startupID;
 	
 	public String getName() {

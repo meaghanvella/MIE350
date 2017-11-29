@@ -46,6 +46,7 @@ public class CompanyDao {
 				company.setWebsite(rs.getString("Website"));
 				company.setHiring_Status(rs.getString("Hiring_Status"));
 				company.setStage(rs.getString("Stage"));
+				company.setLogo(rs.getString("imgURL"));
 			}
 			
 		}catch (SQLException e) {
@@ -76,6 +77,7 @@ public class CompanyDao {
 				company.setWebsite(rs.getString("Website"));
 				company.setHiring_Status(rs.getString("Hiring_Status"));
 				company.setStage(rs.getString("Stage"));
+				company.setLogo(rs.getString("imgURL"));
 				
 				companies.add(company);
 			}
@@ -141,6 +143,7 @@ public class CompanyDao {
 				company.setWebsite(rs.getString("Website"));
 				company.setHiring_Status(rs.getString("Hiring_Status"));
 				company.setStage(rs.getString("Stage"));
+				company.setLogo(rs.getString("imgURL"));
 				
 				//Finally...just add this Company object into the list: 
 				companies.add(company);
@@ -183,6 +186,7 @@ public class CompanyDao {
 				company.setWebsite(rs.getString("Website"));
 				company.setHiring_Status(rs.getString("Hiring_Status"));
 				company.setStage(rs.getString("Stage"));
+				company.setLogo(rs.getString("imgURL"));
 				
 				results.add(company);
 			}

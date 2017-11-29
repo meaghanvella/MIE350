@@ -15,6 +15,11 @@ public class Company {
 	private String Website;
 	private String Hiring_Status;
 	private String Stage;
+	private String logo;
+	
+	public String getLogo(){
+		return logo;	
+	}
 	
 	public String getStage(){
 		return Stage;
@@ -86,6 +91,10 @@ public class Company {
 
 	public void setStage (String newStage) {
 		this.Stage = newStage;
+	}
+	
+	public void setLogo (String newLogo){
+		this.logo=newLogo;
 	}
 
 	@Override
