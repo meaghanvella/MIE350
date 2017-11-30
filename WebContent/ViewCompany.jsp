@@ -91,109 +91,35 @@
 		</div>
 
 		<div class="col-sm-4">
-			<% int colCount = 0;%>
-			<c:forEach items="${rep}" var="rep">
-				<% colCount++;%>
-			</c:forEach>
+		<center>
+		<H3><b> Company Reps </b></H3> </center>
+		
+			 <c:forEach items="${rep}" var="rep">
+			 
+				    <div class="card" height=200px>
+				    <div class="media">
+   					 <div class="media-left">
+   					 <br>
+     				 <img src="img_avatar1.png" class="media-object" style="width:60px">
+    				</div>
+				      <div class="media-body">
+				        <h4 class="media-title"> <c:out value="${rep.getName()}" /> </h4>
+				        <c:out value="${rep.getPosition()}" />
+				        <p class="media-text"> <c:out value="${rep.getIntroduction()}"/> </p>
+				  		<!-- need to insert email here -->
+				  		<a class="btn btn-primary">Contact me</a>
+				      </div>
+				    </div>
+				 	</div>
+					</c:forEach>
+				 	</div>
+				 	<br/>
 			
-			<div class="container-fluid text-center"></div>
-			<%if(colCount >0){%>
-			<!-- CAROUSEL FROM W3 TUTORIAL, COMPANY REPS -->
-			<div class="carousel slide" data-ride="carousel">
-
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
-					<div id="myCarousel">
-						<center>
-							<H3>
-								<b> Company Reps </b>
-							</H3>
-						</center>
-						<!-- INSERT LOOP HERE -->
-						<% int repCount = 0;%>
-						<c:forEach items="${rep}" var="rep">
-						<% repCount++;%>
-						
-						<% if (repCount==1){ System.out.println("start"); %>								
-							<div class="item active text-center">
-						
-								<!-- REP PICTURE, MAY NEED TO LINK LATER -->
-								<center>
-									<img src=img/anne.jpg style="width: 200px">
-								</center>
-								<h4>
-									<c:out value="${rep.getName()}" />
-								</h4>
-								<h5>
-									<b> <c:out value="${rep.getPosition()}" />
-									</b>
-								</h5>
-
-								<h5 class="text-left paddingright">
-									<c:out value="${rep.getIntroduction()}" />
-								</h5>
-
-								<!-- NEED TO LINK TO PARTICULAR EMAIL HERE USING VARIABLE LATER -->
-
-								<a href="mailto:getemail?Subject=Hello%20again"
-									class="btn btn-primary btn-sm" role="button">Contact Me </a>
-								<br>
-								<br>
-								</div>
-								<% }%>
-								<% if (repCount>1){
-									System.out.println("break");%>
-								<div class="item text-center">
-						
-								<!-- REP PICTURE, MAY NEED TO LINK LATER -->
-								<center>
-									<img src=img/anne.jpg style="width: 200px">
-								</center>
-								<h4>
-									<c:out value="${rep.getName()}" />
-								</h4>
-								<h5>
-									<b> <c:out value="${rep.getPosition()}" />
-									</b>
-								</h5>
-
-								<h5 class="text-left paddingright">
-									<c:out value="${rep.getIntroduction()}" />
-								</h5>
-
-								<!-- NEED TO LINK TO PARTICULAR EMAIL HERE USING VARIABLE LATER -->
-
-								<a href="mailto:getemail?Subject=Hello%20again"
-									class="btn btn-primary btn-sm" role="button">Contact Me </a>
-								<br>
-								<br>
-								</div>
-								<% System.out.println("end");}%>
-								</c:forEach>
-						</div>
-					</div>
-
-					<%if(colCount >1){%>
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#myCarousel"
-						data-slide="prev"> <span
-						class="glyphicon glyphicon-chevron-left"></span> <span
-						class="sr-only">Previous</span>
-					</a> <a class="right carousel-control" href="#myCarousel"
-						data-slide="next"> <span
-						class="glyphicon glyphicon-chevron-right"></span> <span
-						class="sr-only">Next</span>
-					</a>
-					<% }%>
-
-
-
-				</div>
-
-			</div>
-			<% }%>
-			
-			
+               
+		 </div>
 			
 </body>
 </html>
+
+
+
