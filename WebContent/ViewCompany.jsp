@@ -32,7 +32,7 @@
 </head>
 <body>
 
-	<%@ include file="footbar.jsp"%>
+
 	<%@ include file="navbar.jsp"%>
 	<br />
 	<!--  Code taken from W3 schools -->
@@ -43,9 +43,10 @@
 		<li><a href="SearchStartup.jsp">Search a Startup</a></li>
 		<li><a href="EventController?action=listEvent">Events</a></li>
 	</ul>
-	<div class="col-sm-1 content"></div>
+
 
 	<div class="row content">
+		<div class="col-sm-1 content"></div>
 		<div class="col-sm-7 content">
 			<br>
 			<div class="container-fluid text-left">
@@ -91,33 +92,103 @@
 		</div>
 
 		<div class="col-sm-4">
-		<center>
-		<H3><b> Company Reps </b></H3> </center>
-		
-			 <c:forEach items="${rep}" var="rep">
-			 
-				    <div class="card" height=200px>
-				    <div class="media">
-   					 <div class="media-left">
-   					 <br>
-     				 <img src="img_avatar1.png" class="media-object" style="width:60px">
-    				</div>
-				      <div class="media-body">
-				        <h4 class="media-title"> <c:out value="${rep.getName()}" /> </h4>
-				        <c:out value="${rep.getPosition()}" />
-				        <p class="media-text"> <c:out value="${rep.getIntroduction()}"/> </p>
-				  		<!-- need to insert email here -->
-				  		<a class="btn btn-primary">Contact me</a>
-				      </div>
-				    </div>
-				 	</div>
-					</c:forEach>
-				 	</div>
-				 	<br/>
+			<center>
+				<H3>
+					<b> Company Reps </b>
+				</H3>
+			</center>
+
+			<c:forEach items="${rep}" var="rep">
+
+				<div class="card" height=200px>
+					<div class="media">
+						<center>
+
+							<h3 class="media-title">
+								<b><c:out value="${rep.getName()}" /></b>
+							</h3>
+							<img src="img_avatar1.png" class="media-object"
+								style="width: 100px">
+
+
+							<div class="media-body">
+
+								<i><c:out value="${rep.getPosition()}" /></i>
+						</center>
+						<hr>
+						<p class="media-text">
+							<c:out value="${rep.getIntroduction()}" />
+						</p>
+						<!-- need to insert email here -->
+						<hr>
+						<center>
+							<a class="btn btn-primary">Contact me</a>
+						</center>
+					</div>
+				</div>
+
+			</c:forEach>
+
+			<% int repCount = 0;%>
+			<c:forEach items="${rep}" var="rep">
+				<% repCount++;%>
+			</c:forEach>
 			
-               
-		 </div>
+			<% int iterate= 0;%>
 			
+			
+			<% if (repCount>0) { %>
+			<div class="container">
+			
+				<h2>Dynamic Tabs</h2>
+				<ul class="nav nav-tabs">
+					<% if (repCount>=1) { %>
+					<li class="active"><a data-toggle="tab" href="#home">Rep 1</a></li>
+					<%} %>
+					<% if (repCount>=2) { %>
+					<li><a data-toggle="tab" href="#menu1">Rep 2</a></li>
+					<%} %>
+					<% if (repCount>=3) { %>
+					<li><a data-toggle="tab" href="#menu2">Rep 3</a></li>
+					<%} %>
+				</ul>
+				<div class="tab-content">
+				<c:forEach items="${rep}" var="rep">
+			<%iterate++; %>
+				<% if (iterate==1) { %>
+					<div id="home" class="tab-pane fade in active">
+						<h3>HOME</h3>
+						<b><c:out value="${rep.getName()}" /></b>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua.</p>
+					</div>
+					<%} %>
+					<% if (iterate==2) { %>
+					<div id="menu1" class="tab-pane fade">
+						<h3>Menu 1</h3>
+						<b><c:out value="${rep.getName()}" /></b>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<%} %>
+					<% if (iterate==3) { %>
+					<div id="menu2" class="tab-pane fade">
+						<h3>Menu 2</h3>
+						<b><c:out value="${rep.getName()}" /></b>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit
+							voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+					</div>
+					<%} %>
+</c:forEach>
+				</div>
+				<%} %>
+			
+			</div>
+		</div>
+		<br /> <br />
+		<br />
+		<br /> <br />
 </body>
 </html>
 
