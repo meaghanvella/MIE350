@@ -9,7 +9,7 @@ import com.mie.util.DbUtil;
 
 public class UserDao {
 	/**
-	 * This class handles the Member objects and the login component of the web
+	 * This class handles the User objects and the login component of the web
 	 * app.
 	 */
 	static Connection currentCon = null;
@@ -18,16 +18,13 @@ public class UserDao {
 
 	public static User login(String username, String password) {
 		/**
-		 * This method attempts to find the member that is trying to log in by
-		 * first retrieving the username and password entered by the user.
+		 * This method attempts to log the user in based on username and password parameters.
 		 */
 		Statement stmt = null;
 		User u = new User();
 		/**
-		 * Prepare a query that searches the members table in the database
-		 * with the given username and password.
+		 * Search through both student and startuprep tables for the user.
 		 */
-		//search queries 1 and 2
 		
 		String searchQuery1 = "select * from Student where Email='"
 				+ username + "' AND Password='" + password + "'";
@@ -45,21 +42,19 @@ public class UserDao {
 			boolean more1 = rs1.next();
 			boolean more2 = rs2.next();
 			/**
-			 * If there are no results from the query, set the member to false.
+			 * If there are no results from either query, set the user to false.
 			 * The person attempting to log in will be redirected to the home
 			 * page when isValid is false.
 			 */
 			
-			//the user doesn't exist in DB
+			//the user doesn't exist in either DB
 			//either incorrect username or password, or both
 			if (!more2&&!more1) {
 				u.setValid(false);
 			}
 
 			/**
-			 * If the query results in an database entry that matches the
-			 * username and password, assign the appropriate information to
-			 * the Member object.
+			 * Set the type of the user according to which query returned an entry.
 			 */
 			else if (more1) {
 				//this is a valid student user
@@ -87,7 +82,7 @@ public class UserDao {
 					+ ex);
 		}
 		/**
-		 * Return the Member object.
+		 * Return the user object.
 		 */
 		return u;
 

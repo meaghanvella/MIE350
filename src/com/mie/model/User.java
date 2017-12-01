@@ -1,5 +1,9 @@
 package com.mie.model;
 
+/*
+ * This class stores user information and contains getters and setters.
+ * **/
+
 public class User {
 	public String email;
 	public String password;

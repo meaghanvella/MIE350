@@ -1,5 +1,9 @@
 package com.mie.model;
 
+/*
+ * This class stores student information and contains getters and setters.
+ * **/
+
 public class Student {
 	private String name;
 	private String year;

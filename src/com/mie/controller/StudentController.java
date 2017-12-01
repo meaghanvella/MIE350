@@ -18,21 +18,10 @@ import com.mie.model.Student;
 
 public class StudentController extends HttpServlet {
 	/**
-	 * This class handles all insert/edit/list functions of the servlet.
-	 * 
-	 * These are variables that lead to the appropriate JSP pages. 
-	 * INSERT leads to the Create A Student page. 
-	 * EDIT leads to the Edit A Student page.
-	 * HOME leads to Student's home page.
-	 //* LIST_STUDENT_PUBLIC leads to the public listing of students.
-	 //* LIST_STUDENT_ADMIN leads to the admin-only listing of students (for them to modify student information).
-	 * 
+	 * This class handles student profile add and edit functionality.
 	 */
-	
     private static final long serialVersionUID = 1L;
 	private static String INSERT = "/studentSignup.jsp";
-	private static String EDIT = "/studentHome.jsp";
-	private static String HOME = "/studentHome.jsp";
 	private static String INSERT_SUCCESS = "/signupRedirect.jsp";
 	private static String EDIT_SUCCESS = "/studentHome.jsp";
 
@@ -48,25 +37,17 @@ public class StudentController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
+		
 		/**
-		 * This class retrieves the appropriate 'action' found on the JSP pages:
-		 * 
-		 * - INSERT will direct the servlet to let the user add a new student to the database. 
-		 * - EDIT will direct the servlet to let the user edit student information in the database. 
-		 * - HOME will direct the servlet to student's home page
-		 //* - delete will direct the servlet to let the user delete a student in the database.
-		 //* - listStudent will direct the servlet to the public listing of all students in the database. 
-		 //* - listStudentAdmin will direct the servlet to the admin listing of all students in the database.
+		 * This method forwards the user to the studentSignup page if the action = insert 
 		 */
+		
 		String forward = "";
 		String action = request.getParameter("action");
-
+		
 		if (action.equalsIgnoreCase("insert")) {
 			forward = INSERT;
-			
 		} 
-
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);
 	}
@@ -75,15 +56,16 @@ public class StudentController extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		/**
-		 * This method retrieves all of the information entered in the form on
-		 * the createStudent.jsp or the editStudent.jsp pages.
+		 * This method retrieves the information entered by the user in either studentSignup 
+		 * (profile add) or studentHome (profile edit though modal) pages 
 		 */
+		
 		HttpSession session = request.getSession(true);
 		Student s = (Student) session.getAttribute("student");
 		String forward="";
 		
-		//note: need to add dropdown stuff
-		
+		//if the student doesn't exist, s is null
+		//the following block adds the student profile to the database
 		if(s == null){
 			s = new Student();
 			s.setName(request.getParameter("Name"));
@@ -94,7 +76,8 @@ public class StudentController extends HttpServlet {
 			
 			dao.addStudent(s);
 			forward = INSERT_SUCCESS;
-		}else{//we're editing now! woo!
+		}else{
+		//if the student exists, then edit
 			s.setName(request.getParameter("Name"));
 			s.setYear(request.getParameter("Year"));
 			s.setMajor(request.getParameter("Major"));
@@ -103,12 +86,6 @@ public class StudentController extends HttpServlet {
 			forward = EDIT_SUCCESS;
 		}
 		
-
-		/**
-		 * Once the student has been added or updated, the page will redirect to
-		 * the listing of students.
-		 */
-		// Note: It should redirect to the student page
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);
 	}

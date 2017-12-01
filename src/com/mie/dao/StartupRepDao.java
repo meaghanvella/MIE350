@@ -13,6 +13,13 @@ import com.mie.model.StartupRep;
 import com.mie.util.DbUtil;
 
 public class StartupRepDao {
+	/**
+	 * This class handles interaction with the StartupRep table including:
+	 * - insert
+	 * - update
+	 * - retrieval of companies belonging to startup reps
+	 * - retrieval of startup reps by email
+	 */
 	
 	private Connection connection;
 	
@@ -44,6 +51,10 @@ public class StartupRepDao {
 		
 	}
 	
+	
+	/**
+	 * This method returns an 
+	 * */
 	public void updateStartupRep(StartupRep rep) {
 
 		try {
@@ -64,7 +75,9 @@ public class StartupRepDao {
 		
 	}
 	 
-	//get startup reps by startup 
+	/**
+	 * This method returns a List of representatives belonging to a particular company
+	 * **/
 	public List<StartupRep> getRepsByStartup(Company company) {
 		
 		//Get the ID of the startup itself:
@@ -97,6 +110,9 @@ public class StartupRepDao {
 		
 	}
 
+	/**
+	 * This method returns a StartupRep according to an email parameter
+	 * */
 	public StartupRep getStartupRepByEmail(String email) {
 		StartupRep rep = new StartupRep();
 
