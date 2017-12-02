@@ -18,9 +18,7 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	<!-- Date Picker Javascript -->
-	<!-- https://jqueryui.com/datepicker/ -->
+
 	<link rel="stylesheet"
 		href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -29,7 +27,6 @@
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
 <body>
-
 	<%@ include file="navbarNotSignedIn.jsp"%>
 
 	<div class="container">
@@ -39,16 +36,17 @@
 	          <div class=text-center>
 	          <br> <br>
 	          <span class="glyphicon glyphicon-ok checkmark"></span>
-	          <h2>Thanks for signing up!</h2>
+	          <h2>Thanks for signing up! Please log in again through the home page.</h2>
 	          <p>Redirecting to the home page...</p>
-	          <div class="spinner">
-				  <div class="bounce1"></div>
-				  <div class="bounce2"></div>
-				  <div class="bounce3"></div>
-			</div> 
+		          <div class="spinner">
+					  <div class="bounce1"></div>
+					  <div class="bounce2"></div>
+					  <div class="bounce3"></div>
+				  </div> 
+	          </div>
 	        </div>
 	      </div>
 	    </div>
-	    </div>
+	  </div>
 </body>
 </html>
