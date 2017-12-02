@@ -1,4 +1,4 @@
-<%@ include file="repfootbar.jsp"%>
+<%@ include file="footbar.jsp"%>
 <%@ include file="navbar.jsp"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
