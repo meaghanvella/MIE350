@@ -8,7 +8,9 @@ import java.sql.Statement;
 import java.util.List;
 
 public class IndustryDao {
-	
+	/**
+	 * This class handles retrieving all industries interaction with the ListIndustry table
+	 */
 	private Connection connection;
 	List<String> industries;
 	

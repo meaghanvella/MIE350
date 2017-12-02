@@ -9,27 +9,26 @@ import java.util.List;
 
 public class EventDao {
 	private Connection connection;
-
+	/**
+	 * This class handles interaction with the Event table including:
+	 * - insert (add Event)
+	 * - retrieval of all events contained in the Event table
+	 */
+	
 	public EventDao() {
 		connection = DbUtil.getConnection();
 	}
 
+	//this method inserts a new Event tuple into the Event table
 	public void addEvent(Event event) {
 		try {
 			PreparedStatement preparedStatement = connection
 					.prepareStatement("insert into Event(EventName,StartupID,EventDate,EventTime,Location,Description) values (?, ?, ?, ?, ?, ?)");
-			//dont need to insert EventId because automatically inserted
-			
-			// Parameters start with 1
+		
 			preparedStatement.setString(1, event.getEventName());
 			preparedStatement.setInt(2, event.getStartupId());
-			
-			//need to doublecheck this
 			preparedStatement.setDate(3, new java.sql.Date(event.getDate().getTime()));
-			//Claire changed this line so the database doesn't look weird
-			preparedStatement.setString(4, event.getEventTime()); //event.getEventTime()
-			
-			//this is ok
+			preparedStatement.setString(4, event.getEventTime()); 
 			preparedStatement.setString(5, event.getLocation());
 			preparedStatement.setString(6, event.getDescription());
 			preparedStatement.executeUpdate();
@@ -39,8 +38,7 @@ public class EventDao {
 		}
 	}
 
-	
-	
+	//this method retrieves all the Events contained in the Event Table and stores them in a List
 	public List<Event> getAllEvents() {
 		List<Event> Events = new ArrayList<Event>();
 		try {
@@ -48,8 +46,6 @@ public class EventDao {
 			ResultSet rs = statement.executeQuery("Select * from Event ORDER BY EventDate");
 			while (rs.next()) {
 				Event event = new Event();
-				
-				//not sure if need eventID
 				event.setEventId(rs.getInt("EventID"));
 				event.setEventName(rs.getString("EventName"));
 				event.setStartupId(rs.getInt("StartupID"));
@@ -65,13 +61,6 @@ public class EventDao {
 		}
 
 		return Events;
-	}
-
-	
-	//if want to update - but not within functionality
-	public void updateEvent(Event event) {
-
-
 	}
 
 }

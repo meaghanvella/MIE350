@@ -1,6 +1,6 @@
 package com.mie.model;
 
-/*
+/**
  * This class stores startup rep information and contains getters and setters.
  * **/
 

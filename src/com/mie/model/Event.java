@@ -1,13 +1,13 @@
 package com.mie.model;
-
 import com.mie.dao.CompanyDao;
 
 import java.util.Date;
 import java.sql.Time;
 
-public class Event {
-	//Created by Selena
-	
+/**
+ * This class stores Event information and contains getters and setters
+ * **/
+public class Event {	
 	private int eventId;
 	private String eventName;
 	private int startupId;
@@ -65,6 +65,7 @@ public class Event {
 		this.description = description;
 	}
 
+	//this method gets the startup the event is posted under
 	public Company getStartup(){
 		CompanyDao cd = new CompanyDao();
 		return cd.getCompanyByID(this.startupId);

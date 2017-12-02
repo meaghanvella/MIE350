@@ -8,7 +8,9 @@ import java.sql.Statement;
 import java.util.List;
 
 public class LocationDao {
-	
+	/**
+	 * This class handles retrieving all locations interaction with the ListLocation table
+	 */
 	private Connection connection;
 	List<String> locations;
 	
