@@ -34,8 +34,12 @@
 					This web application was created for MIE350, an undergraduate course at the University of Toronto.
 					</div>
 				<hr>
+				
+				
+				
+				
 		</div>
-		<div class="col-sm-2"></div>
+	<div class="col-sm-2"></div>
 </div>
 
 <!--

@@ -14,6 +14,7 @@
             <ul class="nav navbar-nav navbar-right">
             <li><a href="#resourcesModal" data-toggle="modal"><h4><b>Resources</b></h4></a></li>
             <li><a href="#aboutModal" data-toggle="modal"><h4><b>About Us</b></h4></a></li>
+            <li><a href="#teamModal" data-toggle="modal"><h4><b>The Team</b></h4></a></li>
             </ul>
             
 		</div>
@@ -29,6 +30,23 @@
 							</div>
 							<div class="modal-body">
 								<p><%@ include file="aboutUs.jsp"%></p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+			</div>
+		
+		    <!-- Team Modal -->
+			<div class="modal fade" id="teamModal" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body">
+								<p><%@ include file="team.jsp"%></p>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
