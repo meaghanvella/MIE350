@@ -62,6 +62,7 @@
 	StudentDao studDao = new StudentDao(); 
 	Student s= studDao.getStudentByEmail(email);
 	String name=s.getName();
+	String industry = s.getIndustry();
 
 %>
 
@@ -77,6 +78,11 @@
 <br />
 <b><%=name %></b>
 <p><%=email %></p>
+<form method="POST" action='SearchController' name="frmAddUser" class="form-inline">
+	<p> Preferred Industry: <input type="submit" class="btn btn-default" name="keyword" value=<%=industry%> /> </p>
+</form>
+
+
 <br />
 
 	<!--  Code modified from https://bootsnipp.com/snippets/featured/squarespace-like-modal -->
@@ -159,6 +165,7 @@
 	  </div>
 	</div>
 
+	
 </center>
 
 </body>

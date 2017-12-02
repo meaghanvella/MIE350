@@ -47,7 +47,7 @@ public class StudentDao {
 			preparedStatement.setString(3, student.getMajor());
 			preparedStatement.setString(4, student.getEmail());
 			preparedStatement.setString(5, student.getPassword());
-			preparedStatement.setString(6, student.getPhone());
+			preparedStatement.setString(6, student.getIndustry());
 			
 			preparedStatement.executeUpdate();
 
@@ -62,7 +62,7 @@ public class StudentDao {
 		 */
 		try {
 			PreparedStatement preparedStatement = connection
-					.prepareStatement("update Student set Name=?, Year=?, Major=?, Email=?, Password=?, Phone=?"
+					.prepareStatement("update Student set Name=?, Year=?, Major=?, Email=?, Password=?, Industry=?"
 							+ " where Email=?");
 			// Parameters start with 1
 			preparedStatement.setString(1, student.getName());
@@ -70,7 +70,7 @@ public class StudentDao {
 			preparedStatement.setString(3, student.getMajor());
 			preparedStatement.setString(4, student.getEmail());
 			preparedStatement.setString(5, student.getPassword());
-			preparedStatement.setString(6, student.getPhone());
+			preparedStatement.setString(6, student.getIndustry());
 			preparedStatement.setString(7, student.getEmail());
 
 			preparedStatement.executeUpdate();
@@ -97,7 +97,7 @@ public class StudentDao {
 				student.setMajor(rs.getString("Major"));
 				student.setEmail(rs.getString("Email"));
 				student.setPassword(rs.getString("Password"));
-				student.setPhone(rs.getString("Phone"));
+				student.setIndustry(rs.getString("Industry"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
