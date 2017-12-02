@@ -10,6 +10,18 @@
 
 
 <html lang="en">
+<% 
+	session = request.getSession();
+	System.out.println(session);
+	if (session.getAttribute("username") == null) {
+		response.sendRedirect("login.jsp");
+	}
+	System.out.println(session.getAttribute("username"));
+	System.out.println(session.getAttribute("currentSessionUser").getClass());
+	
+	%>
+
+
 <head>
 <title>MIE350 Sample Web App</title>
 <meta charset="utf-8">
