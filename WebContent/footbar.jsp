@@ -15,13 +15,49 @@
             <li><a href="#resourcesModal" data-toggle="modal"><h4><b>Resources</b></h4></a></li>
             <li><a href="#aboutModal" data-toggle="modal"><h4><b>About Us</b></h4></a></li>
             <li><a href="#teamModal" data-toggle="modal"><h4><b>The Team</b></h4></a></li>
+            <li><a href="#disclaimerModal" data-toggle="modal"><h4><b>Disclaimer</b></h4></a></li>
             </ul>
             
 		</div>
      </div>
 </nav>
 
-            <!-- About Us Modal -->
+
+       <!-- Resources Modal -->
+			<div class="modal fade" id="resourcesModal" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body">
+								<p><%@ include file="resources.jsp"%></p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+			</div>
+
+            <!-- DisclaimerModal -->
+			<div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body">
+								<p><%@ include file="Disclaimer.jsp"%></p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+			</div>
+			
+			     <!-- About Us Modal -->
 			<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
@@ -54,20 +90,4 @@
 						</div>
 					</div>
 			</div>
-		
-            <!-- Resources Modal -->
-			<div class="modal fade" id="resourcesModal" tabindex="-1" role="dialog">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-							</div>
-							<div class="modal-body">
-								<p><%@ include file="resources.jsp"%></p>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-			</div>
+			
