@@ -123,7 +123,7 @@
 	          </div>
 	          <div class="col-auto">
 	          <label for="inlineFormCustomSelect">Industry</label>
-	          <select id="inlineFormCustomSelect" class="form-control">
+	          <select id="inlineFormCustomSelect" class="form-control" name = "Industry">
 	            <option selected>Choose...</option>
 	            <option>Aerospace</option>
 	            <option>Analytics</option>

@@ -116,7 +116,7 @@
 	          </div>
 	        <div class="col-auto">
 	          <label for="inlineFormCustomSelect">Industry</label>
-	          <select id="inlineFormCustomSelect" class="form-control">
+	          <select id="inlineFormCustomSelect" class="form-control" name = "Industry">
 	            <option selected>Choose...</option>
 	             <c:forEach items="${industry}" var="industry">
 	            	<option>  ${industry} </option>
