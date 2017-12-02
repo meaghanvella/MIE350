@@ -2,6 +2,7 @@
 	pageEncoding="EUC-KR" import="com.mie.model.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ page import="com.mie.dao.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
@@ -35,6 +36,17 @@
     <li class="active"><a href="SearchStartup.jsp">Search a Startup</a></li>
     <li><a href="EventController?action=listEvent">Events</a></li>
   </ul>
+  
+  
+  <%
+   
+	String email = (String) session.getAttribute("username");
+	User u = (User) session.getAttribute("currentSessionUser");
+	StudentDao studDao = new StudentDao(); 
+	Student s= studDao.getStudentByEmail(email);
+	String industry =s.getIndustry();
+
+%>
 
 	<%
 	//not sure about this
@@ -51,7 +63,7 @@
 			</div>
 			<div class="col-sm-8 text-left">
 				<h1>Search A Startup</h1>
-
+				
 				<h4> Enter a keyword to find a startup. This can be part of the name, industry, location or stage of the startup. </h4>
 				<Br />
 				<Br />
@@ -61,6 +73,11 @@
 						    <input type="submit" class="btn btn-info" value="Submit" />
 					</form>
 				</center>
+				
+				<Br />
+				<Br />
+				
+				
 				
 				
 

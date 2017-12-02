@@ -77,6 +77,7 @@ public class StudentController extends HttpServlet {
 			s.setMajor(request.getParameter("Major"));
 			s.setPassword(request.getParameter("Password"));
 			s.setEmail(request.getParameter("Email"));
+			s.setIndustry(request.getParameter("Industry"));
 			
 			dao.addStudent(s);
 			forward = INSERT_SUCCESS;
@@ -86,6 +87,7 @@ public class StudentController extends HttpServlet {
 			s.setYear(request.getParameter("Year"));
 			s.setMajor(request.getParameter("Major"));
 			s.setPassword(request.getParameter("Password"));
+			s.setIndustry(request.getParameter("Industry"));
 			dao.updateStudent(s);  
 			forward = EDIT_SUCCESS;
 		}
