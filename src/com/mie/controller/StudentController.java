@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.mie.dao.IndustryDao;
 import com.mie.dao.StudentDao;
 import com.mie.model.StartupRep;
 import com.mie.model.Student;
@@ -26,6 +27,7 @@ public class StudentController extends HttpServlet {
 	private static String EDIT_SUCCESS = "/studentHome.jsp";
 
 	private StudentDao dao;
+	private IndustryDao industryDao;
 
 	/**
 	 * Constructor for this class.
@@ -33,6 +35,7 @@ public class StudentController extends HttpServlet {
 	public StudentController() {
 		super();
 		dao = new StudentDao();
+		industryDao = new IndustryDao();
 	}
 
 	protected void doGet(HttpServletRequest request,
@@ -47,6 +50,7 @@ public class StudentController extends HttpServlet {
 		
 		if (action.equalsIgnoreCase("insert")) {
 			forward = INSERT;
+			request.setAttribute("industry", industryDao.getAllIndustries());
 		} 
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);

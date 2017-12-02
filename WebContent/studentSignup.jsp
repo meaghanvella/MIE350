@@ -118,17 +118,9 @@
 	          <label for="inlineFormCustomSelect">Industry</label>
 	          <select id="inlineFormCustomSelect" class="form-control">
 	            <option selected>Choose...</option>
-	            <option>Aerospace</option>
-	            <option>Analytics</option>
-	            <option>Education</option>
-	            <option>Electronics</option>
-	            <option>Energy</option>
-	            <option>Fintech</option>
-	            <option>Healthcare</option>
-	            <option>Marketing &amp; Advertising</option>
-	            <option>Photography</option>
-	            <option>Robotics</option>
-	            <option>Software</option>
+	             <c:forEach items="${industry}" var="industry">
+	            	<option>  ${industry} </option>
+	           </c:forEach>
 	          </select>
 	        </div>
 	          <br>
