@@ -1,65 +1,65 @@
 <div class="row text-left">
 	<div class="col-sm-2"></div>
 		<div class="col-sm-8">
-			<center>
-			<h2>The Team</h2>
-			</center>
-				<hr>
-	<div class="col-sm-6">
-			<div class="container-fluid text-left">
-				<div class="media">
-					<div class="media-left">
-						<img src="img/Hermanpuppy.jpg" class="media-object" style="width: 140px">
+			<center><h2>The Team</h2></center>
+			<hr>
+			<!-- column 1 -->
+			<div class="col-sm-6">
+					<div class="container-fluid text-left">
+						<div class="media">
+							<div class="media-left">
+								<img src="img/Hermanpuppy.jpg" class="media-object" style="width: 140px">
+							</div>
+							<div class="media-body">
+									<h4 class="media-heading"><b>Herman Chandi</b></h4>
+									<br>Position: bark-end dev
+									<br>House: Ravenclaw
+							</div>
+						</div>
 					</div>
-					<div class="media-body">
-							<h4 class="media-heading"><b>Herman Chandi</b></h4>
-							<br>Position: bark-end dev
-							<br>House: Ravenclaw
+					<br>
+					<div class="container-fluid text-left">
+						<div class="media">
+							<div class="media-left">
+								<img src="img/Clairepuppy.jpg" class="media-object" style="width: 140px">
+							</div>
+							<div class="media-body">
+									<h4 class="media-heading"><b>Claire Goldsmith</b></h4>
+									<br>Position: bootstrap chewer
+									<br>House: Hufflepuff
+							</div>
+						</div>
 					</div>
-				</div>
+					<br>
+					<div class="container-fluid text-left">
+						<div class="media">
+							<div class="media-left">
+								<img src="img/Irenepuppy.jpg" class="media-object" style="width: 140px">
+							</div>
+							<div class="media-body">
+									<h4 class="media-heading"><b>Irene Halim</b></h4>
+									<br>Position: data fetcher
+									<br>House: Ravenclaw
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="container-fluid text-left">
+						<div class="media">
+							<div class="media-left">
+								<img src="img/Laurenpuppy.jpg" class="media-object" style="width: 140px">
+							</div>
+							<div class="media-body">
+									<h4 class="media-heading"><b>Lauren Ip</b></h4>
+									<br>Position: fluff-end dev
+									<br>House: Ravenclaw
+							</div>
+						</div>
+					</div>
 			</div>
-			<br>
-			<div class="container-fluid text-left">
-				<div class="media">
-					<div class="media-left">
-						<img src="img/Clairepuppy.jpg" class="media-object" style="width: 140px">
-					</div>
-					<div class="media-body">
-							<h4 class="media-heading"><b>Claire Goldsmith</b></h4>
-							<br>Position: bootstrap chewer
-							<br>House: Hufflepuff
-					</div>
-				</div>
-			</div>
-			<br>
-			<div class="container-fluid text-left">
-				<div class="media">
-					<div class="media-left">
-						<img src="img/Irenepuppy.jpg" class="media-object" style="width: 140px">
-					</div>
-					<div class="media-body">
-							<h4 class="media-heading"><b>Irene Halim</b></h4>
-							<br>Position: data fetcher
-							<br>House: Ravenclaw
-					</div>
-				</div>
-			</div>
-			<br>
-			<div class="container-fluid text-left">
-				<div class="media">
-					<div class="media-left">
-						<img src="img/Laurenpuppy.jpg" class="media-object" style="width: 140px">
-					</div>
-					<div class="media-body">
-							<h4 class="media-heading"><b>Lauren Ip</b></h4>
-							<br>Position: fluff-end dev
-							<br>House: Ravenclaw
-					</div>
-				</div>
-			</div>
-	</div>
-	
-	<div class="col-sm-6">
+			
+			<!-- column 2 -->
+			<div class="col-sm-6">
 			<div class="container-fluid text-left">
 				<div class="media">
 					<div class="media-left">
@@ -99,9 +99,6 @@
 				</div>
 			</div>
 	</div>
-
-		<div class="col-sm-5">
-			<div class="col-sm-2"></div>
 		</div>
 </div>
 
