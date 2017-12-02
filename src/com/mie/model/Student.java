@@ -11,6 +11,7 @@ public class Student {
 	private String email;
 	private String password;
 	private String phone;
+	private String industry;
 
 	public String getName(){return name;}
 	public String getYear(){return year;}
@@ -18,6 +19,7 @@ public class Student {
 	public String getEmail(){return email;}
 	public String getPassword(){return password;}
 	public String getPhone(){return phone;}
+	public String getIndustry(){return industry;}
 
 	public void setName(String n){name=n;}
 	public void setYear(String y){year=y;}
@@ -25,6 +27,7 @@ public class Student {
 	public void setEmail(String e){email=e;}
 	public void setPassword(String p){password=p;}
 	public void setPhone(String p){phone=p;}
+	public void setIndustry(String p){industry=p;}
 
 	/*.getName());
 			preparedStatement.setString(2, student.getYear());
