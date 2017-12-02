@@ -88,7 +88,7 @@
 				</h4>
 				<h4>
 					<b>Website: </b>
-					<c:out value="${startup.getWeb()}" />
+					<a href="${startup.getWeb()}"><c:out value="${startup.getWeb()}" /></a>
 				</h4>
 			</div>
 		</div>
