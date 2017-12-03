@@ -2,6 +2,9 @@
 <%@ page import="com.mie.model.*" %>
 <%@ page import="com.mie.dao.*" %>
 <%@ page import="com.mie.controller.*" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -63,6 +66,11 @@
 	Student s= studDao.getStudentByEmail(email);
 	String name=s.getName();
 	String industry = s.getIndustry();
+	
+	IndustryDao indDao = new IndustryDao(); 
+	List<String> ind = new ArrayList<String>();
+	ind = indDao.getAllIndustries();
+	
 
 %>
 
@@ -125,17 +133,9 @@
 	          <label for="inlineFormCustomSelect">Industry</label>
 	          <select id="inlineFormCustomSelect" class="form-control" name = "Industry">
 	            <option selected>Choose...</option>
-	            <option>Aerospace</option>
-	            <option>Analytics</option>
-	            <option>Education</option>
-	            <option>Electronics</option>
-	            <option>Energy</option>
-	            <option>Fintech</option>
-	            <option>Healthcare</option>
-	            <option>Marketing & Advertising</option>
-	            <option>Photography</option>
-	            <option>Robotics</option>
-	            <option>Software</option>
+	             <% for (String i: ind) {%>
+	            	  <option><%=i %></option>
+	             <%}%>
 	          </select>
 	        </div>
 	          </div>
