@@ -89,10 +89,10 @@ public class CompanyDao {
 	}
 	
 	
-public Company getCompanyByIndustry(String industry) {
+public List<Company> getCompanyByIndustry(String industry) {
 		
-		Company company = new Company();
 		
+		List<Company> companies = new ArrayList<Company>();
 		try {
 			String query = "SELECT * FROM Startup WHERE Industry=?";
 			PreparedStatement pst = connection.prepareStatement(query);
@@ -101,6 +101,7 @@ public Company getCompanyByIndustry(String industry) {
 			ResultSet rs = pst.executeQuery();
 			
 			while(rs.next()) {
+				Company company = new Company();
 				company.setName(rs.getString("Name"));
 				company.setID(rs.getInt("StartupID"));
 				company.setDescription(rs.getString("Description"));
@@ -111,13 +112,15 @@ public Company getCompanyByIndustry(String industry) {
 				company.setHiring_Status(rs.getString("Hiring_Status"));
 				company.setStage(rs.getString("Stage"));
 				company.setLogo(rs.getString("imgURL"));
+				
+				companies.add(company);
 			}
 			
 		}catch (SQLException e) {
 			e.printStackTrace();
 		}
 	
-		return company;
+		return companies;
 	}
 	
 	public List<Company> filter_single(String industry, String location) {

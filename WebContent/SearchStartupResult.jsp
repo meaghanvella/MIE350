@@ -43,11 +43,19 @@
 				<!-- You can put left sidebar links here if you want to. -->
 			</div>
 			<div class="col-sm-8 text-left">
-				<h1>Search A Startup - Results</h1>
-
-				The following startups match your search result "<b><font
-					color=red><%=request.getAttribute("keyword")%></font></b>":<br> <br>
+				
+				 <c:if test = "${page > 0}">
+         			<h1>Your Preferred Industry is <%=request.getAttribute("keyword")%></h1>
+      			</c:if>
+      			
+				 <c:if test = "${page < 1 }">
+         			<h1>Search A Startup - Results</h1>
+					The following startups match your search result "<b><font
+					color=red><%=request.getAttribute("keyword")%></font></b>":
 					<br/>
+      			</c:if>
+      				<br><br>
+				
 				 <% int colCount = 0;%>
 				 <c:forEach items="${startup}" var="company">
 					 <% if(colCount == 0){%>

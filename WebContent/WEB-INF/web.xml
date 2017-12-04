@@ -36,6 +36,17 @@
     <url-pattern>/EventController</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <description></description>
+    <display-name>IndustryController</display-name>
+    <servlet-name>IndustryController</servlet-name>
+    <servlet-class>com.mie.controller.IndustryController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndustryController</servlet-name>
+    <url-pattern>/IndustryController</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>StartupRepController</display-name>

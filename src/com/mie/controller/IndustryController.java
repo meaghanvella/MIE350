@@ -12,20 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 import com.mie.dao.CompanyDao;
 import com.mie.model.Company;
 
-public class SearchController extends HttpServlet {
-	
-	//Adopted from the MIE 350 sample application code 
-	//waiting on Meaghan, tbh....
+public class IndustryController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	private static String SEARCH_COMPANY = "/SearchStartupResult.jsp";
-	//^^^Fill in with the appropriate JSP page afterwards 
+ 
 	private CompanyDao dao;
 	
 	/**
 	 * Constructor for the class 
 	 */
-	public SearchController() {
+	public IndustryController() {
 		super();
 		dao = new CompanyDao();
 	}
@@ -39,8 +36,9 @@ public class SearchController extends HttpServlet {
 		
 		RequestDispatcher view = request.getRequestDispatcher(SEARCH_COMPANY);
 		request.setAttribute("keyword", keyword);
-		request.setAttribute("startup", dao.searchCompanyByKeyword(keyword));
-		request.setAttribute("page", 0);
+		request.setAttribute("startup", dao.getCompanyByIndustry(keyword));
+		request.setAttribute("page", 1);
+		
 		
 		//Redirect to the results page: 
 		view.forward(request, response);

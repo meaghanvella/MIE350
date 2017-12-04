@@ -70,7 +70,6 @@
 	IndustryDao indDao = new IndustryDao(); 
 	List<String> ind = new ArrayList<String>();
 	ind = indDao.getAllIndustries();
-	
 
 %>
 
@@ -86,8 +85,8 @@
 <br />
 <b><%=name %></b>
 <p><%=email %></p>
-<form method="POST" action='SearchController' name="frmAddUser" class="form-inline">
-	<p> Preferred Industry: <input type="submit" class="btn btn-default" name="keyword" value=<%=industry%> /> </p>
+<form method="POST" action='IndustryController' name="frmAddUser" class="form-inline">
+	<p> Preferred Industry: <input type="submit" class="btn btn-default" name="keyword" value="<%=industry%>" /> </p>
 </form>
 
 
