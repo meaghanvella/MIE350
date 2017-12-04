@@ -5,11 +5,12 @@
 			<h2>Our Vision</h2>
 			</center>
 				<hr>
-					<h4> StartU is a web application designed to simplify recruitment for startups and students alike.<br><br>
+				<div class="container-fluid text-left paddingright">
+					<h5> StartU is a web application designed to simplify recruitment for startups and students alike.<br><br>
 					We provide students with a platform to contact representatives from startups of interest, making 
-					the recruitment process more efficient for both parties.</h4>
+					the recruitment process more efficient for both parties.</h5>
 					<br>
-					<div class="container-fluid text-left paddingright">
+					
 					The application supports two types of users: Students and Startup Representatives.
 					<br>
 					<br>

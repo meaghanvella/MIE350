@@ -19,6 +19,11 @@
   overflow: hidden;
 }
 
+.navbar.navbar-fixed-bottom{
+	padding-top:0px !important; 
+	padding-bottom:60px !important;
+    height: 40px;
+}
 
 /* Set gray background color and 100% height */
 .sidenav {

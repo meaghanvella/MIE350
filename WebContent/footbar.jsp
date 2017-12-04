@@ -12,10 +12,10 @@
         <div class="collapse navbar-collapse" id="myNavbar">
     
             <ul class="nav navbar-nav navbar-right">
-            <li><a href="#resourcesModal" data-toggle="modal"><h4><b>Resources</b></h4></a></li>
-            <li><a href="#aboutModal" data-toggle="modal"><h4><b>About Us</b></h4></a></li>
-            <li><a href="#teamModal" data-toggle="modal"><h4><b>The Team</b></h4></a></li>
-            <li><a href="#disclaimerModal" data-toggle="modal"><h4><b>Disclaimer</b></h4></a></li>
+            <li><a href="#resourcesModal" data-toggle="modal"><h5>Resources</h5></a></li>
+            <li><a href="#aboutModal" data-toggle="modal"><h5>About Us</h4></a></li>
+            <li><a href="#teamModal" data-toggle="modal"><h5>The Team</h4></a></li>
+            <li><a href="#disclaimerModal" data-toggle="modal"><h5>Disclaimer</h4></a></li>
             </ul>
             
 		</div>
