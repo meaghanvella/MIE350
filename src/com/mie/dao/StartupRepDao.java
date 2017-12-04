@@ -19,6 +19,8 @@ public class StartupRepDao {
 	 * - update
 	 * - retrieval of companies belonging to startup reps
 	 * - retrieval of startup reps by email
+	 * - confirming whether a startup rep exists in the database
+
 	 */
 	
 	private Connection connection;
@@ -136,6 +138,27 @@ public class StartupRepDao {
 			e.printStackTrace();
 		}
 		return rep;
+
+	}
+	
+	public boolean startupRepExistsWithEmail(String email) {
+		/**
+		 * This method returns true if there is already a startup rep with the inputted email in the database.
+		 */
+		try {
+			PreparedStatement preparedStatement = connection
+					.prepareStatement("select * from StartupRep where email=?");
+			preparedStatement.setString(1, email);
+			ResultSet rs = preparedStatement.executeQuery();
+
+			if (rs.next()) {
+				return true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
 
 	}
 

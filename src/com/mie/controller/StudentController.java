@@ -24,6 +24,7 @@ public class StudentController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 	private static String INSERT = "/studentSignup.jsp";
 	private static String INSERT_SUCCESS = "/signupRedirect.jsp";
+	private static String CREATE_FAILURE = "/incorrectSignup.jsp";
 	private static String EDIT_SUCCESS = "/studentHome.jsp";
 
 	private StudentDao dao;
@@ -71,16 +72,20 @@ public class StudentController extends HttpServlet {
 		//if the student doesn't exist, s is null
 		//the following block adds the student profile to the database
 		if(s == null){
-			s = new Student();
-			s.setName(request.getParameter("Name"));
-			s.setYear(request.getParameter("Year"));
-			s.setMajor(request.getParameter("Major"));
-			s.setPassword(request.getParameter("Password"));
-			s.setEmail(request.getParameter("Email"));
-			s.setIndustry(request.getParameter("Industry"));
+			if(dao.studentExistsWithEmail(request.getParameter("Email"))){
+				forward = CREATE_FAILURE;
+			}else{
+				s = new Student();
+				s.setName(request.getParameter("Name"));
+				s.setYear(request.getParameter("Year"));
+				s.setMajor(request.getParameter("Major"));
+				s.setPassword(request.getParameter("Password"));
+				s.setEmail(request.getParameter("Email"));
+				s.setIndustry(request.getParameter("Industry"));
+				dao.addStudent(s);
+				forward = INSERT_SUCCESS;
+			}
 			
-			dao.addStudent(s);
-			forward = INSERT_SUCCESS;
 		}else{
 		//if the student exists, then edit
 			s.setName(request.getParameter("Name"));

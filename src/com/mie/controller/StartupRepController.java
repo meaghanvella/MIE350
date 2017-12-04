@@ -30,7 +30,9 @@ public class StartupRepController extends HttpServlet{
 	
 	private static String INSERT = "/repSignup.jsp";
 	private static String CREATE_SUCCESS = "/signupRedirect.jsp";
+	private static String CREATE_FAILURE = "/incorrectSignup.jsp";
 	private static String EDIT_SUCCESS = "/repHome.jsp";
+
 
 	/**
 	 * Constructor for the class
@@ -78,23 +80,28 @@ public class StartupRepController extends HttpServlet{
 		
 		//if the startup rep doesn't exist, s is null
 		//the following block adds the startup rep profile to the database
-
+		
 		if(s == null){
-			s = new StartupRep();
-			s.setEmail(request.getParameter("Email"));
-			s.setName(request.getParameter("Name"));
-			s.setPosition(request.getParameter("Position"));
-			s.setIntroduction(request.getParameter("Introduction"));
-			s.setPassword(request.getParameter("Password"));
-			String startupId = request.getParameter("Startup");
-			try {
-				s.setStartupID(Integer.parseInt(startupId));
-
-				dao.addStartupRep(s);
-				forward = CREATE_SUCCESS;
-			} catch (NumberFormatException e){
-				forward = INSERT;
+			//if startup rep already exists, do not try to add the user
+			if(dao.startupRepExistsWithEmail(request.getParameter("Email"))){
+				forward = CREATE_FAILURE;
+			}else{
+				s = new StartupRep();
+				s.setEmail(request.getParameter("Email"));
+				s.setName(request.getParameter("Name"));
+				s.setPosition(request.getParameter("Position"));
+				s.setIntroduction(request.getParameter("Introduction"));
+				s.setPassword(request.getParameter("Password"));
+				String startupId = request.getParameter("Startup");
+				try {
+					s.setStartupID(Integer.parseInt(startupId));
+					dao.addStartupRep(s);
+					forward = CREATE_SUCCESS;
+				} catch (NumberFormatException e){
+					forward = INSERT;
+				}
 			}
+
 		}else{
 			//if the startup rep exists, then edit
 			s.setName(request.getParameter("Name"));

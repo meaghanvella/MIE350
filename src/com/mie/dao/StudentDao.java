@@ -19,6 +19,7 @@ public class StudentDao {
 	 * - insert
 	 * - update
 	 * - getting student by email
+	 * - confirming whether a student exists in the database
 	 */
 	
 	private Connection connection;
@@ -60,7 +61,9 @@ public class StudentDao {
 		/**
 		 * This method updates a student's information into the database.
 		 */
+		
 		try {
+			
 			PreparedStatement preparedStatement = connection
 					.prepareStatement("update Student set Name=?, Year=?, Major=?, Email=?, Password=?, Industry=?"
 							+ " where Email=?");
@@ -104,6 +107,27 @@ public class StudentDao {
 		}
 
 		return student;
+	}
+	
+	
+	public boolean studentExistsWithEmail(String email){
+		/**
+		 * This method returns true if there is already a student with the inputted email in the database.
+		 */
+		try {
+			PreparedStatement preparedStatement = connection
+					.prepareStatement("select * from Student where email=?");
+			preparedStatement.setString(1, email);
+			ResultSet rs = preparedStatement.executeQuery();
+
+			if (rs.next()) {
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return false;
 	}
 	
 

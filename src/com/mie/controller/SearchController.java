@@ -13,7 +13,9 @@ import com.mie.dao.CompanyDao;
 import com.mie.model.Company;
 
 public class SearchController extends HttpServlet {
-	
+	/**
+	 * This class handles student profile add and edit functionality.
+	 */
 	private static final long serialVersionUID = 1L;
 	private static String SEARCH_COMPANY = "/SearchStartupResult.jsp";
 	
@@ -36,7 +38,7 @@ public class SearchController extends HttpServlet {
 		
 		RequestDispatcher view = request.getRequestDispatcher(SEARCH_COMPANY);
 		
-		//values to be sent to web page
+		//attributes are set up
 		request.setAttribute("keyword", keyword);
 		request.setAttribute("startup", dao.searchCompanyByKeyword(keyword));
 		request.setAttribute("page", 0);
