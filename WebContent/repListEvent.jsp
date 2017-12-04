@@ -20,7 +20,7 @@
 <html lang = "en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student Home Page</title>
+<title>Event List</title>
 </head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,7 +60,7 @@
 
             The time is now <b><%=new java.util.Date()%></b>.<br> <br><br>
 			</div>
-            <table class="table table-hover  sortable"">
+            <table class="table table-hover  sortable table-bordered">
                 <thead>
                 <tr>
                     <th>Startup</th>
@@ -91,7 +91,6 @@
    
         </div>
         <div class="col-sm-1 sidenav">
-            <!-- You can put right sidebar links here if you want to. -->
         </div>
   
     </div>
