@@ -66,7 +66,7 @@
 				<div class="media">
 					<div class="media-left">
 						<img src="${startup.getLogo()}" class="media-object"
-							style="width: 150px">
+							style="width: 175px">
 					</div>
 					<div class="media-body">
 						<h1 class="media-heading">
@@ -87,6 +87,10 @@
 						<h4>
 							<b>Stage:</b>
 							<c:out value="${startup.getStage()}" />
+						</h4>
+						<h4>
+							<b>Hiring Status:</b>
+							<c:out value="${startup.getHiring_Status()}" />
 						</h4>
 
 					</div>

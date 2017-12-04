@@ -4,7 +4,7 @@
 			<center><h2>The Team</h2></center>
 			<hr>
 			<div class="container-fluid text-left paddingright">
-			StartU was developped by a team of seven Industrial Engineering students from the University of Toronto for a course called Design and Analysis of
+			StartU was developed by a team of seven Industrial Engineering students from the University of Toronto for a course called Design and Analysis of
 			 Information Systems (MIE350). Overall, the team consisted of three back-end members (Herman Chandi, Selena Lu and Claudia Nguyen), one researcher (Irene Halim) and three
 			 front-end designers (Claire Goldsmith, Lauren Ip and Meaghan Vella). Integration was done as a tag-team effort between the front
 			 and back-end, with Meaghan being the primary integrator. For more on the team members, and what they would like as puppies, see below. The team used on online repository to store and share code, which can be found here: 
@@ -89,8 +89,8 @@
 					</div>
 					<div class="media-body">
 							<h4 class="media-heading"><b>Claudia Nguyen</b></h4>
-							<br>Position: bootstrap chewer
-							<br>House: Hufflepuff
+							<br>Position: bark-end dev
+							<br>House: Slytherin
 					</div>
 				</div>
 			</div>
