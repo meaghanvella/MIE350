@@ -48,38 +48,6 @@ body {
 	}
 }
 
-/* for modal form 
-.center {
-    margin-top:50px;   
-}
-
-.modal-header {
-	padding-bottom: 5px;
-}
-
-.modal-footer {
-    	padding: 0;
-	}
-    
-.modal-footer .btn-group button {
-	height:40px;
-	border-top-left-radius : 0;
-	border-top-right-radius : 0;
-	border: none;
-	border-right: 1px solid #ddd;
-}
-	
-.modal-footer .btn-group:last-child > button {
-	border-right: 0;
-}
-
-.card {
-	border-style: solid;
-	border-colour: black;
-}
-*/
-
-
 //New stuff Claire
 
 
@@ -256,7 +224,7 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    min-height: 250px;
+    min-height: 260px;
 }
 
 .card .togrow{

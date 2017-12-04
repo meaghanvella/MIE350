@@ -42,12 +42,6 @@
   </ul>
 
     
-     
-    <!--  
-	<c:forEach items="${CompanyDao.getAllIndustries()}" var="company">
-     <p class="card-text"><c:out value="${company}" /></p>
-   </c:forEach>
- -->
   
  <div class="container-fluid text-center">
 	<div class="row content">

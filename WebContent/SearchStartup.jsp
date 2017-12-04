@@ -7,7 +7,7 @@
 
 <html lang="en">
 <head>
-<title>MIE350 Sample Web App - Search Students</title>
+<title>Search Startups</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -77,13 +77,9 @@
 				<Br />
 				<Br />
 				
-				
-				
-				
 
 			</div>
 			<div class="col-sm-2 sidenav">
-				<!-- You can put right sidebar links here if you want to. -->
 			</div>
 		</div>
 	</div>

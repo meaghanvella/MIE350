@@ -40,10 +40,11 @@
 	<div class="container-fluid text-center">
 		<div class="row content">
 			<div class="col-sm-2 sidenav">
-				<!-- You can put left sidebar links here if you want to. -->
+				<!-- used for spacing on webpage -->
 			</div>
 			<div class="col-sm-8 text-left">
 				
+				<!-- Depending on how to page was accessed, different values are needed, ie search vs industry search -->
 				 <c:if test = "${page > 0}">
          			<h1>Your Preferred Industry is <%=request.getAttribute("keyword")%></h1>
       			</c:if>
