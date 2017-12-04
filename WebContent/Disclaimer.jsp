@@ -28,6 +28,7 @@ Start-Up Reps and their corresponding emails displayed on this webapp are not re
 <br><br>
 Images used on this webapp, aside from the logo, come from third-party sites. Citations for these images, as well as code resources used 
 in the StartU webapp can be found in the corresponding Final Report under the resource section.
+<br><br>
 
 
 					</div>
