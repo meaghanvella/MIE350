@@ -7,6 +7,17 @@
 <%@ page import="com.mie.dao.CompanyDao"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
+<% 
+	session = request.getSession();
+	System.out.println(session);
+	if (session.getAttribute("username") == null) {
+		response.sendRedirect("login.jsp");
+	}
+	System.out.println(session.getAttribute("username"));
+	System.out.println(session.getAttribute("currentSessionUser").getClass());
+	
+	%>
+
 <html lang="en">
 <head>
 <title>StartU</title>
