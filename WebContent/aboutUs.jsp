@@ -54,13 +54,13 @@
 				<hr>
 				
 			<h5><b>References</b></h5>
-			[1] https://www.investopedia.com/ask/answers/12/what-is-a-startup.asp <br>
-			[2] https://steveblank.com/2010/01/25/whats-a-startup-first-principles/<br>
-			[3] https://www.entrepreneur.com/article/240742<br>
-			[4] http://searchcio.techtarget.com/definition/startup-culture<br>
-			[5] https://www.themuse.com/advice/startup-founders-spill-what-i-look-for-in-new-hires<br>
-			[6] https://www.marsdd.com/news-and-insights/hiring-strategies-startups-five-tips-recruite-first-hire/<br>
-			[7] http://miter.mit.edu/how-do-startups-hire/
+			[1] A. Fontinelle. "What exactly is a startup?" Internet: https://www.investopedia.com/ask/answers/12/what-is-a-startup.asp, 2017 [Dec. 3, 2017]  <br>
+			[2] S. Blank. "What's A Startup? First Principles." Internet: https://steveblank.com/2010/01/25/whats-a-startup-first-principles/, Jan 25, 2010 [Dec. 3, 2017] <br>
+			[3] Z. Cutler. "4 Big Challenges That Startups Face." Internet: https://www.entrepreneur.com/article/240742, Dec. 11, 2014 [Dec. 3, 2017]<br>
+			[4] M. Rouse. "startup culture." Internet: http://searchcio.techtarget.com/definition/startup-culture, June, 2014 [Dec. 4, 2017]  <br>
+			[5] "Startup Founders Spill: What I Look for in New Hires." Internet: https://www.themuse.com/advice/startup-founders-spill-what-i-look-for-in-new-hires, n.d. [Dec. 3, 2017] <br>
+			[6] A. Malszecki. "Hiring strategies for startups: 5 tips to recruit your first hire." Internet: https://www.marsdd.com/news-and-insights/hiring-strategies-startups-five-tips-recruite-first-hire/, Aug. 18, 2014 [Dec. 3, 2017]<br>
+			[7] G. Hall. "How Do Startups Hire?" Internet: http://miter.mit.edu/how-do-startups-hire/ Mar 12, 2013 [Dec. 3, 2017] 
 			
 				<div class="container-fluid text-left paddingright">
 				</div>
