@@ -27,7 +27,7 @@
 
 
 </head>
-
+<%@ include file="footbarNotSignedIn.jsp"%>
 <body style="background-color:#E0FFFF;" background="img/briefcase-6-xxl.png">
 	<div class="container-fluid text-center">
 		<div class="container-fluid">
